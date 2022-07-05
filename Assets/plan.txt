@@ -17,12 +17,15 @@
 	menu based game
 	tasks:
 
-0. cat / dog (10xp)
-[20 xp] 1. fish / duck (20 xp)
-[50 xp] 2. parakeet / frog (50 xp)
-[150 xp] 3. snail / axolotl (100 xp)
-[500 xp] 4. bear / elephant (200 xp)
-[1000 xp] 5. dragon (500 xp)
+0. cat (10xp)
+[20 xp] 1. fish / dog (20 xp)
+[50 xp] 2. rabbit / duck (50 xp)
+[100 xp] 2. parakeet / frog (100 xp)
+[250 xp] 3. snail / axolotl (250 xp)
+[500 xp] 4. bear / elephant (500 xp)
+[1000 xp] 5. dragon (800 xp)
+
+cat / fish / dog / rabbit have 1-3 color variants
 
 	get 1-3 animals per day
 	higher level animals take more time and resource
