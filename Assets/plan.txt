@@ -1,0 +1,29 @@
+1. papers please but American healthcare
+	2. papa's pizzaria but with potions (violently stressful)
+3. operation + mario party
+4. inside out the game (dEEp metaphor)
+5. healing only combat
+
+	6. nursing animal to recovery (cute and wholesome)
+	animal sanctuary -> try to rehabilitate as many animals as possible
+	infinite arcade style, keep rescuing more animals
+	to care for animals -> each animal has different possible tasks for each day
+		animals gain happiness when cared for and eventually recover
+	increasing reputation increases number/rarity of new animals coming in 
+	
+	
+	appeal: micromanagement, wholesome caring for cute animals, pokemon style personalization
+	
+	menu based game
+	tasks:
+
+0. cat / dog (10xp)
+[20 xp] 1. fish / duck (20 xp)
+[50 xp] 2. parakeet / frog (50 xp)
+[150 xp] 3. snail / axolotl (100 xp)
+[500 xp] 4. llama / elephant (200 xp)
+[1000 xp] 5. dragon (500 xp)
+
+	get 1-3 animals per day
+	higher level animals take more time and resource
+	reputation goes down a little if you decline an animal
