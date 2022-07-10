@@ -10,16 +10,8 @@
 script = ExtResource( 2 )
 
 [node name="BgPanel" type="Sprite" parent="."]
-position = Vector2( 162, 70 )
 texture = ExtResource( 4 )
-
-[node name="Left" type="ColorRect" parent="."]
-margin_right = 108.0
-margin_bottom = 140.0
-color = Color( 0.54902, 0.486275, 0.486275, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+centered = false
 
 [node name="AnimalList" type="Node2D" parent="."]
 position = Vector2( 112, 4 )
@@ -30,38 +22,22 @@ centered = false
 
 [node name="AnimalArray" type="Node2D" parent="AnimalList"]
 position = Vector2( 2, 2 )
+scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 3 )
 
 [node name="Animal" parent="AnimalList/AnimalArray" instance=ExtResource( 1 )]
 
 [node name="Animal2" parent="AnimalList/AnimalArray" instance=ExtResource( 1 )]
-position = Vector2( 16, 0 )
+position = Vector2( 32, 0 )
 
 [node name="Animal3" parent="AnimalList/AnimalArray" instance=ExtResource( 1 )]
-position = Vector2( 32, 0 )
+position = Vector2( 64, 0 )
 
 [node name="Animal4" parent="AnimalList/AnimalArray" instance=ExtResource( 1 )]
-position = Vector2( 48, 0 )
+position = Vector2( 96, 0 )
 
 [node name="Animal5" parent="AnimalList/AnimalArray" instance=ExtResource( 1 )]
-position = Vector2( 64, 0 )
+position = Vector2( 128, 0 )
 
 [node name="Animal6" parent="AnimalList/AnimalArray" instance=ExtResource( 1 )]
-position = Vector2( 80, 0 )
-
-[node name="Animal7" parent="AnimalList/AnimalArray" instance=ExtResource( 1 )]
-
-[node name="Animal8" parent="AnimalList/AnimalArray" instance=ExtResource( 1 )]
-position = Vector2( 16, 0 )
-
-[node name="Animal9" parent="AnimalList/AnimalArray" instance=ExtResource( 1 )]
-position = Vector2( 32, 0 )
-
-[node name="Animal10" parent="AnimalList/AnimalArray" instance=ExtResource( 1 )]
-position = Vector2( 48, 0 )
-
-[node name="Animal11" parent="AnimalList/AnimalArray" instance=ExtResource( 1 )]
-position = Vector2( 64, 0 )
-
-[node name="Animal12" parent="AnimalList/AnimalArray" instance=ExtResource( 1 )]
-position = Vector2( 80, 0 )
+position = Vector2( 160, 0 )
