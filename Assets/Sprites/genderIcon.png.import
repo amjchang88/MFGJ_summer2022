@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fishAnimatedAll.png-f0106f3d1ae2be5f6d73fa64ad6b7372.stex"
+path="res://.import/genderIcon.png-b4f2bfadb8080676ed35501052d2acbe.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/fishAnimatedAll.png"
-dest_files=[ "res://.import/fishAnimatedAll.png-f0106f3d1ae2be5f6d73fa64ad6b7372.stex" ]
+source_file="res://Assets/Sprites/genderIcon.png"
+dest_files=[ "res://.import/genderIcon.png-b4f2bfadb8080676ed35501052d2acbe.stex" ]
 
 [params]
 
@@ -28,7 +28,6 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
-process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true

@@ -29,13 +29,13 @@ func initialize(p_animation, p_xpYield, p_affliction, p_health, p_happiness):
 func _ready():
 	randomize()
 	var randFloat = randf()
-	if randFloat < 0.2:
+	if randFloat < 0.25:
 		$AnimatedSprite.animation = "dog" + str(floor(rand_range(1, 8.99)))
-	elif randFloat < 0.4:
+	elif randFloat < 0.5:
 		$AnimatedSprite.animation = "cat" + str(floor(rand_range(1, 8.99)))
-	elif randFloat < 0.6:
+	elif randFloat < 0.75:
 		$AnimatedSprite.animation = "fish" + str(floor(rand_range(1, 8.99)))
-	elif randFloat < 0.8:
+	elif randFloat <= 1:
 		$AnimatedSprite.animation = "rabbit" + str(floor(rand_range(1, 8.99)))
 	$AnimatedSprite.speed_scale = rand_range(0.5, 1.5)
 

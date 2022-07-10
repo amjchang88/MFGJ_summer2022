@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/animalShadow.png-fd355721f9506a131ebc4284fdd80002.stex"
+path="res://.import/gravestone.png-661117d5cce05b28c8ee774b26eaf19f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/animalShadow.png"
-dest_files=[ "res://.import/animalShadow.png-fd355721f9506a131ebc4284fdd80002.stex" ]
+source_file="res://Assets/Sprites/gravestone.png"
+dest_files=[ "res://.import/gravestone.png-661117d5cce05b28c8ee774b26eaf19f.stex" ]
 
 [params]
 

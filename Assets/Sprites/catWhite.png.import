@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/boxPanel.png-0755a57355d3e57c874979707d419c0c.stex"
+path="res://.import/catWhite.png-78d7b1e7cd877bcb14842782d0940b4c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/boxPanel.png"
-dest_files=[ "res://.import/boxPanel.png-0755a57355d3e57c874979707d419c0c.stex" ]
+source_file="res://Assets/Sprites/catWhite.png"
+dest_files=[ "res://.import/catWhite.png-78d7b1e7cd877bcb14842782d0940b4c.stex" ]
 
 [params]
 
@@ -30,5 +30,5 @@ process/HDR_as_SRGB=false
 process/invert_color=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
