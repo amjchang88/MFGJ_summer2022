@@ -1,7 +1,25 @@
 extends Node2D
 
-onready var animalArray = get_children()
+onready var animalArray 
+onready var animalInstance = preload("res://Scenes/Animal.tscn")
+
+var animalX := 0
+var animalY := 0
+var animalCount := 0
 
 func _ready():
-	for i in animalArray:
-		print(i.happiness)
+	for _i in range(30):
+		add_child(animalInstance.instance(), true)
+		
+	animalArray = get_children()
+	
+	for Animal in animalArray:
+		
+		Animal.arrayPos = animalCount
+		
+		animalX = (animalCount % 5) * 32
+		animalY = floor(animalCount / 5) * 32
+		print(Animal)
+		Animal.position = Vector2(animalX, animalY)
+
+		animalCount += 1

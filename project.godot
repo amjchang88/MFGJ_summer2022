@@ -14,6 +14,11 @@ config/name="MFGJ_summer2022"
 run/main_scene="res://Scenes/Main.tscn"
 config/icon="res://icon.png"
 
+[debug]
+
+gdscript/warnings/narrowing_conversion=false
+gdscript/warnings/integer_division=false
+
 [display]
 
 window/size/width=216

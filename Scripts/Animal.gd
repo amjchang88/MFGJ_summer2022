@@ -5,6 +5,7 @@ extends Node2D
 
 
 # Basic Animal Stats
+onready var arrayPos := 0
 
 # Health stats
 onready var happiness := 0
@@ -26,5 +27,27 @@ func initialize(p_animation, p_xpYield, p_affliction, p_health, p_happiness):
 	happiness = p_happiness
 	
 func _ready():
-	$AnimatedSprite.animation = "dog" + str(round(rand_range(1, 8.99)))
+	var randFloat = randf()
+	if randFloat > 0.5:
+		$AnimatedSprite.animation = "dog" + str(floor(rand_range(1, 8.99)))
+	else:
+		$AnimatedSprite.animation = "cat" + str(floor(rand_range(1, 8.99)))
 	$AnimatedSprite.speed_scale = rand_range(0.5, 1.5)
+
+
+
+
+
+func _on_AnimalArea2D_input_event(_viewport, event, _shape_idx):
+	if event is InputEventMouseButton:
+		if event.pressed:
+			print("Animal Position in array is " + str(arrayPos))
+
+
+func _on_AnimalArea2D_mouse_entered():
+	$AnimatedSprite.get_material().set_shader_param("opacity", 1)
+
+
+
+func _on_AnimalArea2D_mouse_exited():
+	$AnimatedSprite.get_material().set_shader_param("opacity", 0)

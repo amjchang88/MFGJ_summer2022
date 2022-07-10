@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/animalSpriteFrames.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://Scripts/Animal.gd" type="Script" id=2]
 [ext_resource path="res://outlineMaterial.tres" type="Material" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 15, 15 )
 
 [node name="Animal" type="Node2D"]
 script = ExtResource( 2 )
@@ -14,3 +17,13 @@ animation = "dog8"
 frame = 1
 playing = true
 centered = false
+
+[node name="AnimalArea2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimalArea2D"]
+position = Vector2( 16, 16 )
+shape = SubResource( 1 )
+
+[connection signal="input_event" from="AnimalArea2D" to="." method="_on_AnimalArea2D_input_event"]
+[connection signal="mouse_entered" from="AnimalArea2D" to="." method="_on_AnimalArea2D_mouse_entered"]
+[connection signal="mouse_exited" from="AnimalArea2D" to="." method="_on_AnimalArea2D_mouse_exited"]
