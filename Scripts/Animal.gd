@@ -46,8 +46,9 @@ func _on_AnimalArea2D_input_event(_viewport, event, _shape_idx):
 
 func _on_AnimalArea2D_mouse_entered():
 	$AnimatedSprite.get_material().set_shader_param("opacity", 1)
-
+	$animalShadow.visible = true
 
 
 func _on_AnimalArea2D_mouse_exited():
 	$AnimatedSprite.get_material().set_shader_param("opacity", 0)
+	$animalShadow.visible = false

@@ -5,5 +5,5 @@
 [resource]
 resource_local_to_scene = true
 shader = ExtResource( 1 )
-shader_param/outline_color = Color( 0.968627, 0.0117647, 0.0117647, 1 )
-shader_param/opacity = null
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
