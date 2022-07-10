@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bgPanel.png-f3e1c855e977d9622b68fd0f949f42a9.stex"
+path="res://.import/boxPanel.png-0755a57355d3e57c874979707d419c0c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/bgPanel.png"
-dest_files=[ "res://.import/bgPanel.png-f3e1c855e977d9622b68fd0f949f42a9.stex" ]
+source_file="res://Assets/boxPanel.png"
+dest_files=[ "res://.import/boxPanel.png-0755a57355d3e57c874979707d419c0c.stex" ]
 
 [params]
 
