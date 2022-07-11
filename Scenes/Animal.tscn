@@ -20,8 +20,7 @@ centered = false
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 material = ExtResource( 3 )
 frames = ExtResource( 1 )
-animation = "cat1"
-frame = 1
+animation = "dog3"
 playing = true
 centered = false
 
