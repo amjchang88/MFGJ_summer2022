@@ -47,7 +47,7 @@ func look_for_texture(var text):
 			valid_texture = false
 	elif actual_mode == mode.edit:
 		dock.get_node("Label2").add_color_override("font_color", Color("ffb246"))
-		dock.get_node("Label2").text = "Texture path-Not required"
+		#dock.get_node("Label2").text = "Texture path-Not required"
 		valid_texture = true
 
 func look_for_file(var text):

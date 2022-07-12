@@ -12,9 +12,9 @@ centered = false
 script = ExtResource( 2 )
 
 [node name="Name" type="RichTextLabel" parent="."]
-margin_left = 51.0
+margin_left = 56.0
 margin_top = 7.0
-margin_right = 96.0
+margin_right = 101.0
 margin_bottom = 21.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_constants/shadow_offset_x = 1
@@ -26,7 +26,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Type" type="RichTextLabel" parent="."]
+[node name="Species" type="RichTextLabel" parent="."]
 margin_left = 7.0
 margin_top = 13.0
 margin_right = 104.0
@@ -34,12 +34,12 @@ margin_bottom = 26.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
-text = "TYPE"
+text = "SPECIES"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TypeText" type="RichTextLabel" parent="."]
+[node name="SpeciesText" type="RichTextLabel" parent="."]
 margin_left = 7.0
 margin_top = 29.0
 margin_right = 104.0
@@ -52,7 +52,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Color" type="RichTextLabel" parent="."]
+[node name="Mood" type="RichTextLabel" parent="."]
 margin_left = 7.0
 margin_top = 45.0
 margin_right = 104.0
@@ -60,12 +60,12 @@ margin_bottom = 58.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
-text = "COLOR"
+text = "MOOD"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Color2" type="RichTextLabel" parent="."]
+[node name="MoodText" type="RichTextLabel" parent="."]
 margin_left = 7.0
 margin_top = 61.0
 margin_right = 104.0
@@ -73,7 +73,7 @@ margin_bottom = 74.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
-text = "Fish"
+text = "Happy"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -99,13 +99,15 @@ margin_bottom = 106.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
-text = "ayaya"
+tab_size = 2
+text = "Injured"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 73, 43 )
+position = Vector2( 79, 43 )
 frames = ExtResource( 4 )
 animation = "cat1"
+frame = 1
 playing = true
