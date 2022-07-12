@@ -58,8 +58,8 @@ func look_for_file(var text):
 				dock.get_node("Label4").text = "File found, will edit it"
 				dock.get_node("Button").text = "Add char"
 				dock.get_node("Label4").add_color_override("font_color", Color("ffffff"))
-				dock.get_node("tex_path").text = "Not needed"
-				dock.get_node("tex_path").editable = false
+				dock.get_node("tex_path").text = "Can edit!!! (seehang bug fix)"
+				dock.get_node("tex_path").editable = true
 				dock.get_node("Label").add_color_override("font_color", Color("46ff49"))
 				dock.get_node("Label").text = "Save path-Valid"
 				actual_mode = mode.edit
@@ -108,3 +108,11 @@ func create():
 		bf.add_char(int(dock.get_node("letter_button1/u").value),0,Rect2(dock.get_node("letter_button1/x").value,dock.get_node("letter_button1/y").value,dock.get_node("letter_button1/w").value,dock.get_node("letter_button1/h").value))
 		ResourceSaver.save(dock.get_node("sav_path").text,bf)
 		look_for_file(sav_path_line.text)
+
+func _exit_tree():
+	#Added by seehang, it should have been here already
+	# Clean-up of the plugin goes here.
+	# Remove the dock.
+	remove_control_from_docks(dock)
+	# Erase the control from the memory.
+	dock.free()

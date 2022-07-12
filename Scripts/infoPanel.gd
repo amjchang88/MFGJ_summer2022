@@ -21,4 +21,4 @@ func _process(_delta):
 	
 func _ready():
 	#move_to(2,2)
-	$Animal/AnimatedSprite.animation = "dog3"
+	$AnimatedSprite.animation = "dog3"

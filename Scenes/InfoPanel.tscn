@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/UI/infoPanel.png" type="Texture" id=1]
-[ext_resource path="res://Scenes/infoPanel.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/infoPanel.gd" type="Script" id=2]
 [ext_resource path="res://Assets/UI/hgssFont.tres" type="BitmapFont" id=3]
-[ext_resource path="res://Scenes/Animal.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/animalSpriteFrames.tres" type="SpriteFrames" id=4]
 
 [node name="InfoPanel" type="Sprite"]
 position = Vector2( -109, 2 )
@@ -12,13 +12,15 @@ centered = false
 script = ExtResource( 2 )
 
 [node name="Name" type="RichTextLabel" parent="."]
-margin_left = 63.0
+margin_left = 51.0
 margin_top = 7.0
-margin_right = 160.0
-margin_bottom = 20.0
+margin_right = 96.0
+margin_bottom = 21.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
+bbcode_enabled = true
+bbcode_text = "[center]MISO[/center]"
 text = "MISO"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -26,9 +28,9 @@ __meta__ = {
 
 [node name="Type" type="RichTextLabel" parent="."]
 margin_left = 7.0
-margin_top = 25.0
+margin_top = 13.0
 margin_right = 104.0
-margin_bottom = 38.0
+margin_bottom = 26.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
@@ -39,9 +41,9 @@ __meta__ = {
 
 [node name="TypeText" type="RichTextLabel" parent="."]
 margin_left = 7.0
-margin_top = 40.0
+margin_top = 29.0
 margin_right = 104.0
-margin_bottom = 53.0
+margin_bottom = 42.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
@@ -52,35 +54,35 @@ __meta__ = {
 
 [node name="Color" type="RichTextLabel" parent="."]
 margin_left = 7.0
-margin_top = 57.0
+margin_top = 45.0
 margin_right = 104.0
-margin_bottom = 70.0
+margin_bottom = 58.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
-text = "idk man"
+text = "COLOR"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Color2" type="RichTextLabel" parent="."]
 margin_left = 7.0
-margin_top = 73.0
+margin_top = 61.0
 margin_right = 104.0
-margin_bottom = 86.0
+margin_bottom = 74.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
-text = "smth"
+text = "Fish"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Status" type="RichTextLabel" parent="."]
 margin_left = 7.0
-margin_top = 89.0
+margin_top = 77.0
 margin_right = 104.0
-margin_bottom = 102.0
+margin_bottom = 90.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
@@ -91,9 +93,9 @@ __meta__ = {
 
 [node name="Status2" type="RichTextLabel" parent="."]
 margin_left = 7.0
-margin_top = 105.0
+margin_top = 93.0
 margin_right = 104.0
-margin_bottom = 118.0
+margin_bottom = 106.0
 custom_fonts/normal_font = ExtResource( 3 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
@@ -102,5 +104,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Animal" parent="." instance=ExtResource( 4 )]
-position = Vector2( 59, 33 )
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 73, 43 )
+frames = ExtResource( 4 )
+animation = "cat1"
+playing = true
