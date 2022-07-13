@@ -1,36 +1,33 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Scenes/Animal.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/InfoPanel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Main.gd" type="Script" id=2]
-[ext_resource path="res://Scripts/AnimalList.gd" type="Script" id=3]
-[ext_resource path="res://Assets/bgPanel.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/AnimalArray.gd" type="Script" id=3]
+[ext_resource path="res://Assets/UI/bgPanel.png" type="Texture" id=4]
+[ext_resource path="res://Assets/UI/boxPanel.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/JournalPanel.tscn" type="PackedScene" id=6]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="BgPanel" type="Sprite" parent="."]
-position = Vector2( 240, 120 )
 texture = ExtResource( 4 )
-
-[node name="Left" type="ColorRect" parent="."]
-margin_right = 160.0
-margin_bottom = 240.0
-color = Color( 0.54902, 0.486275, 0.486275, 1 )
+centered = false
 
 [node name="AnimalList" type="Node2D" parent="."]
+position = Vector2( 122, 20 )
+
+[node name="boxPanel" type="Sprite" parent="AnimalList"]
+texture = ExtResource( 5 )
+centered = false
+
+[node name="AnimalArray" type="Node2D" parent="AnimalList"]
+position = Vector2( 2, 2 )
+scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 3 )
 
-[node name="Animal" parent="AnimalList" instance=ExtResource( 1 )]
-position = Vector2( 240, 30 )
+[node name="InfoPanel" parent="." instance=ExtResource( 1 )]
+position = Vector2( -118, 2 )
 
-[node name="Animal2" parent="AnimalList" instance=ExtResource( 1 )]
-position = Vector2( 240, 74 )
-
-[node name="Animal3" parent="AnimalList" instance=ExtResource( 1 )]
-position = Vector2( 290, 30 )
-
-[node name="Animal4" parent="AnimalList" instance=ExtResource( 1 )]
-position = Vector2( 190, 30 )
-
-[node name="Animal5" parent="AnimalList" instance=ExtResource( 1 )]
-position = Vector2( 190, 74 )
+[node name="JournalPanel" parent="." instance=ExtResource( 6 )]
+position = Vector2( -118, 2 )

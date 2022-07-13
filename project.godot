@@ -8,20 +8,38 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Sprite",
+"class": "UIPanel",
+"language": "GDScript",
+"path": "res://Scripts/ClassUIPanel.gd"
+} ]
+_global_script_class_icons={
+"UIPanel": ""
+}
+
 [application]
 
 config/name="MFGJ_summer2022"
 run/main_scene="res://Scenes/Main.tscn"
 config/icon="res://icon.png"
 
+[debug]
+
+gdscript/warnings/narrowing_conversion=false
+gdscript/warnings/integer_division=false
+
 [display]
 
-window/size/width=320
-window/size/height=240
+window/size/width=220
+window/size/height=144
 window/size/resizable=false
-window/size/test_width=1280
-window/size/test_height=960
+window/size/test_width=1320
+window/size/test_height=864
+mouse_cursor/custom_image="res://Assets/Sprites/handCursor.png"
+mouse_cursor/custom_image_hotspot=Vector2( 2, 54 )
 window/stretch/mode="2d"
+window/stretch/aspect="expand"
 
 [importer_defaults]
 
