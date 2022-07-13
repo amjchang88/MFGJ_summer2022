@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/UI/journalPanel.png" type="Texture" id=1]
+[ext_resource path="res://Assets/UI/hgssFont.tres" type="BitmapFont" id=2]
+[ext_resource path="res://Scenes/Animal.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/JournalPanel.gd" type="Script" id=4]
+
+[node name="JournalPanel" type="Sprite"]
+texture = ExtResource( 1 )
+centered = false
+script = ExtResource( 4 )
+
+[node name="JournalTitle" type="RichTextLabel" parent="."]
+margin_left = 26.0
+margin_top = 9.0
+margin_right = 100.0
+margin_bottom = 22.0
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center]JOURNAL[/center]"
+text = "JOURNAL"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimalsTitle" type="RichTextLabel" parent="."]
+margin_left = 8.0
+margin_top = 29.0
+margin_right = 82.0
+margin_bottom = 42.0
+custom_fonts/normal_font = ExtResource( 2 )
+text = "ANIMALS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AfflictionsTitle" type="RichTextLabel" parent="."]
+margin_left = 8.0
+margin_top = 65.0
+margin_right = 82.0
+margin_bottom = 78.0
+custom_fonts/normal_font = ExtResource( 2 )
+text = "AFFLICTIONS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TreatmentsTitle" type="RichTextLabel" parent="."]
+margin_left = 8.0
+margin_top = 101.0
+margin_right = 82.0
+margin_bottom = 114.0
+custom_fonts/normal_font = ExtResource( 2 )
+text = "TREATMENTS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Animal" parent="." instance=ExtResource( 3 )]
+position = Vector2( 8, 44 )
+scale = Vector2( 0.5, 0.5 )

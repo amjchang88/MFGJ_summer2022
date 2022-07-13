@@ -2,7 +2,7 @@ extends Node2D
 # This is the base animal node
 
 # Node paths
-onready var infoPanel = get_tree().get_root().get_node("Main").get_node("InfoPanel")
+onready var infoPanel = get_tree().get_root().get_node("Main").get_node("JournalPanel")
 
 # Basic Animal Stats
 onready var arrayPos := 0

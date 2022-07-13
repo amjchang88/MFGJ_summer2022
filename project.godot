@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Sprite",
+"class": "UIPanel",
+"language": "GDScript",
+"path": "res://Scripts/ClassUIPanel.gd"
+} ]
+_global_script_class_icons={
+"UIPanel": ""
+}
+
 [application]
 
 config/name="MFGJ_summer2022"
