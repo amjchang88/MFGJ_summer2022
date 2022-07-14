@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=132 format=2]
+[gd_resource type="SpriteFrames" load_steps=136 format=2]
 
 [ext_resource path="res://Assets/Sprites/catAnimatedAll.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Sprites/dogAnimatedAll.png" type="Texture" id=2]
@@ -501,6 +501,22 @@ region = Rect2( 384, 0, 32, 32 )
 atlas = ExtResource( 8 )
 region = Rect2( 416, 0, 32, 32 )
 
+[sub_resource type="AtlasTexture" id=124]
+atlas = ExtResource( 8 )
+region = Rect2( 448, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=125]
+atlas = ExtResource( 8 )
+region = Rect2( 480, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=126]
+atlas = ExtResource( 8 )
+region = Rect2( 512, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=127]
+atlas = ExtResource( 8 )
+region = Rect2( 544, 0, 32, 32 )
+
 [resource]
 animations = [ {
 "frames": [ SubResource( 1 ), SubResource( 2 ) ],
@@ -813,12 +829,12 @@ animations = [ {
 "name": "frog7",
 "speed": 5.0
 }, {
-"frames": [  ],
+"frames": [ SubResource( 124 ), SubResource( 125 ) ],
 "loop": true,
 "name": "frog8",
 "speed": 5.0
 }, {
-"frames": [  ],
+"frames": [ SubResource( 126 ), SubResource( 127 ) ],
 "loop": true,
 "name": "frogShadow",
 "speed": 5.0
