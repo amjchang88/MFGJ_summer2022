@@ -45,7 +45,7 @@ texture = ExtResource( 11 )
 centered = false
 
 [node name="AnimalList" type="Node2D" parent="."]
-position = Vector2( 114, 37 )
+position = Vector2( 114, 53 )
 
 [node name="boxPanel" type="Sprite" parent="AnimalList"]
 material = ExtResource( 8 )

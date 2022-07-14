@@ -20,8 +20,8 @@ func place_animals():
 	
 		Animal.arrayPos = animalCount
 		
-		animalX = (animalCount % 5) * 32
-		animalY = floor(animalCount / 5) * 32
+		animalX = (animalCount % 6) * 32
+		animalY = floor(animalCount / 6) * 32
 		Animal.position = Vector2(animalX, animalY)
 
 		animalCount += 1
