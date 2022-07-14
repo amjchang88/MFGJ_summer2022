@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/duckAnimatedAll.png-70bbd7c7a354a45212fd4de811459891.stex"
+path="res://.import/birdAnimatedAll.png-c4765cfe7700ddee392a2a3b60eaf8f3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/duckAnimatedAll.png"
-dest_files=[ "res://.import/duckAnimatedAll.png-70bbd7c7a354a45212fd4de811459891.stex" ]
+source_file="res://Assets/Sprites/birdAnimatedAll.png"
+dest_files=[ "res://.import/birdAnimatedAll.png-c4765cfe7700ddee392a2a3b60eaf8f3.stex" ]
 
 [params]
 

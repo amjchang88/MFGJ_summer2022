@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/duckAnimatedAll.png-70bbd7c7a354a45212fd4de811459891.stex"
+path="res://.import/frogAnimatedAll.png-1c8971deb36410ea9ca4bb38b4be9064.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/duckAnimatedAll.png"
-dest_files=[ "res://.import/duckAnimatedAll.png-70bbd7c7a354a45212fd4de811459891.stex" ]
+source_file="res://Assets/Sprites/frogAnimatedAll.png"
+dest_files=[ "res://.import/frogAnimatedAll.png-1c8971deb36410ea9ca4bb38b4be9064.stex" ]
 
 [params]
 
