@@ -58,7 +58,7 @@ centered = false
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Animal"]
 material = SubResource( 2 )
 frames = ExtResource( 7 )
-animation = "birdShadow"
+animation = "frogShadow"
 playing = true
 centered = false
 
@@ -81,7 +81,7 @@ centered = false
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Animal2"]
 material = SubResource( 2 )
 frames = ExtResource( 7 )
-animation = "birdShadow"
+animation = "frogShadow"
 playing = true
 centered = false
 
@@ -104,7 +104,7 @@ centered = false
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Animal3"]
 material = SubResource( 2 )
 frames = ExtResource( 7 )
-animation = "birdShadow"
+animation = "frogShadow"
 playing = true
 centered = false
 
@@ -127,7 +127,7 @@ centered = false
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Animal4"]
 material = SubResource( 2 )
 frames = ExtResource( 7 )
-animation = "birdShadow"
+animation = "frogShadow"
 playing = true
 centered = false
 
