@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Assets/UI/journalPanel.png" type="Texture" id=1]
 [ext_resource path="res://Assets/UI/hgssFont.tres" type="BitmapFont" id=2]
-[ext_resource path="res://Scenes/Animal.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/animalSpriteFrames.tres" type="SpriteFrames" id=3]
 [ext_resource path="res://Scripts/JournalPanel.gd" type="Script" id=4]
 
 [node name="JournalPanel" type="Sprite"]
@@ -56,6 +56,38 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Animal" parent="." instance=ExtResource( 3 )]
-position = Vector2( 8, 44 )
+[node name="Cat" type="AnimatedSprite" parent="."]
+position = Vector2( 14, 52 )
 scale = Vector2( 0.5, 0.5 )
+frames = ExtResource( 3 )
+animation = "catShadow"
+
+[node name="Dog" type="AnimatedSprite" parent="."]
+position = Vector2( 30, 52 )
+scale = Vector2( 0.5, 0.5 )
+frames = ExtResource( 3 )
+animation = "dogShadow"
+
+[node name="Fish" type="AnimatedSprite" parent="."]
+position = Vector2( 46, 52 )
+scale = Vector2( 0.5, 0.5 )
+frames = ExtResource( 3 )
+animation = "fishShadow"
+
+[node name="Duck" type="AnimatedSprite" parent="."]
+position = Vector2( 62, 52 )
+scale = Vector2( 0.5, 0.5 )
+frames = ExtResource( 3 )
+animation = "duckShadow"
+
+[node name="Rabbit" type="AnimatedSprite" parent="."]
+position = Vector2( 78, 52 )
+scale = Vector2( 0.5, 0.5 )
+frames = ExtResource( 3 )
+animation = "rabbitShadow"
+
+[node name="\?" type="AnimatedSprite" parent="."]
+position = Vector2( 94, 52 )
+scale = Vector2( 0.5, 0.5 )
+frames = ExtResource( 3 )
+animation = "rabbitShadow"
