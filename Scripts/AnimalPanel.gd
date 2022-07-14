@@ -1,8 +1,5 @@
 extends UIPanel
 
-func _ready():
-	pass
-
 
 func _on_Area2D_input_event(_viewport, event, _shape_idx):
 	# clicked back button

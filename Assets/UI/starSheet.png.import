@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/journalPanel.png-afc2c23fcbd0670acd47b8c9cd6ebe0d.stex"
+path="res://.import/starSheet.png-a90ce01f88b547cfb94d0e427a49efd8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/journalPanel.png"
-dest_files=[ "res://.import/journalPanel.png-afc2c23fcbd0670acd47b8c9cd6ebe0d.stex" ]
+source_file="res://Assets/UI/starSheet.png"
+dest_files=[ "res://.import/starSheet.png-a90ce01f88b547cfb94d0e427a49efd8.stex" ]
 
 [params]
 

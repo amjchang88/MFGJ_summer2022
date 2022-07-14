@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://Assets/UI/journalPanel.png" type="Texture" id=1]
+[ext_resource path="res://Assets/UI/AnimalPanel.png" type="Texture" id=1]
 [ext_resource path="res://Assets/UI/hgssFont.tres" type="BitmapFont" id=2]
-[ext_resource path="res://Scripts/JournalPanel.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/AnimalPanel.gd" type="Script" id=3]
+[ext_resource path="res://Assets/UI/starSheet.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/JournalIcon.tscn" type="PackedScene" id=6]
 [ext_resource path="res://outlineShader.gdshader" type="Shader" id=7]
 
@@ -42,13 +43,25 @@ shader = ExtResource( 7 )
 shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
 shader_param/opacity = 0.0
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="ShaderMaterial" id=7]
+resource_local_to_scene = true
+shader = ExtResource( 7 )
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
+
+[sub_resource type="ShaderMaterial" id=8]
+resource_local_to_scene = true
+shader = ExtResource( 7 )
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
+
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 8, 9 )
 
-[node name="JournalPanel" type="Sprite"]
+[node name="AnimalPanel" type="Sprite"]
 texture = ExtResource( 1 )
 centered = false
-script = ExtResource( 4 )
+script = ExtResource( 3 )
 
 [node name="JournalTitle" type="RichTextLabel" parent="."]
 margin_left = 8.0
@@ -57,77 +70,89 @@ margin_right = 82.0
 margin_bottom = 22.0
 custom_fonts/normal_font = ExtResource( 2 )
 bbcode_enabled = true
-bbcode_text = "[center]JOURNAL[/center]"
-text = "JOURNAL"
+bbcode_text = "[center]DOG[/center]"
+text = "DOG"
 
-[node name="AnimalsTitle" type="RichTextLabel" parent="."]
+[node name="VariationsTitle" type="RichTextLabel" parent="."]
 margin_left = 8.0
 margin_top = 29.0
 margin_right = 82.0
 margin_bottom = 42.0
 custom_fonts/normal_font = ExtResource( 2 )
-text = "ANIMALS"
+text = "VARIATIONS"
 
-[node name="AfflictionsTitle" type="RichTextLabel" parent="."]
+[node name="NameTitle" type="RichTextLabel" parent="."]
 margin_left = 8.0
-margin_top = 65.0
+margin_top = 81.0
 margin_right = 82.0
-margin_bottom = 78.0
+margin_bottom = 94.0
 custom_fonts/normal_font = ExtResource( 2 )
-text = "AFFLICTIONS"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+text = "NAME"
 
-[node name="TreatmentsTitle" type="RichTextLabel" parent="."]
+[node name="NameText" type="RichTextLabel" parent="."]
 margin_left = 8.0
-margin_top = 101.0
-margin_right = 82.0
-margin_bottom = 114.0
+margin_top = 99.0
+margin_right = 103.0
+margin_bottom = 112.0
 custom_fonts/normal_font = ExtResource( 2 )
-text = "TREATMENTS"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+text = "Unknown"
+
+[node name="Rarity" type="RichTextLabel" parent="."]
+margin_left = 8.0
+margin_top = 118.0
+margin_right = 103.0
+margin_bottom = 131.0
+custom_fonts/normal_font = ExtResource( 2 )
+text = "RARITY"
 
 [node name="AnimalList" type="Node2D" parent="."]
 
 [node name="Cat" parent="AnimalList" instance=ExtResource( 6 )]
 material = SubResource( 1 )
+animation = "cat1"
 
 [node name="Dog" parent="AnimalList" instance=ExtResource( 6 )]
 material = SubResource( 2 )
 position = Vector2( 30, 52 )
-animation = "dogShadow"
+animation = "cat2"
 
 [node name="Fish" parent="AnimalList" instance=ExtResource( 6 )]
 material = SubResource( 3 )
 position = Vector2( 46, 52 )
-animation = "fishShadow"
 
 [node name="Rabbit" parent="AnimalList" instance=ExtResource( 6 )]
 material = SubResource( 4 )
 position = Vector2( 62, 52 )
-animation = "rabbitShadow"
 
 [node name="Duck" parent="AnimalList" instance=ExtResource( 6 )]
 material = SubResource( 5 )
 position = Vector2( 78, 52 )
-animation = "duckShadow"
+animation = "cat5"
 
 [node name="JournalIcon5" parent="AnimalList" instance=ExtResource( 6 )]
 material = SubResource( 6 )
 position = Vector2( 94, 52 )
-animation = "birdShadow"
+animation = "cat6"
 
-[node name="AfflictionList" type="Node2D" parent="."]
+[node name="JournalIcon" parent="AnimalList" instance=ExtResource( 6 )]
+material = SubResource( 7 )
+position = Vector2( 14, 68 )
 
-[node name="TreatmentList" type="Node2D" parent="."]
+[node name="JournalIcon2" parent="AnimalList" instance=ExtResource( 6 )]
+material = SubResource( 8 )
+position = Vector2( 30, 68 )
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( 95, 14 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 7 )
+shape = SubResource( 9 )
+
+[node name="StarSheet" type="Sprite" parent="."]
+position = Vector2( 54, 120 )
+texture = ExtResource( 4 )
+centered = false
+hframes = 5
+frame = 4
 
 [connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]

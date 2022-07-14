@@ -2,7 +2,7 @@ extends Node2D
 # This is the base animal node
 
 # Node paths
-onready var infoPanel = get_tree().get_root().get_node("Main").get_node("InfoPanel")
+onready var infoPanel = get_tree().get_root().get_node("Main").get_node("AnimalPanel")
 
 # Basic Animal Stats
 onready var arrayPos := 0
@@ -54,7 +54,7 @@ func _on_AnimalArea2D_input_event(_viewport, event, _shape_idx):
 func _on_AnimalArea2D_mouse_entered():
 	$AnimatedSprite.get_material().set_shader_param("opacity", 1)
 	$animalShadow.visible = true
-	infoPanel.move_to(2,2)
+	#infoPanel.move_to(110,2)
 
 
 func _on_AnimalArea2D_mouse_exited():

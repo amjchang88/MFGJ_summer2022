@@ -17,9 +17,9 @@ margin_left = 57.0
 margin_top = 15.0
 margin_right = 102.0
 margin_bottom = 29.0
-custom_fonts/normal_font = ExtResource( 3 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
+custom_fonts/normal_font = ExtResource( 3 )
 bbcode_enabled = true
 bbcode_text = "[center]MISO[/center]"
 text = "MISO"
@@ -32,9 +32,9 @@ margin_left = 8.0
 margin_top = 9.0
 margin_right = 105.0
 margin_bottom = 22.0
-custom_fonts/normal_font = ExtResource( 3 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
+custom_fonts/normal_font = ExtResource( 3 )
 text = "SPECIES"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -45,9 +45,9 @@ margin_left = 8.0
 margin_top = 25.0
 margin_right = 105.0
 margin_bottom = 38.0
-custom_fonts/normal_font = ExtResource( 3 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
+custom_fonts/normal_font = ExtResource( 3 )
 text = "Dog"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -58,9 +58,9 @@ margin_left = 8.0
 margin_top = 41.0
 margin_right = 105.0
 margin_bottom = 54.0
-custom_fonts/normal_font = ExtResource( 3 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
+custom_fonts/normal_font = ExtResource( 3 )
 text = "MOOD"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -71,9 +71,9 @@ margin_left = 8.0
 margin_top = 57.0
 margin_right = 105.0
 margin_bottom = 70.0
-custom_fonts/normal_font = ExtResource( 3 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
+custom_fonts/normal_font = ExtResource( 3 )
 text = "Happy"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -84,9 +84,9 @@ margin_left = 8.0
 margin_top = 73.0
 margin_right = 105.0
 margin_bottom = 86.0
-custom_fonts/normal_font = ExtResource( 3 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
+custom_fonts/normal_font = ExtResource( 3 )
 text = "SYMPTOMS"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -97,23 +97,20 @@ margin_left = 8.0
 margin_top = 89.0
 margin_right = 105.0
 margin_bottom = 102.0
-custom_fonts/normal_font = ExtResource( 3 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
+custom_fonts/normal_font = ExtResource( 3 )
 tab_size = 2
-text = "Leg injury"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+text = "Limp"
 
 [node name="Affliction" type="RichTextLabel" parent="."]
 margin_left = 8.0
 margin_top = 105.0
 margin_right = 105.0
 margin_bottom = 118.0
-custom_fonts/normal_font = ExtResource( 3 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
+custom_fonts/normal_font = ExtResource( 3 )
 text = "AFFLICTION"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -124,14 +121,11 @@ margin_left = 8.0
 margin_top = 121.0
 margin_right = 105.0
 margin_bottom = 134.0
-custom_fonts/normal_font = ExtResource( 3 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
+custom_fonts/normal_font = ExtResource( 3 )
 tab_size = 2
-text = "None"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+text = "Broken leg"
 
 [node name="GenderIcon" type="Sprite" parent="."]
 position = Vector2( 92, 33 )
@@ -147,5 +141,4 @@ texture = ExtResource( 5 )
 position = Vector2( 80, 45 )
 frames = ExtResource( 4 )
 animation = "cat2"
-frame = 1
 playing = true

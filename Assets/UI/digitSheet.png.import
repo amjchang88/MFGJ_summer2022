@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/journalPanel.png-afc2c23fcbd0670acd47b8c9cd6ebe0d.stex"
+path="res://.import/digitSheet.png-a121a438c730a805703259ddd839cd1b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/journalPanel.png"
-dest_files=[ "res://.import/journalPanel.png-afc2c23fcbd0670acd47b8c9cd6ebe0d.stex" ]
+source_file="res://Assets/UI/digitSheet.png"
+dest_files=[ "res://.import/digitSheet.png-a121a438c730a805703259ddd839cd1b.stex" ]
 
 [params]
 

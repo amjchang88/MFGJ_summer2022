@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/journalPanel.png-afc2c23fcbd0670acd47b8c9cd6ebe0d.stex"
+path="res://.import/seasonSheet.png-dd529a8d0c522f4924145bb8f61f3ae4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/journalPanel.png"
-dest_files=[ "res://.import/journalPanel.png-afc2c23fcbd0670acd47b8c9cd6ebe0d.stex" ]
+source_file="res://Assets/UI/seasonSheet.png"
+dest_files=[ "res://.import/seasonSheet.png-dd529a8d0c522f4924145bb8f61f3ae4.stex" ]
 
 [params]
 

@@ -4,8 +4,10 @@ extends Sprite
 
 class_name UIPanel
 
-var targetX := -118
-var targetY := 2
+export var defaultX : int
+export var defaultY : int 
+export var targetX : int
+export var targetY : int
 export var movespeed := 4
 
 func move_to(p_x, p_y):
