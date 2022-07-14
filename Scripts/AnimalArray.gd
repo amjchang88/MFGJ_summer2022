@@ -11,15 +11,17 @@ func _ready():
 	for _i in range(30):
 		add_child(animalInstance.instance(), true)
 		
+	place_animals()
+
+func place_animals():
 	animalArray = get_children()
-	
+
 	for Animal in animalArray:
-		
+	
 		Animal.arrayPos = animalCount
 		
 		animalX = (animalCount % 5) * 32
 		animalY = floor(animalCount / 5) * 32
-		print(Animal)
 		Animal.position = Vector2(animalX, animalY)
 
 		animalCount += 1

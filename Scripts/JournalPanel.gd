@@ -1,4 +1,11 @@
 extends UIPanel
 
 func _ready():
-	$Animal.get_node("AnimatedSprite").animation = "dogShadow"
+	pass
+
+
+
+
+
+func _on_CatArea_mouse_entered():
+	$AnimalList/Cat.get_material().set_shader_param("opacity", 1)
