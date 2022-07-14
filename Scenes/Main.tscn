@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scenes/InfoPanel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Main.gd" type="Script" id=2]
@@ -6,6 +6,19 @@
 [ext_resource path="res://Assets/UI/bgPanel.png" type="Texture" id=4]
 [ext_resource path="res://Assets/UI/boxPanel.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/JournalPanel.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/animalSpriteFrames.tres" type="SpriteFrames" id=7]
+[ext_resource path="res://Assets/Sprites/animalShadow.png" type="Texture" id=8]
+[ext_resource path="res://Scripts/Animal.gd" type="Script" id=9]
+[ext_resource path="res://outlineShader.gdshader" type="Shader" id=10]
+
+[sub_resource type="ShaderMaterial" id=2]
+resource_local_to_scene = true
+shader = ExtResource( 10 )
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 15, 15 )
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 2 )
@@ -31,3 +44,110 @@ position = Vector2( -118, 2 )
 
 [node name="JournalPanel" parent="." instance=ExtResource( 6 )]
 position = Vector2( -118, 2 )
+
+[node name="Animal" type="Node2D" parent="."]
+position = Vector2( 36, 85 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 9 )
+
+[node name="animalShadow" type="Sprite" parent="Animal"]
+position = Vector2( 0, 2 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Animal"]
+material = SubResource( 2 )
+frames = ExtResource( 7 )
+animation = "dog3"
+frame = 1
+playing = true
+centered = false
+
+[node name="AnimalArea2D" type="Area2D" parent="Animal"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Animal/AnimalArea2D"]
+position = Vector2( 16, 16 )
+shape = SubResource( 1 )
+
+[node name="Animal2" type="Node2D" parent="."]
+position = Vector2( 12, 44 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 9 )
+
+[node name="animalShadow" type="Sprite" parent="Animal2"]
+position = Vector2( 0, 2 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Animal2"]
+material = SubResource( 2 )
+frames = ExtResource( 7 )
+animation = "dog3"
+playing = true
+centered = false
+
+[node name="AnimalArea2D" type="Area2D" parent="Animal2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Animal2/AnimalArea2D"]
+position = Vector2( 16, 16 )
+shape = SubResource( 1 )
+
+[node name="Animal3" type="Node2D" parent="."]
+position = Vector2( 24, 110 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 9 )
+
+[node name="animalShadow" type="Sprite" parent="Animal3"]
+position = Vector2( 0, 2 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Animal3"]
+material = SubResource( 2 )
+frames = ExtResource( 7 )
+animation = "dog3"
+playing = true
+centered = false
+
+[node name="AnimalArea2D" type="Area2D" parent="Animal3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Animal3/AnimalArea2D"]
+position = Vector2( 16, 16 )
+shape = SubResource( 1 )
+
+[node name="Animal4" type="Node2D" parent="."]
+position = Vector2( 64, 75 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 9 )
+
+[node name="animalShadow" type="Sprite" parent="Animal4"]
+position = Vector2( 0, 2 )
+texture = ExtResource( 8 )
+centered = false
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Animal4"]
+material = SubResource( 2 )
+frames = ExtResource( 7 )
+animation = "dog3"
+frame = 1
+playing = true
+centered = false
+
+[node name="AnimalArea2D" type="Area2D" parent="Animal4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Animal4/AnimalArea2D"]
+position = Vector2( 16, 16 )
+shape = SubResource( 1 )
+
+[connection signal="input_event" from="Animal/AnimalArea2D" to="Animal" method="_on_AnimalArea2D_input_event"]
+[connection signal="mouse_entered" from="Animal/AnimalArea2D" to="Animal" method="_on_AnimalArea2D_mouse_entered"]
+[connection signal="mouse_exited" from="Animal/AnimalArea2D" to="Animal" method="_on_AnimalArea2D_mouse_exited"]
+[connection signal="input_event" from="Animal2/AnimalArea2D" to="Animal2" method="_on_AnimalArea2D_input_event"]
+[connection signal="mouse_entered" from="Animal2/AnimalArea2D" to="Animal2" method="_on_AnimalArea2D_mouse_entered"]
+[connection signal="mouse_exited" from="Animal2/AnimalArea2D" to="Animal2" method="_on_AnimalArea2D_mouse_exited"]
+[connection signal="input_event" from="Animal3/AnimalArea2D" to="Animal3" method="_on_AnimalArea2D_input_event"]
+[connection signal="mouse_entered" from="Animal3/AnimalArea2D" to="Animal3" method="_on_AnimalArea2D_mouse_entered"]
+[connection signal="mouse_exited" from="Animal3/AnimalArea2D" to="Animal3" method="_on_AnimalArea2D_mouse_exited"]
+[connection signal="input_event" from="Animal4/AnimalArea2D" to="Animal4" method="_on_AnimalArea2D_input_event"]
+[connection signal="mouse_entered" from="Animal4/AnimalArea2D" to="Animal4" method="_on_AnimalArea2D_mouse_entered"]
+[connection signal="mouse_exited" from="Animal4/AnimalArea2D" to="Animal4" method="_on_AnimalArea2D_mouse_exited"]

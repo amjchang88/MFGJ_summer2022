@@ -1,9 +1,46 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Assets/UI/journalPanel.png" type="Texture" id=1]
 [ext_resource path="res://Assets/UI/hgssFont.tres" type="BitmapFont" id=2]
-[ext_resource path="res://Assets/animalSpriteFrames.tres" type="SpriteFrames" id=3]
 [ext_resource path="res://Scripts/JournalPanel.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/JournalIcon.tscn" type="PackedScene" id=6]
+[ext_resource path="res://outlineShader.gdshader" type="Shader" id=7]
+
+[sub_resource type="ShaderMaterial" id=1]
+resource_local_to_scene = true
+shader = ExtResource( 7 )
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
+
+[sub_resource type="ShaderMaterial" id=2]
+resource_local_to_scene = true
+shader = ExtResource( 7 )
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
+
+[sub_resource type="ShaderMaterial" id=3]
+resource_local_to_scene = true
+shader = ExtResource( 7 )
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
+
+[sub_resource type="ShaderMaterial" id=4]
+resource_local_to_scene = true
+shader = ExtResource( 7 )
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
+
+[sub_resource type="ShaderMaterial" id=5]
+resource_local_to_scene = true
+shader = ExtResource( 7 )
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
+
+[sub_resource type="ShaderMaterial" id=6]
+resource_local_to_scene = true
+shader = ExtResource( 7 )
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
 
 [node name="JournalPanel" type="Sprite"]
 texture = ExtResource( 1 )
@@ -56,38 +93,36 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Cat" type="AnimatedSprite" parent="."]
-position = Vector2( 14, 52 )
-scale = Vector2( 0.5, 0.5 )
-frames = ExtResource( 3 )
-animation = "catShadow"
+[node name="AnimalList" type="Node2D" parent="."]
 
-[node name="Dog" type="AnimatedSprite" parent="."]
+[node name="Cat" parent="AnimalList" instance=ExtResource( 6 )]
+material = SubResource( 1 )
+
+[node name="Dog" parent="AnimalList" instance=ExtResource( 6 )]
+material = SubResource( 2 )
 position = Vector2( 30, 52 )
-scale = Vector2( 0.5, 0.5 )
-frames = ExtResource( 3 )
 animation = "dogShadow"
 
-[node name="Fish" type="AnimatedSprite" parent="."]
+[node name="Fish" parent="AnimalList" instance=ExtResource( 6 )]
+material = SubResource( 3 )
 position = Vector2( 46, 52 )
-scale = Vector2( 0.5, 0.5 )
-frames = ExtResource( 3 )
 animation = "fishShadow"
 
-[node name="Duck" type="AnimatedSprite" parent="."]
+[node name="Rabbit" parent="AnimalList" instance=ExtResource( 6 )]
+material = SubResource( 4 )
 position = Vector2( 62, 52 )
-scale = Vector2( 0.5, 0.5 )
-frames = ExtResource( 3 )
+animation = "rabbitShadow"
+
+[node name="Duck" parent="AnimalList" instance=ExtResource( 6 )]
+material = SubResource( 5 )
+position = Vector2( 78, 52 )
 animation = "duckShadow"
 
-[node name="Rabbit" type="AnimatedSprite" parent="."]
-position = Vector2( 78, 52 )
-scale = Vector2( 0.5, 0.5 )
-frames = ExtResource( 3 )
-animation = "rabbitShadow"
-
-[node name="\?" type="AnimatedSprite" parent="."]
+[node name="JournalIcon5" parent="AnimalList" instance=ExtResource( 6 )]
+material = SubResource( 6 )
 position = Vector2( 94, 52 )
-scale = Vector2( 0.5, 0.5 )
-frames = ExtResource( 3 )
-animation = "rabbitShadow"
+animation = "sus"
+
+[node name="AfflictionList" type="Node2D" parent="."]
+
+[node name="TreatmentList" type="Node2D" parent="."]
