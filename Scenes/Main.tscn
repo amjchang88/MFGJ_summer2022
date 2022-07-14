@@ -59,6 +59,7 @@ centered = false
 material = SubResource( 2 )
 frames = ExtResource( 7 )
 animation = "frogShadow"
+frame = 1
 playing = true
 centered = false
 
@@ -82,6 +83,7 @@ centered = false
 material = SubResource( 2 )
 frames = ExtResource( 7 )
 animation = "frogShadow"
+frame = 1
 playing = true
 centered = false
 
@@ -105,6 +107,7 @@ centered = false
 material = SubResource( 2 )
 frames = ExtResource( 7 )
 animation = "frogShadow"
+frame = 1
 playing = true
 centered = false
 
@@ -128,6 +131,7 @@ centered = false
 material = SubResource( 2 )
 frames = ExtResource( 7 )
 animation = "frogShadow"
+frame = 1
 playing = true
 centered = false
 
