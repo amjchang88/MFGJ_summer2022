@@ -149,7 +149,7 @@ position = Vector2( 95, 14 )
 shape = SubResource( 9 )
 
 [node name="StarSheet" type="Sprite" parent="."]
-position = Vector2( 54, 120 )
+position = Vector2( 54, 119.5 )
 texture = ExtResource( 4 )
 centered = false
 hframes = 5
