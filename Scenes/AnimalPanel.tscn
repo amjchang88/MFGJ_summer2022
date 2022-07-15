@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=2]
 
-[ext_resource path="res://Assets/UI/AnimalPanel.png" type="Texture" id=1]
+[ext_resource path="res://Assets/UI/animalPanel.png" type="Texture" id=1]
 [ext_resource path="res://Assets/UI/hgssFont.tres" type="BitmapFont" id=2]
 [ext_resource path="res://Scripts/AnimalPanel.gd" type="Script" id=3]
 [ext_resource path="res://Assets/UI/starSheet.png" type="Texture" id=4]

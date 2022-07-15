@@ -2,18 +2,19 @@ extends Node2D
 # This is the base animal node
 
 # Node paths
-onready var infoPanel = get_tree().get_root().get_node("Main").get_node("InfoPanel")
-
+onready var infoPanel := get_tree().get_root().get_node("Main").get_node("InfoPanel")
+onready var parent := get_parent()
 
 
 # Basic Animal Stats
 onready var arrayPos := 0
 
 # Health stats
-onready var happiness := 0
-onready var health := 0
+onready var happiness := 1
+onready var health := .5
 onready var alive := true
-onready var affliction := ""
+onready var affliction := " "
+onready var symptom := " "
 
 # Static stats
 onready var xpYield := 0
@@ -21,12 +22,13 @@ onready var weight := 0
 onready var height := 0
 
 
-func initialize(p_animation, p_xpYield, p_affliction, p_health, p_happiness):
+func initialize(p_animation, p_xpYield, p_affliction, p_health, p_weight):
 	$AnimatedSprite.animation = p_animation
 	affliction = p_affliction
 	xpYield = p_xpYield
 	health = p_health
-	happiness = p_happiness
+	weight = p_weight
+	
 	
 func _ready():
 	randomize()
@@ -49,7 +51,7 @@ func _ready():
 
 func _on_AnimalArea2D_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton:
-		if event.pressed:
+		if event.pressed and !parent.paused:
 			infoPanel.move_to(2, 2)
 
 
