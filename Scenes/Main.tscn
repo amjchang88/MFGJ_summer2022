@@ -24,24 +24,51 @@ centered = false
 
 [node name="HUD" type="Node2D" parent="."]
 
-[node name="Digit1" type="Sprite" parent="HUD"]
-position = Vector2( 130, 26 )
+[node name="Day1" type="Sprite" parent="HUD"]
+position = Vector2( 182, 16 )
 texture = ExtResource( 10 )
 centered = false
-hframes = 9
+hframes = 10
 frame = 8
 
-[node name="Digit2" type="Sprite" parent="HUD"]
-position = Vector2( 134, 26 )
+[node name="Day2" type="Sprite" parent="HUD"]
+position = Vector2( 186, 16 )
 texture = ExtResource( 10 )
 centered = false
-hframes = 9
+hframes = 10
+
+[node name="Time1" type="Sprite" parent="HUD"]
+position = Vector2( 194, 16 )
+texture = ExtResource( 10 )
+centered = false
+hframes = 10
+
+[node name="Time2" type="Sprite" parent="HUD"]
+position = Vector2( 198, 16 )
+texture = ExtResource( 10 )
+centered = false
+hframes = 10
+frame = 1
+
+[node name="Time3" type="Sprite" parent="HUD"]
+position = Vector2( 204, 16 )
+texture = ExtResource( 10 )
+centered = false
+hframes = 10
+frame = 9
+
+[node name="Time4" type="Sprite" parent="HUD"]
+position = Vector2( 208, 16 )
+texture = ExtResource( 10 )
+centered = false
+hframes = 10
+frame = 9
 
 [node name="Season" type="Sprite" parent="HUD"]
-position = Vector2( 142, 16 )
+position = Vector2( 142, 15 )
 texture = ExtResource( 9 )
 centered = false
-hframes = 4
+vframes = 4
 
 [node name="Healthbar" type="Sprite" parent="HUD"]
 position = Vector2( 130, 9 )
