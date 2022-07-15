@@ -3,8 +3,8 @@ extends Node2D
 
 # Node paths
 onready var infoPanel = get_tree().get_root().get_node("Main").get_node("InfoPanel")
-onready var JournalPanel = get_tree().get_root().get_node("Main").get_node("JournalPanel")
-#onready var infoPanel = get_tree().get_root().get_node("Main").get_node("AnimalPanel")
+
+
 
 # Basic Animal Stats
 onready var arrayPos := 0

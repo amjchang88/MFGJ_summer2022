@@ -1,5 +1,7 @@
 extends UIPanel
 
+onready var infoPanel = get_tree().get_root().get_node("Main").get_node("AnimalPanel")
+
 func _ready():
 	pass
 

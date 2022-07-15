@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scenes/InfoPanel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Main.gd" type="Script" id=2]
@@ -12,6 +12,9 @@
 [ext_resource path="res://Assets/UI/digitSheet.png" type="Texture" id=10]
 [ext_resource path="res://Assets/UI/healthbar.png" type="Texture" id=11]
 
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 16, 3.5 )
+
 [node name="Main" type="Node2D"]
 script = ExtResource( 2 )
 
@@ -22,25 +25,26 @@ centered = false
 [node name="HUD" type="Node2D" parent="."]
 
 [node name="Digit1" type="Sprite" parent="HUD"]
-position = Vector2( 143, 15 )
+position = Vector2( 130, 26 )
 texture = ExtResource( 10 )
 centered = false
 hframes = 9
+frame = 8
 
 [node name="Digit2" type="Sprite" parent="HUD"]
-position = Vector2( 139, 15 )
+position = Vector2( 134, 26 )
 texture = ExtResource( 10 )
 centered = false
 hframes = 9
 
 [node name="Season" type="Sprite" parent="HUD"]
-position = Vector2( 177, 14 )
+position = Vector2( 142, 16 )
 texture = ExtResource( 9 )
 centered = false
 hframes = 4
 
 [node name="Healthbar" type="Sprite" parent="HUD"]
-position = Vector2( 129, 8 )
+position = Vector2( 130, 9 )
 texture = ExtResource( 11 )
 centered = false
 
@@ -49,6 +53,7 @@ position = Vector2( 114, 53 )
 
 [node name="boxPanel" type="Sprite" parent="AnimalList"]
 material = ExtResource( 8 )
+position = Vector2( 1, 1 )
 texture = ExtResource( 5 )
 centered = false
 
@@ -77,3 +82,11 @@ defaultX = 222
 defaultY = 2
 targetX = 222
 targetY = 2
+
+[node name="JournalButton" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="JournalButton"]
+position = Vector2( 197, 28.5 )
+shape = SubResource( 1 )
+
+[connection signal="input_event" from="JournalButton" to="." method="_on_JournalButton_input_event"]

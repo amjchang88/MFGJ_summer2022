@@ -12,6 +12,7 @@ extents = Vector2( 14, 14 )
 script = ExtResource( 2 )
 
 [node name="animalShadow" type="Sprite" parent="."]
+visible = false
 position = Vector2( 0, 2 )
 texture = ExtResource( 4 )
 centered = false
@@ -20,6 +21,7 @@ centered = false
 material = ExtResource( 3 )
 frames = ExtResource( 1 )
 animation = "dog3"
+frame = 1
 playing = true
 centered = false
 
