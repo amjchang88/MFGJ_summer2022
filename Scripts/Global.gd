@@ -34,7 +34,10 @@ func _init():
 	catClass.rarity = 0
 	catClass.weightLow = 7
 	catClass.weightHigh = 18
+<<<<<<< HEAD
 	catClass.nameList = ["Black Shorthair", "Tuxedo Shorthair", "Coffee Longhair", "Calico Shorthair", "Brown Tabby", "Orange Shorthair", "Chocolate Point", "White Longhair"]
+=======
+>>>>>>> parent of e037d6f (aniamls)
 	
 	dogClass.name = "DOG"
 	dogClass.rarity = 0

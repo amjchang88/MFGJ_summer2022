@@ -16,10 +16,8 @@ func _on_Area2D_input_event(_viewport, event, _shape_idx):
 			emit_signal("returned")
 
 func initialize(p_name, p_variationList, p_nameList, p_rarity):
-	$NameText.text = "Select Variation"
 	$JournalTitle.bbcode_text = "[center]" + p_name + "[/center]"
 	$StarSheet.frame = p_rarity
-	nameList = p_nameList
 	for i in 8:
 		if p_variationList[i]:
 			children[i].animation = p_name.to_lower() + str(i)
