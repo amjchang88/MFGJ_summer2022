@@ -24,6 +24,10 @@ config/name="MFGJ_summer2022"
 run/main_scene="res://Scenes/Main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://Scenes/Global.tscn"
+
 [debug]
 
 gdscript/warnings/narrowing_conversion=false
