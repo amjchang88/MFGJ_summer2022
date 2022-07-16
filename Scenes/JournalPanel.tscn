@@ -70,14 +70,11 @@ text = "ANIMALS"
 
 [node name="AfflictionsTitle" type="RichTextLabel" parent="."]
 margin_left = 8.0
-margin_top = 65.0
-margin_right = 82.0
-margin_bottom = 78.0
+margin_top = 88.0
+margin_right = 97.0
+margin_bottom = 101.0
 custom_fonts/normal_font = ExtResource( 2 )
-text = "AFFLICTIONS"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+text = "AFFLICTIONS &"
 
 [node name="TreatmentsTitle" type="RichTextLabel" parent="."]
 margin_left = 8.0
