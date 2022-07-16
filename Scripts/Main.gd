@@ -20,7 +20,7 @@ func _ready():
 func _on_JournalButton_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton:
 		if event.pressed:
-			journalPanel.move_to(112,2)
+			journalPanel.move_to(2,2)
 			animalArray.paused = true
 
 
@@ -28,7 +28,7 @@ func _on_ScreenTransition_animation_finished():
 	$ScreenTransition.visible = false
 
 
-func _on_EndButton_input_event(viewport, event, shape_idx):
+func _on_EndButton_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton:
 		if event.pressed:
 			$ScreenTransition.visible = true
