@@ -3,7 +3,7 @@ extends Node2D
 # class
 class AnimalClass:
 	var variationList = [0, 0, 0, 0, 0, 0, 0, 0]
-	var nameList = [" ", "", " ", " ", " ", " ", " ", " "]
+	var nameList = [" ", " ", " ", " ", " ", " ", " ", " "]
 	var name : String
 	var rarity : int
 	var weightLow : float
@@ -46,7 +46,7 @@ func _init():
 	fishClass.rarity = 1
 	fishClass.weightLow = 0.1
 	fishClass.weightHigh = 1
-	fishClass.nameList = ["Blue Guppy", "Light Blue Guppy", "Orange Guppy", "Red Guppy", "Yellow Guppy", "Orange Koi", "Red Koi", "Black & Red Koi"]
+	fishClass.nameList = ["Blue Beta", "Light Blue Beta", "Orange Guppy", "Red Beta", "Yellow Guppy", "Orange Koi", "Red Koi", "Tricolor Koi"]
 	
 	duckClass.name = "DUCK"
 	duckClass.rarity = 1
@@ -58,17 +58,19 @@ func _init():
 	rabbitClass.rarity = 1
 	rabbitClass.weightLow = 2
 	rabbitClass.weightHigh = 10
-	rabbitClass.nameList = [""]
+	rabbitClass.nameList = ["Black", "Dutch", "Brown", "Californian", "Harlequin", "White", "Golden"]
 	
 	ratClass.name = "RAT"
 	ratClass.rarity = 2
 	ratClass.weightLow = 0.5
 	ratClass.weightHigh = 1.5
+	ratClass.nameList = ["Black", "Black Piebald", "Blue", "Gray", "Gray Piebald", "Brown", "Brown Piebald", "Tan Piebald"]
 	
 	frogClass.name = "FROG"
 	frogClass.rarity = 3
 	frogClass.weightLow = 0.1
 	frogClass.weightHigh = 5
+	frogClass.nameList = [""]
 	
 	axolotlClass.name = "AXOLOTL"
 	axolotlClass.rarity = 3
