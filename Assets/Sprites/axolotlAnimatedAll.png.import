@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/AnimalPanel.png-66f4ddcf4f69b72476e6c391a6802f42.stex"
+path="res://.import/axolotlAnimatedAll.png-46c5fbbb0a95ffa8e69a9654925e48ee.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/AnimalPanel.png"
-dest_files=[ "res://.import/AnimalPanel.png-66f4ddcf4f69b72476e6c391a6802f42.stex" ]
+source_file="res://Assets/Sprites/axolotlAnimatedAll.png"
+dest_files=[ "res://.import/axolotlAnimatedAll.png-46c5fbbb0a95ffa8e69a9654925e48ee.stex" ]
 
 [params]
 
