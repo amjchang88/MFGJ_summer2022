@@ -34,6 +34,7 @@ func _init():
 	catClass.rarity = 0
 	catClass.weightLow = 7
 	catClass.weightHigh = 18
+	catClass.nameList = ["Black Shorthair", "Tuxedo Shorthair", "Coffee Shorthair", "Calico Shorthair", "Brown Shorthair", "Orange Shorthair", "Chocolate", "White Shorthair"]
 	
 	dogClass.name = "DOG"
 	dogClass.rarity = 0
