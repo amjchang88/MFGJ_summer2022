@@ -15,6 +15,7 @@ var fishClass
 var rabbitClass
 var duckClass
 var ratClass
+var birdClass
 var frogClass
 var axolotlClass
 var dragonClass
@@ -27,6 +28,7 @@ func _init():
 	duckClass = AnimalClass.new()
 	ratClass = AnimalClass.new()
 	frogClass = AnimalClass.new()
+	birdClass = AnimalClass.new()
 	axolotlClass = AnimalClass.new()
 	dragonClass = AnimalClass.new()
 	
@@ -34,7 +36,6 @@ func _init():
 	catClass.rarity = 0
 	catClass.weightLow = 7
 	catClass.weightHigh = 18
-
 	catClass.nameList = ["Black Shorthair", "Tuxedo Shorthair", "Coffee Longhair", "Calico Shorthair", "Brown Tabby", "Orange Shorthair", "Chocolate Point", "White Longhair"]
 	
 	dogClass.name = "DOG"
@@ -68,16 +69,22 @@ func _init():
 	ratClass.nameList = ["Black", "Black Piebald", "Blue", "Gray", "Gray Piebald", "Brown", "Brown Piebald", "Tan Piebald"]
 	
 	frogClass.name = "FROG"
-	frogClass.rarity = 3
+	frogClass.rarity = 2
 	frogClass.weightLow = 0.1
 	frogClass.weightHigh = 5
 	frogClass.nameList = ["Brown", "Green", "Tree", "White", "Golden", "Blue Poison", "Red Poison", "Yellow Poison"]
+	
+	birdClass.name = "BIRD"
+	birdClass.rarity = 3
+	birdClass.weightLow = 0.1
+	birdClass.weightHigh = 1
+	birdClass.nameList = [""]
 	
 	axolotlClass.name = "AXOLOTL"
 	axolotlClass.rarity = 3
 	axolotlClass.weightLow = 0.1
 	axolotlClass.weightHigh = 1
-	axolotlClass.nameList = [""]
+	axolotlClass.nameList = ["Red Canary", "Yellow Canary", ""]
 	
 	dragonClass.name = "DRAGON"
 	dragonClass.rarity = 4
