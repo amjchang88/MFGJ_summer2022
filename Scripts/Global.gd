@@ -15,8 +15,8 @@ var fishClass
 var rabbitClass
 var duckClass
 var ratClass
-var birdClass
 var frogClass
+var birdClass
 var axolotlClass
 var dragonClass
 	
@@ -84,9 +84,10 @@ func _init():
 	axolotlClass.rarity = 3
 	axolotlClass.weightLow = 0.1
 	axolotlClass.weightHigh = 1
-	axolotlClass.nameList = []
+	axolotlClass.nameList = ["Black", "Copper", "Golden", "Lavender", "Piebald", "Pink", "Sunglasses", "Red"]
 	
 	dragonClass.name = "DRAGON"
 	dragonClass.rarity = 4
 	dragonClass.weightLow = 5
 	dragonClass.weightHigh = 15
+	dragonClass.nameList = ["Air", "Earth", "Fire", "Frost", "Light", "Shadow", "Soul", "Water"]
