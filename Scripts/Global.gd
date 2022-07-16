@@ -71,12 +71,13 @@ func _init():
 	frogClass.rarity = 3
 	frogClass.weightLow = 0.1
 	frogClass.weightHigh = 5
-	frogClass.nameList = [""]
+	frogClass.nameList = ["Brown", "Green", "Tree", "White", "Golden", "Blue Poison", "Red Poison", "Yellow Poison"]
 	
 	axolotlClass.name = "AXOLOTL"
 	axolotlClass.rarity = 3
 	axolotlClass.weightLow = 0.1
 	axolotlClass.weightHigh = 1
+	axolotlClass.nameList = [""]
 	
 	dragonClass.name = "DRAGON"
 	dragonClass.rarity = 4
