@@ -13,7 +13,10 @@ func _process(_delta):
 		$Week2.frame = global.week
 	
 	# set reputation bar length
-	$TextureProgress.value = global.repuation
+	if $TextureProgress.value < global.reputation:
+		$TextureProgress.value += 1
+	if $TexttureProgress.value > global.reputation:
+		$TextureProgress.value += 1
 	
 	# set season
 	$Season.frame = global.season

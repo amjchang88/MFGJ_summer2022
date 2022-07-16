@@ -84,7 +84,7 @@ shape = SubResource( 2 )
 visible = false
 
 [node name="HUD2" type="Node2D" parent="NewAnimal"]
-position = Vector2( 0, -1 )
+position = Vector2( 0, -2 )
 script = ExtResource( 15 )
 
 [node name="Week1" type="Sprite" parent="NewAnimal/HUD2"]

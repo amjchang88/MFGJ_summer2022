@@ -40,15 +40,15 @@ func _ready():
 	randomize()
 	var randFloat = randf()
 	if randFloat < 0.2:
-		$AnimatedSprite.animation = "dog" + str(floor(rand_range(1, 8.99)))
+		$AnimatedSprite.animation = "bird" + str(floor(rand_range(1, 8.99)))
 	elif randFloat < 0.4:
-		$AnimatedSprite.animation = "cat" + str(floor(rand_range(1, 8.99)))
+		$AnimatedSprite.animation = "rat" + str(floor(rand_range(1, 8.99)))
 	elif randFloat < 0.6:
-		$AnimatedSprite.animation = "fish" + str(floor(rand_range(1, 8.99)))
+		$AnimatedSprite.animation = "frog" + str(floor(rand_range(1, 8.99)))
 	elif randFloat < 0.8:
-		$AnimatedSprite.animation = "rabbit" + str(floor(rand_range(1, 8.99)))
+		$AnimatedSprite.animation = "axolotl" + str(floor(rand_range(1, 8.99)))
 	elif randFloat <= 1:
-		$AnimatedSprite.animation = "duck" + str(floor(rand_range(1, 8.99)))
+		$AnimatedSprite.animation = "dragon" + str(floor(rand_range(1, 8.99)))
 	$AnimatedSprite.speed_scale = rand_range(0.5, 1.5)
 
 
