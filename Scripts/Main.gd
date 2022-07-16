@@ -2,7 +2,7 @@ extends Node2D
 
 onready var journalPanel = get_node("JournalPanel")
 onready var animalArray = get_node("AnimalList").get_node("AnimalArray")
-onready var wime1 = get_node("HUD").get_node("Week1")
+onready var week1 = get_node("HUD").get_node("Week1")
 onready var week2 = get_node("HUD").get_node("Week2")
 
 # Player variables
@@ -23,10 +23,19 @@ func _on_JournalButton_input_event(_viewport, event, _shape_idx):
 			journalPanel.move_to(112,2)
 			animalArray.paused = true
 			paused = true
+			$HUD.visible = false
 
 
 func _on_ScreenTransition_animation_finished():
-	$ScreenTransition.visible = false
+	if $ScreenTransition.animation == "end":
+		$ScreenTransition.visible = false
+		#$NewAnimal.visible = false
+		$ScreenTransition.animation = "start"
+		$ScreenTransition.stop()
+	else:
+		$ScreenTransition.animation = "end"
+		$ScreenTransition.play()
+		$NewAnimal.visible = true
 
 
 func _on_EndButton_input_event(_viewport, event, _shape_idx):
@@ -36,5 +45,7 @@ func _on_EndButton_input_event(_viewport, event, _shape_idx):
 			$ScreenTransition.play()
 
 
+
 func _on_JournalPanel_returned():
 	paused = false
+	$HUD.visible = true

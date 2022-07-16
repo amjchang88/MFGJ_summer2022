@@ -19,7 +19,11 @@ var frogClass
 var birdClass
 var axolotlClass
 var dragonClass
-	
+
+var repuation := 0
+var season := 0
+var week := 1
+
 func _init():
 	catClass = AnimalClass.new()
 	dogClass = AnimalClass.new()
