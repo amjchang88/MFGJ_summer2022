@@ -34,27 +34,31 @@ func _init():
 	catClass.rarity = 0
 	catClass.weightLow = 7
 	catClass.weightHigh = 18
-	catClass.nameList = ["Black Shorthair", "Tuxedo Shorthair", "Coffee Shorthair", "Calico Shorthair", "Brown Shorthair", "Orange Shorthair", "Chocolate Point", "White Shorthair"]
+	catClass.nameList = ["Black Shorthair", "Tuxedo Shorthair", "Coffee Longhair", "Calico Shorthair", "Brown Tabby", "Orange Shorthair", "Chocolate Point", "White Longhair"]
 	
 	dogClass.name = "DOG"
 	dogClass.rarity = 0
-	dogClass.weightLow = 35
+	dogClass.weightLow = 40
 	dogClass.weightHigh = 85
+	dogClass.nameList = ["Border Collie", "Chocolate Lab", "Rhodesian Ridgeback", "Golden Retriever", "Terrier", "Black Shiba Inu", "Schipperke", "White German Shepherd"]
 	
 	fishClass.name = "FISH"
 	fishClass.rarity = 1
 	fishClass.weightLow = 0.1
 	fishClass.weightHigh = 1
+	fishClass.nameList = ["Blue Guppy", "Light Blue Guppy", "Orange Guppy", "Red Guppy", "Yellow Guppy", "Orange Koi", "Red Koi", "Black & Red Koi"]
 	
 	duckClass.name = "DUCK"
 	duckClass.rarity = 1
 	duckClass.weightLow = 1
 	duckClass.weightHigh = 4
+	duckClass.nameList = ["Black", "Brown", "Mallard (Female)", "Mallard (Male)", "Mandarin (Female)", "Mandarin (Male)", "White", "Yellow"]
 	
 	rabbitClass.name = "RABBIT"
 	rabbitClass.rarity = 1
 	rabbitClass.weightLow = 2
 	rabbitClass.weightHigh = 10
+	rabbitClass.nameList = [""]
 	
 	ratClass.name = "RAT"
 	ratClass.rarity = 2
