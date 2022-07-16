@@ -157,7 +157,6 @@ playing = true
 material = SubResource( 8 )
 position = Vector2( 14, 69 )
 animation = "frogShadow"
-frame = 1
 playing = true
 
 [node name="Bird" parent="AnimalList" instance=ExtResource( 6 )]
