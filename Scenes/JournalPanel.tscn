@@ -115,7 +115,7 @@ text = "TREATMENTS"
 
 [node name="Cat" parent="AnimalList" instance=ExtResource( 6 )]
 material = SubResource( 1 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="Dog" parent="AnimalList" instance=ExtResource( 6 )]
@@ -152,7 +152,6 @@ playing = true
 material = SubResource( 8 )
 position = Vector2( 14, 69 )
 animation = "frogShadow"
-frame = 1
 playing = true
 
 [node name="Bird" parent="AnimalList" instance=ExtResource( 6 )]
@@ -165,7 +164,6 @@ playing = true
 material = SubResource( 10 )
 position = Vector2( 46, 69 )
 animation = "axolotlShadow"
-frame = 1
 playing = true
 
 [node name="Dragon" parent="AnimalList" instance=ExtResource( 6 )]
