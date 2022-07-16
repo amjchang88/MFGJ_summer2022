@@ -24,13 +24,13 @@ shader = ExtResource( 7 )
 shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
 shader_param/opacity = 0.0
 
-[sub_resource type="ShaderMaterial" id=4]
+[sub_resource type="ShaderMaterial" id=5]
 resource_local_to_scene = true
 shader = ExtResource( 7 )
 shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
 shader_param/opacity = 0.0
 
-[sub_resource type="ShaderMaterial" id=5]
+[sub_resource type="ShaderMaterial" id=4]
 resource_local_to_scene = true
 shader = ExtResource( 7 )
 shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
@@ -115,7 +115,7 @@ text = "TREATMENTS"
 
 [node name="Cat" parent="AnimalList" instance=ExtResource( 6 )]
 material = SubResource( 1 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="Dog" parent="AnimalList" instance=ExtResource( 6 )]
@@ -132,17 +132,17 @@ animation = "fishShadow"
 frame = 1
 playing = true
 
-[node name="Rabbit" parent="AnimalList" instance=ExtResource( 6 )]
-material = SubResource( 4 )
-position = Vector2( 78, 52 )
-animation = "rabbitShadow"
-frame = 1
-playing = true
-
 [node name="Duck" parent="AnimalList" instance=ExtResource( 6 )]
 material = SubResource( 5 )
 position = Vector2( 62, 52 )
 animation = "duckShadow"
+frame = 1
+playing = true
+
+[node name="Rabbit" parent="AnimalList" instance=ExtResource( 6 )]
+material = SubResource( 4 )
+position = Vector2( 78, 52 )
+animation = "rabbitShadow"
 frame = 1
 playing = true
 
@@ -157,6 +157,7 @@ playing = true
 material = SubResource( 8 )
 position = Vector2( 14, 69 )
 animation = "frogShadow"
+frame = 1
 playing = true
 
 [node name="Bird" parent="AnimalList" instance=ExtResource( 6 )]
@@ -191,4 +192,13 @@ position = Vector2( 95, 14 )
 shape = SubResource( 7 )
 
 [connection signal="clicked" from="AnimalList/Cat" to="." method="_on_Cat_clicked"]
+[connection signal="clicked" from="AnimalList/Dog" to="." method="_on_Dog_clicked"]
+[connection signal="clicked" from="AnimalList/Fish" to="." method="_on_Fish_clicked"]
+[connection signal="clicked" from="AnimalList/Duck" to="." method="_on_Duck_clicked"]
+[connection signal="clicked" from="AnimalList/Rabbit" to="." method="_on_Rabbit_clicked"]
+[connection signal="clicked" from="AnimalList/Rat" to="." method="_on_Rat_clicked"]
+[connection signal="clicked" from="AnimalList/Frog" to="." method="_on_Frog_clicked"]
+[connection signal="clicked" from="AnimalList/Bird" to="." method="_on_Bird_clicked"]
+[connection signal="clicked" from="AnimalList/Axolotl" to="." method="_on_Axolotl_clicked"]
+[connection signal="clicked" from="AnimalList/Dragon" to="." method="_on_Dragon_clicked"]
 [connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]
