@@ -22,7 +22,7 @@ func initialize(p_name, p_variationList, p_nameList, p_rarity):
 	$StarSheet.frame = p_rarity
 	
 	nameList = p_nameList
-	$NameText.text = "Select Variation"
+	$NameText.text = "Select " + p_name
 	for i in 8:
 		if p_variationList[i]:
 			children[i].animation = p_name.to_lower() + str(i)

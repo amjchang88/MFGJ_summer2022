@@ -108,6 +108,7 @@ visible = false
 position = Vector2( 110, 72 )
 frames = ExtResource( 12 )
 
+[connection signal="returned" from="JournalPanel" to="." method="_on_JournalPanel_returned"]
 [connection signal="returned" from="JournalPanel" to="AnimalList/AnimalArray" method="_on_JournalPanel_returned"]
 [connection signal="returned" from="AnimalPanel" to="JournalPanel" method="_on_AnimalPanel_returned"]
 [connection signal="input_event" from="JournalButton" to="." method="_on_JournalButton_input_event"]

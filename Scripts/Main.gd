@@ -11,7 +11,7 @@ onready var time := 1
 onready var day := 1
 onready var season := 0
 
-
+var paused = false
 
 func _ready():
 	randomize()
@@ -19,9 +19,10 @@ func _ready():
 
 func _on_JournalButton_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton:
-		if event.pressed:
-			journalPanel.move_to(2,2)
+		if event.pressed and !paused:
+			journalPanel.move_to(112,2)
 			animalArray.paused = true
+			paused = true
 
 
 func _on_ScreenTransition_animation_finished():
@@ -30,6 +31,10 @@ func _on_ScreenTransition_animation_finished():
 
 func _on_EndButton_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton:
-		if event.pressed:
+		if event.pressed and !paused:
 			$ScreenTransition.visible = true
 			$ScreenTransition.play()
+
+
+func _on_JournalPanel_returned():
+	paused = false

@@ -81,7 +81,7 @@ margin_right = 82.0
 margin_bottom = 42.0
 mouse_filter = 2
 custom_fonts/normal_font = ExtResource( 2 )
-text = "VARIATIONS"
+text = "COLLECTION"
 
 [node name="NameTitle" type="RichTextLabel" parent="."]
 margin_left = 8.0
@@ -90,7 +90,7 @@ margin_right = 82.0
 margin_bottom = 94.0
 mouse_filter = 2
 custom_fonts/normal_font = ExtResource( 2 )
-text = "NAME"
+text = "VARIANT"
 
 [node name="NameText" type="RichTextLabel" parent="."]
 margin_left = 8.0
