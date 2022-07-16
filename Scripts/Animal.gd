@@ -15,6 +15,7 @@ onready var health := .5
 onready var alive := true
 onready var affliction := " "
 onready var symptom := " "
+onready var gender := 0
 
 # Static stats
 onready var xpYield := 0
