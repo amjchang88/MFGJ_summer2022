@@ -78,7 +78,7 @@ centered = false
 [node name="YardList" type="Node2D" parent="."]
 
 [node name="AnimalList" type="Node2D" parent="."]
-position = Vector2( 114, 53 )
+position = Vector2( 114, 54 )
 
 [node name="boxPanel" type="Sprite" parent="AnimalList"]
 material = ExtResource( 8 )
@@ -119,4 +119,5 @@ position = Vector2( 188.5, 30 )
 shape = SubResource( 1 )
 
 [connection signal="returned" from="JournalPanel" to="AnimalList/AnimalArray" method="_on_JournalPanel_returned"]
+[connection signal="returned" from="AnimalPanel" to="JournalPanel" method="_on_AnimalPanel_returned"]
 [connection signal="input_event" from="JournalButton" to="." method="_on_JournalButton_input_event"]
