@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scenes/InfoPanel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Main.gd" type="Script" id=2]
@@ -13,7 +13,10 @@
 [ext_resource path="res://Assets/UI/healthbar.png" type="Texture" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 24.5, 6 )
+extents = Vector2( 24.5, 7 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 8, 3.5 )
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 2 )
@@ -26,44 +29,18 @@ centered = false
 position = Vector2( 0, -1 )
 
 [node name="Day1" type="Sprite" parent="HUD"]
-position = Vector2( 182, 16 )
-texture = ExtResource( 10 )
-centered = false
-hframes = 10
-frame = 8
-
-[node name="Day2" type="Sprite" parent="HUD"]
-position = Vector2( 186, 16 )
-texture = ExtResource( 10 )
-centered = false
-hframes = 10
-
-[node name="Time1" type="Sprite" parent="HUD"]
-position = Vector2( 194, 16 )
-texture = ExtResource( 10 )
-centered = false
-hframes = 10
-
-[node name="Time2" type="Sprite" parent="HUD"]
-position = Vector2( 198, 16 )
+position = Vector2( 187, 16 )
 texture = ExtResource( 10 )
 centered = false
 hframes = 10
 frame = 1
 
-[node name="Time3" type="Sprite" parent="HUD"]
-position = Vector2( 204, 16 )
+[node name="Day2" type="Sprite" parent="HUD"]
+position = Vector2( 191, 16 )
 texture = ExtResource( 10 )
 centered = false
 hframes = 10
-frame = 9
-
-[node name="Time4" type="Sprite" parent="HUD"]
-position = Vector2( 208, 16 )
-texture = ExtResource( 10 )
-centered = false
-hframes = 10
-frame = 9
+frame = 1
 
 [node name="Season" type="Sprite" parent="HUD"]
 position = Vector2( 142, 15 )
@@ -118,6 +95,12 @@ targetY = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="JournalButton"]
 position = Vector2( 188.5, 30 )
 shape = SubResource( 1 )
+
+[node name="EndButton" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EndButton"]
+position = Vector2( 205, 17.5 )
+shape = SubResource( 2 )
 
 [connection signal="returned" from="JournalPanel" to="AnimalList/AnimalArray" method="_on_JournalPanel_returned"]
 [connection signal="returned" from="AnimalPanel" to="JournalPanel" method="_on_AnimalPanel_returned"]

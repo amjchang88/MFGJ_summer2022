@@ -1,13 +1,15 @@
 extends Node2D
 
 onready var journalPanel = get_node("JournalPanel")
-onready var hud = get_node("HUD")
 onready var animalArray = get_node("AnimalList").get_node("AnimalArray")
-
+onready var time1 = get_node("HUD").get_node("Time1")
+onready var time2 = get_node("HUD").get_node("Time2")
+onready var time3 = get_node("HUD").get_node("Time3")
 # Player variables
 onready var reputation := 0 # reputation ~= xp
 onready var time := 1
-onready var season := 1
+onready var day := 1
+onready var season := 0
 
 
 
