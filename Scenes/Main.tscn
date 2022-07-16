@@ -17,7 +17,7 @@
 extents = Vector2( 24.5, 7 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 8, 3.5 )
+extents = Vector2( 24, 7 )
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 2 )
@@ -94,13 +94,13 @@ targetY = 2
 [node name="JournalButton" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="JournalButton"]
-position = Vector2( 188.5, 30 )
+position = Vector2( 139.5, 30 )
 shape = SubResource( 1 )
 
 [node name="EndButton" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EndButton"]
-position = Vector2( 205, 17.5 )
+position = Vector2( 189, 30 )
 shape = SubResource( 2 )
 
 [node name="ScreenTransition" type="AnimatedSprite" parent="."]
