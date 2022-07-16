@@ -78,13 +78,13 @@ func _init():
 	birdClass.rarity = 3
 	birdClass.weightLow = 0.1
 	birdClass.weightHigh = 1
-	birdClass.nameList = [""]
+	birdClass.nameList = ["Red Canary", "Yellow Canary", "Gray Cockatiel", "White Cockatiel", "Green Lovebird", "Rainbow Lovebird", "Blue Parakeet", "Green Parakeet"]
 	
 	axolotlClass.name = "AXOLOTL"
 	axolotlClass.rarity = 3
 	axolotlClass.weightLow = 0.1
 	axolotlClass.weightHigh = 1
-	axolotlClass.nameList = ["Red Canary", "Yellow Canary", ""]
+	axolotlClass.nameList = []
 	
 	dragonClass.name = "DRAGON"
 	dragonClass.rarity = 4
