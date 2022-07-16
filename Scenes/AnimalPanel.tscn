@@ -78,6 +78,7 @@ margin_left = 8.0
 margin_top = 29.0
 margin_right = 82.0
 margin_bottom = 42.0
+mouse_filter = 2
 custom_fonts/normal_font = ExtResource( 2 )
 text = "VARIATIONS"
 
@@ -86,6 +87,7 @@ margin_left = 8.0
 margin_top = 81.0
 margin_right = 82.0
 margin_bottom = 94.0
+mouse_filter = 1
 custom_fonts/normal_font = ExtResource( 2 )
 text = "NAME"
 
@@ -95,7 +97,6 @@ margin_top = 99.0
 margin_right = 103.0
 margin_bottom = 112.0
 custom_fonts/normal_font = ExtResource( 2 )
-text = "Unknown"
 
 [node name="Rarity" type="RichTextLabel" parent="."]
 margin_left = 8.0
@@ -107,38 +108,38 @@ text = "RARITY"
 
 [node name="AnimalList" type="Node2D" parent="."]
 
-[node name="Cat" parent="AnimalList" instance=ExtResource( 6 )]
+[node name="1" parent="AnimalList" instance=ExtResource( 6 )]
 material = SubResource( 1 )
 animation = "cat1"
 
-[node name="Dog" parent="AnimalList" instance=ExtResource( 6 )]
+[node name="2" parent="AnimalList" instance=ExtResource( 6 )]
 material = SubResource( 2 )
 position = Vector2( 30, 52 )
 animation = "cat2"
 
-[node name="Fish" parent="AnimalList" instance=ExtResource( 6 )]
+[node name="3" parent="AnimalList" instance=ExtResource( 6 )]
 material = SubResource( 3 )
 position = Vector2( 46, 52 )
 
-[node name="Rabbit" parent="AnimalList" instance=ExtResource( 6 )]
+[node name="4" parent="AnimalList" instance=ExtResource( 6 )]
 material = SubResource( 4 )
 position = Vector2( 62, 52 )
 
-[node name="Duck" parent="AnimalList" instance=ExtResource( 6 )]
+[node name="5" parent="AnimalList" instance=ExtResource( 6 )]
 material = SubResource( 5 )
 position = Vector2( 78, 52 )
 animation = "cat5"
 
-[node name="JournalIcon5" parent="AnimalList" instance=ExtResource( 6 )]
+[node name="6" parent="AnimalList" instance=ExtResource( 6 )]
 material = SubResource( 6 )
 position = Vector2( 94, 52 )
 animation = "cat6"
 
-[node name="JournalIcon" parent="AnimalList" instance=ExtResource( 6 )]
+[node name="7" parent="AnimalList" instance=ExtResource( 6 )]
 material = SubResource( 7 )
 position = Vector2( 14, 68 )
 
-[node name="JournalIcon2" parent="AnimalList" instance=ExtResource( 6 )]
+[node name="8" parent="AnimalList" instance=ExtResource( 6 )]
 material = SubResource( 8 )
 position = Vector2( 30, 68 )
 
@@ -155,4 +156,12 @@ centered = false
 hframes = 5
 frame = 4
 
+[connection signal="clicked" from="AnimalList/1" to="." method="_on_1_clicked"]
+[connection signal="clicked" from="AnimalList/2" to="." method="_on_2_clicked"]
+[connection signal="clicked" from="AnimalList/3" to="." method="_on_3_clicked"]
+[connection signal="clicked" from="AnimalList/4" to="." method="_on_4_clicked"]
+[connection signal="clicked" from="AnimalList/5" to="." method="_on_5_clicked"]
+[connection signal="clicked" from="AnimalList/6" to="." method="_on_6_clicked"]
+[connection signal="clicked" from="AnimalList/7" to="." method="_on_7_clicked"]
+[connection signal="clicked" from="AnimalList/8" to="." method="_on_8_clicked"]
 [connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]

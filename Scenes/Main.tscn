@@ -23,6 +23,7 @@ texture = ExtResource( 4 )
 centered = false
 
 [node name="HUD" type="Node2D" parent="."]
+position = Vector2( 0, -1 )
 
 [node name="Day1" type="Sprite" parent="HUD"]
 position = Vector2( 182, 16 )
