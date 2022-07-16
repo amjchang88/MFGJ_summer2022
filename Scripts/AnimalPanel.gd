@@ -18,7 +18,7 @@ func _on_Area2D_input_event(_viewport, event, _shape_idx):
 
 func initialize(p_name, p_variationList, p_nameList, p_rarity):
 	variationList = p_variationList
-	$JournalTitle.bbcode_text = "[center]" + p_name + "[/center]"
+	$JournalTitle.bbcode_text = "[center]" + p_name.to_upper() + "[/center]"
 	$StarSheet.frame = p_rarity
 	
 	nameList = p_nameList

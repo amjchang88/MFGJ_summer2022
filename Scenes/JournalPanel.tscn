@@ -115,37 +115,41 @@ text = "TREATMENTS"
 
 [node name="Cat" parent="AnimalList" instance=ExtResource( 6 )]
 material = SubResource( 1 )
-frame = 2
 playing = true
 
 [node name="Dog" parent="AnimalList" instance=ExtResource( 6 )]
 material = SubResource( 2 )
 position = Vector2( 30, 52 )
 animation = "dogShadow"
+frame = 1
 playing = true
 
 [node name="Fish" parent="AnimalList" instance=ExtResource( 6 )]
 material = SubResource( 3 )
 position = Vector2( 46, 52 )
 animation = "fishShadow"
+frame = 1
 playing = true
 
 [node name="Duck" parent="AnimalList" instance=ExtResource( 6 )]
 material = SubResource( 5 )
 position = Vector2( 62, 52 )
 animation = "duckShadow"
+frame = 1
 playing = true
 
 [node name="Rabbit" parent="AnimalList" instance=ExtResource( 6 )]
 material = SubResource( 4 )
 position = Vector2( 78, 52 )
 animation = "rabbitShadow"
+frame = 1
 playing = true
 
 [node name="Rat" parent="AnimalList" instance=ExtResource( 6 )]
 material = SubResource( 6 )
 position = Vector2( 94, 52 )
 animation = "ratShadow"
+frame = 1
 playing = true
 
 [node name="Frog" parent="AnimalList" instance=ExtResource( 6 )]
@@ -159,6 +163,7 @@ playing = true
 material = SubResource( 9 )
 position = Vector2( 30, 69 )
 animation = "birdShadow"
+frame = 1
 playing = true
 
 [node name="Axolotl" parent="AnimalList" instance=ExtResource( 6 )]
@@ -172,6 +177,7 @@ playing = true
 material = SubResource( 11 )
 position = Vector2( 62, 69 )
 animation = "dragonShadow"
+frame = 1
 playing = true
 
 [node name="AfflictionList" type="Node2D" parent="."]

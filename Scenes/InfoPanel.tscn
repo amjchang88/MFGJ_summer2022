@@ -45,7 +45,7 @@ custom_constants/shadow_offset_y = 1
 custom_fonts/normal_font = ExtResource( 3 )
 text = "Dog"
 
-[node name="Mood" type="RichTextLabel" parent="."]
+[node name="Weight" type="RichTextLabel" parent="."]
 margin_left = 8.0
 margin_top = 41.0
 margin_right = 105.0
@@ -55,7 +55,7 @@ custom_constants/shadow_offset_y = 1
 custom_fonts/normal_font = ExtResource( 3 )
 text = "WEIGHT"
 
-[node name="MoodText" type="RichTextLabel" parent="."]
+[node name="WeightText" type="RichTextLabel" parent="."]
 margin_left = 8.0
 margin_top = 57.0
 margin_right = 105.0
@@ -121,7 +121,6 @@ texture = ExtResource( 5 )
 position = Vector2( 80, 41 )
 frames = ExtResource( 4 )
 animation = "cat2"
-frame = 1
 playing = true
 
 [node name="StarSheet" type="Sprite" parent="."]

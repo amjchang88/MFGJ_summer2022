@@ -15,20 +15,25 @@ onready var health := .5
 onready var alive := true
 onready var affliction := " "
 onready var symptom := " "
+onready var gender := 0
 
 # Static stats
-onready var xpYield := 0
+onready var rarity := 0
 onready var weight := 0
 onready var height := 0
+onready var animalName : String
+onready var nickname : String
+onready var variation := 0
 
 
-func initialize(p_animation, p_xpYield, p_affliction, p_health, p_weight):
-	$AnimatedSprite.animation = p_animation
+func initialize(p_animalName, p_variation, p_rarity, p_affliction, p_health, p_weight):
+	variation = p_variation
 	affliction = p_affliction
-	xpYield = p_xpYield
+	rarity = p_rarity
 	health = p_health
 	weight = p_weight
-	
+	animalName = p_animalName
+	$AnimatedSprite.animation = animalName.to_lower() + str(variation)
 	
 func _ready():
 	randomize()
@@ -53,6 +58,7 @@ func _on_AnimalArea2D_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton:
 		if event.pressed and !parent.paused:
 			infoPanel.move_to(2, 2)
+			infoPanel.set_values(animalName, nickname, weight, symptom, affliction, gender, rarity)
 
 
 func _on_AnimalArea2D_mouse_entered():

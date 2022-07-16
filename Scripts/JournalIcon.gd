@@ -2,6 +2,10 @@ extends AnimatedSprite
 
 signal clicked
 
+func _ready():
+	randomize()
+	speed_scale = rand_range(0.5, 1.5)
+
 func _on_CatArea_mouse_entered():
 	get_material().set_shader_param("opacity", 1)
 
