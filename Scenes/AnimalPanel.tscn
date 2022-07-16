@@ -68,6 +68,7 @@ margin_left = 9.0
 margin_top = 9.0
 margin_right = 83.0
 margin_bottom = 22.0
+mouse_filter = 2
 custom_fonts/normal_font = ExtResource( 2 )
 bbcode_enabled = true
 bbcode_text = "[center]DOG[/center]"
@@ -87,7 +88,7 @@ margin_left = 8.0
 margin_top = 81.0
 margin_right = 82.0
 margin_bottom = 94.0
-mouse_filter = 1
+mouse_filter = 2
 custom_fonts/normal_font = ExtResource( 2 )
 text = "NAME"
 
@@ -96,6 +97,7 @@ margin_left = 8.0
 margin_top = 99.0
 margin_right = 103.0
 margin_bottom = 112.0
+mouse_filter = 2
 custom_fonts/normal_font = ExtResource( 2 )
 
 [node name="Rarity" type="RichTextLabel" parent="."]
@@ -103,6 +105,7 @@ margin_left = 8.0
 margin_top = 118.0
 margin_right = 103.0
 margin_bottom = 131.0
+mouse_filter = 2
 custom_fonts/normal_font = ExtResource( 2 )
 text = "RARITY"
 
