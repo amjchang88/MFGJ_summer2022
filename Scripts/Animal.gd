@@ -26,13 +26,14 @@ onready var nickname : String
 onready var variation := 0
 
 
-func initialize(p_animalName, p_variation, p_rarity, p_affliction, p_health, p_weight):
+func initialize(p_animalName, p_nickname, p_variation, p_rarity, p_affliction, p_health, p_weight):
 	variation = p_variation
 	affliction = p_affliction
 	rarity = p_rarity
 	health = p_health
 	weight = p_weight
 	animalName = p_animalName
+	nickname = p_nickname
 	$AnimatedSprite.animation = animalName.to_lower() + str(variation)
 	
 func _ready():

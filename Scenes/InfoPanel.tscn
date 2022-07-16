@@ -121,7 +121,6 @@ texture = ExtResource( 5 )
 position = Vector2( 80, 41 )
 frames = ExtResource( 4 )
 animation = "cat2"
-frame = 1
 playing = true
 
 [node name="StarSheet" type="Sprite" parent="."]

@@ -88,28 +88,31 @@ position = Vector2( 0, -1 )
 script = ExtResource( 15 )
 
 [node name="Week1" type="Sprite" parent="NewAnimal/HUD2"]
-position = Vector2( 190, 28 )
+position = Vector2( 190, 26 )
 texture = ExtResource( 10 )
 centered = false
 hframes = 10
 
 [node name="Week2" type="Sprite" parent="NewAnimal/HUD2"]
-position = Vector2( 194, 28 )
+position = Vector2( 194, 26 )
 texture = ExtResource( 10 )
 centered = false
 hframes = 10
 frame = 1
 
 [node name="Season" type="Sprite" parent="NewAnimal/HUD2"]
-position = Vector2( 144, 27 )
+position = Vector2( 144, 25 )
 texture = ExtResource( 14 )
 centered = false
 vframes = 4
 
-[node name="Healthbar" type="Sprite" parent="NewAnimal/HUD2"]
-position = Vector2( 32, 29 )
-texture = ExtResource( 11 )
-centered = false
+[node name="TextureProgress" type="TextureProgress" parent="NewAnimal/HUD2"]
+margin_left = 32.0
+margin_top = 27.0
+margin_right = 113.0
+margin_bottom = 30.0
+max_value = 1000.0
+texture_progress = ExtResource( 11 )
 
 [node name="ScreenTransition" type="AnimatedSprite" parent="."]
 visible = false
@@ -117,6 +120,7 @@ position = Vector2( 110, 72 )
 frames = ExtResource( 12 )
 animation = "start"
 
+[connection signal="toNewAnimal" from="." to="NewAnimal" method="_on_Main_toNewAnimal"]
 [connection signal="returned" from="JournalPanel" to="." method="_on_JournalPanel_returned"]
 [connection signal="returned" from="JournalPanel" to="AnimalList/AnimalArray" method="_on_JournalPanel_returned"]
 [connection signal="returned" from="AnimalPanel" to="JournalPanel" method="_on_AnimalPanel_returned"]

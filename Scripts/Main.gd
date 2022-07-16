@@ -13,6 +13,8 @@ onready var season := 0
 
 var paused = false
 
+signal toNewAnimal
+
 func _ready():
 	randomize()
 
@@ -28,14 +30,18 @@ func _on_JournalButton_input_event(_viewport, event, _shape_idx):
 
 func _on_ScreenTransition_animation_finished():
 	if $ScreenTransition.animation == "end":
+		# transition ended, reset transition animation
 		$ScreenTransition.visible = false
 		#$NewAnimal.visible = false
 		$ScreenTransition.animation = "start"
 		$ScreenTransition.stop()
 	else:
+		# mid transition (screen is black)
+		# switch to newAnimal scene
 		$ScreenTransition.animation = "end"
 		$ScreenTransition.play()
 		$NewAnimal.visible = true
+		emit_signal("toNewAnimal")
 
 
 func _on_EndButton_input_event(_viewport, event, _shape_idx):
