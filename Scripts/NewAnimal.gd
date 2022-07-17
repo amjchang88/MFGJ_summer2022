@@ -7,13 +7,18 @@ onready var mainAnimalArray = get_tree().get_root().get_node("Main").get_node("A
 var mode := 0
 var animalArray 
 var rng = RandomNumberGenerator.new()
+var choices = []
+var newAnimal
+var newAnimalNode
+var paused 
 
 signal finished
+signal returnMain
 
 func _on_Main_toNewAnimal():
 	rng.randomize()
 	$New.visible = false
-	$RichTextLabel.text = "Recoveries:"
+	$RichTextLabel.text = "Healed:"
 	$RichTextLabel2.visible = true
 	$RichTextLabel3.text = "Reputation:"
 	$DeathList.visible = false
@@ -50,6 +55,7 @@ func read_animals():
 		$RichTextLabel2.text = Animal.nickname + ": +" + str(xp)
 		global.reputation += xp
 	emit_signal("finished")
+	mode += 1
 
 func read_dead_animals():
 	for Animal in animalArray:
@@ -63,7 +69,7 @@ func read_dead_animals():
 func _on_Area2D_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton:
 		if event.pressed:
-			mode += 1
+
 			
 			match mode:
 				1:
@@ -79,7 +85,11 @@ func _on_Area2D_input_event(_viewport, event, _shape_idx):
 					$RichTextLabel.text = "Deaths:"
 
 					read_dead_animals()
+					mode += 1
+					if mainAnimalArray.animalArray.size() > 30:
+						mode = 6
 				2:
+					next_week()
 					$DeathList.free_animals()
 					$DeathList.visible = false
 					$RichTextLabel2.visible = false
@@ -88,8 +98,20 @@ func _on_Area2D_input_event(_viewport, event, _shape_idx):
 					$New.visible = true
 					$NewAnimalPanel.frame = 0
 					$Area2D.visible = false
-				3:
+					
+					random_animal()
+					mode += 1
+				3, 4:
+					$NewAnimalPanel.frame = 0
+					$Area2D.visible = false
+					$New/LineEdit.text = ""
+					random_animal()
+					mode += 1
+				_:
 					visible = false
+					$RichTextLabel2.text = ""
+					mode = 0
+					emit_signal("returnMain")
 
 
 func _on_NewAnimal_finished():
@@ -99,10 +121,31 @@ func _on_NewAnimal_finished():
 func random_animal():
 	randomize()
 	if global.reputation < 500:
-		var choices = ["cat", "dog", "fish", "rabbit", "duck"]
+		#choices = ["cat", "dog", "fish", "rabbit", "duck"]
+		choices = ["cat"]
 	else:
-		var choices = ["cat", "dog", "fish", "rabbit", "duck", "rat", "frog", "bird", "axolotl", "dragon"]
-	var newAnimal = animal.instance()
-	add_child_below_node(get_node("New"), newAnimal)
+		#choices = ["cat", "dog", "fish", "rabbit", "duck", "rat", "frog", "bird", "axolotl", "dragon"]
+		choices = ["cat"]
+	newAnimal = animal.instance()
+	mainAnimalArray.add_child(newAnimal)
+	var p_animalName = choices[randi() % choices.size()]
+	var p_variation = rng.randi_range(1, 8)
+	var p_rarity = global.get(p_animalName + "Class").rarity
+	var p_symptom = global.get(p_animalName + "Class").symptomList[randi() % global.get(p_animalName + "Class").symptomList.size()]
+	var p_ttk = global.symptomDict[p_symptom].ttk
+	var p_weight = rand_range(global.get(p_animalName + "Class").weightLow, global.get(p_animalName + "Class").weightHigh)
+	newAnimal.initialize(p_animalName, p_variation, p_rarity, p_symptom, p_ttk, p_weight)
+	newAnimal.position = $New.position
 	
+
+
+func _on_LineEdit_text_entered(new_text):
+	if new_text:
+		print('*****')
+		newAnimal.nickname = new_text
+		#remove_child(get_node("Animal"))
+		mainAnimalArray.add_child(newAnimal)
+		newAnimal.set_owner(mainAnimalArray)
+		mainAnimalArray.place_animals()
+		emit_signal("finished")
 	

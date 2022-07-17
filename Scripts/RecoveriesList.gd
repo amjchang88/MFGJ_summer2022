@@ -22,4 +22,4 @@ func free_animals():
 	animalArray = get_children()
 	
 	for Animal in animalArray:
-		queue_free()
+		Animal.queue_free()

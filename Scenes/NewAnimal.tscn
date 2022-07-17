@@ -109,3 +109,4 @@ placeholder_text = "Nickname"
 
 [connection signal="finished" from="." to="." method="_on_NewAnimal_finished"]
 [connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]
+[connection signal="text_entered" from="New/LineEdit" to="." method="_on_LineEdit_text_entered"]

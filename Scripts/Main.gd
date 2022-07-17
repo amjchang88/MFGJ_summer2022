@@ -25,7 +25,6 @@ func _on_JournalButton_input_event(_viewport, event, _shape_idx):
 			journalPanel.move_to(112,2)
 			animalArray.paused = true
 			paused = true
-			$HUD.visible = false
 
 
 func _on_ScreenTransition_animation_finished():
@@ -38,6 +37,8 @@ func _on_ScreenTransition_animation_finished():
 	else:
 		# mid transition (screen is black)
 		# switch to newAnimal scene
+		paused = true
+		$AnimalList/AnimalArray.paused = true
 		$ScreenTransition.animation = "end"
 		$ScreenTransition.play()
 		$NewAnimal.visible = true
@@ -55,3 +56,8 @@ func _on_EndButton_input_event(_viewport, event, _shape_idx):
 func _on_JournalPanel_returned():
 	paused = false
 	$HUD.visible = true
+
+
+func _on_NewAnimal_returnMain():
+	$AnimalList/AnimalArray.paused = false
+	paused = false

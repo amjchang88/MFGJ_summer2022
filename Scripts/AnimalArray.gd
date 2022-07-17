@@ -10,12 +10,11 @@ var animalY := 0
 var animalCount := 0
 
 func _ready():
-	for _i in range(30):
-		add_child(animalInstance.instance(), true)
 		
 	place_animals()
 
 func place_animals():
+	animalCount = 0
 	animalArray = get_children()
 
 	for Animal in animalArray:

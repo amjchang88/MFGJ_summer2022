@@ -26,11 +26,11 @@ onready var nickname : String = "Jeff"
 onready var variation := 0
 
 
-func initialize(p_animalName, p_variation, p_rarity, p_affliction, p_health, p_weight):
+func initialize(p_animalName, p_variation, p_rarity, p_symptom, p_ttk, p_weight):
 	variation = p_variation
-	affliction = p_affliction
+	symptom = p_symptom
 	rarity = p_rarity
-	health = p_health
+	health = p_ttk
 	weight = p_weight
 	animalName = p_animalName
 	$AnimatedSprite.animation = animalName.to_lower() + str(variation)
@@ -56,7 +56,7 @@ func _ready():
 
 func _on_AnimalArea2D_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton:
-		if event.pressed and !parent.paused:
+		if event.pressed and !parent.paused and alive:
 			infoPanel.move_to(2, 2)
 			infoPanel.set_values(animalName, nickname, weight, symptom, affliction, gender, rarity)
 

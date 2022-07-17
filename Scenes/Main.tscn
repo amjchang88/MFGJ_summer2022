@@ -48,10 +48,10 @@ scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 3 )
 
 [node name="InfoPanel" parent="." instance=ExtResource( 1 )]
-position = Vector2( -110, 2 )
-defaultX = -110
+position = Vector2( 2, 2 )
+defaultX = 2
 defaultY = 2
-targetX = -110
+targetX = 2
 targetY = 2
 
 [node name="JournalPanel" parent="." instance=ExtResource( 6 )]
@@ -126,4 +126,5 @@ animation = "start"
 [connection signal="returned" from="AnimalPanel" to="JournalPanel" method="_on_AnimalPanel_returned"]
 [connection signal="input_event" from="JournalButton" to="." method="_on_JournalButton_input_event"]
 [connection signal="input_event" from="EndButton" to="." method="_on_EndButton_input_event"]
+[connection signal="returnMain" from="NewAnimal" to="." method="_on_NewAnimal_returnMain"]
 [connection signal="animation_finished" from="ScreenTransition" to="." method="_on_ScreenTransition_animation_finished"]
