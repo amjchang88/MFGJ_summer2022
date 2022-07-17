@@ -28,6 +28,28 @@ var bleeding
 var swelling
 var lethargy
 
+var eyeCrusts 
+var damagedFeathers
+var sneezing
+var beakLesions
+
+var frayedFins
+var weightLoss
+var gasping
+
+var drySkin
+var dullSkin
+var cloudyEyes
+
+var bloating
+var fuzzyGills
+var floating
+
+var discoloredScales
+var coughing
+var irritability
+var dryClaws
+
 var catClass
 var dogClass
 var fishClass
@@ -70,12 +92,104 @@ func _init():
 	limping.treatmentName = "Cast"
 	
 	bleeding = SymptomClass.new()
+	bleeding.ttk = 1 
+	bleeding.afflictionName = "Cuts"
+	bleeding.treatmentName = "Bandages"
 	
 	swelling = SymptomClass.new()
+	swelling.ttk = 2
+	swelling.afflictionName = "Arthritis"
+	swelling.treatmentName = "Anti-inflammatory"
 	
 	lethargy = SymptomClass.new()
+	lethargy.ttk = 3
+	lethargy.afflictionName = "Autoimmune disease"
+	lethargy.treatmentName = "Vitamin treatment"
 	
+	eyeCrusts = SymptomClass.new()
+	eyeCrusts.ttk = 1
+	eyeCrusts.afflictionName = "Conjunctivitis"
+	eyeCrusts.treatmentName = "Eye drops"
 	
+	damagedFeathers = SymptomClass.new()
+	damagedFeathers.ttk = 1
+	damagedFeathers.afflictionName = "Mites"
+	damagedFeathers.treatmentName = "Med bath"
+	
+	sneezing = SymptomClass.new()
+	sneezing.ttk = 2
+	sneezing.afflictionName = "Respiratory infection"
+	sneezing.treatmentName = "Antibiotics"
+	
+	beakLesions = SymptomClass.new()
+	beakLesions.ttk = 2
+	beakLesions.afflictionName = "Fungal infection"
+	beakLesions.treatmentName = "Antifungal"
+	
+	frayedFins = SymptomClass.new()
+	frayedFins.ttk = 3
+	frayedFins.afflictionName = "Fin rot"
+	frayedFins.treatmentName = "Antibiotics"
+	
+	weightLoss = SymptomClass.new()
+	weightLoss.ttk = 2 
+	weightLoss.afflictionName = "Parasites"
+	weightLoss.treatmentName = "Parasite treatment"
+	
+	gasping = SymptomClass.new()
+	gasping.ttk = 1
+	gasping.afflictionName = "Ammonia buildup"
+	gasping.treatmentName = "Tank filter"
+	
+	drySkin = SymptomClass.new()
+	drySkin.ttk = 2
+	drySkin.afflictionName = "Dehydration"
+	drySkin.treatmentName = "Mineral bath"
+	
+	dullSkin = SymptomClass.new()
+	dullSkin.ttk = 3
+	dullSkin.afflictionName = "Skin infection"
+	dullSkin.treatmentName = "Antibiotics"
+	
+	cloudyEyes = SymptomClass.new()
+	cloudyEyes.ttk = 2
+	cloudyEyes.afflictionName = "Eye irritation"
+	cloudyEyes.treatmentName = "Eye cream"
+	
+	bloating = SymptomClass.new()
+	bloating.ttk = 2
+	bloating.afflictionName = "Thyroid disorder"
+	bloating.treatmentName = "Thyroid meds"
+	
+	fuzzyGills = SymptomClass.new()
+	fuzzyGills.ttk = 2
+	fuzzyGills.afflictionName = "Amphibian fungus"
+	fuzzyGills.treatmentName = "Antifungal"
+	
+	floating = SymptomClass.new()
+	floating.ttk = 3
+	floating.afflictionName = "Constipation"
+	floating.treatmentName = "Refrigeration"
+	
+	discoloredScales = SymptomClass.new()
+	discoloredScales.ttk = 2
+	discoloredScales.afflictionName = "Dragon scale rot"
+	discoloredScales.treatmentName = "Antibiotics"
+	
+	coughing = SymptomClass.new()
+	coughing.ttk = 1
+	coughing.afflictionName = "Dragon flu"
+	coughing.treatmentName = "Flu meds"
+	
+	irritability = SymptomClass.new()
+	irritability.ttk = 3 
+	irritability.afflictionName = "Mad dragon disease"
+	irritability.treatmentName = "Teddy bear"
+	
+	dryClaws = SymptomClass.new()
+	dryClaws.ttk = 1
+	dryClaws.afflictionName = "Dragonitis"
+	dryClaws.treatmentName = "Claw cream"
 
 	
 	catClass = AnimalClass.new()
@@ -153,4 +267,4 @@ func _init():
 	dragonClass.weightHigh = 15
 	dragonClass.nameList = ["Air", "Earth", "Fire", "Frost", "Light", "Shadow", "Soul", "Water"]
 
-	symptomDict = {"Fever" : fever, "Rashes" : rashes, "Itching" : itching, "Vomiting" : vomiting, "Limping" : limping}
+	symptomDict = {"Fever" : fever, "Rashes" : rashes, "Itching" : itching, "Vomiting" : vomiting, "Limping" : limping, "Bleeding" : bleeding, "Swelling" : swelling, "Lethargy" : lethargy, "Eye crusts" : eyeCrusts, "Damaged feathers" : damagedFeathers, "Sneezing" : sneezing, "Beak lesions" : beakLesions, "Frayed fins" : frayedFins, "Weight loss" : weightLoss, "Gasping" : gasping, "Dry skin" : drySkin, "Dull skin" : dullSkin, "Cloudy eyes" : cloudyEyes, "Bloating" : bloating, "Fuzzy gills" : fuzzyGills, "Floating" : floating, "Discolored scales" : discoloredScales, "Coughing" : coughing, "Irritability" : irritability, "Dry claws" : dryClaws}
