@@ -17,3 +17,9 @@ func place_animals():
 		Animal.position = Vector2(animalX, animalY)
 		
 		animalCount += 1
+
+func free_animals():
+	animalArray = get_children()
+	
+	for Animal in animalArray:
+		queue_free()

@@ -4,8 +4,11 @@
 [ext_resource path="res://Assets/UI/hgssFont.tres" type="BitmapFont" id=2]
 [ext_resource path="res://Assets/UI/lineEditBox.png" type="Texture" id=3]
 [ext_resource path="res://Scripts/NewAnimal.gd" type="Script" id=4]
-[ext_resource path="res://Scripts/DeathList.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/Animal.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scripts/RecoveriesList.gd" type="Script" id=6]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 47.5, 7 )
 
 [sub_resource type="Theme" id=2]
 
@@ -17,9 +20,6 @@ region_rect = Rect2( 0, 0, 98, 20 )
 margin_left = 3.0
 margin_top = 2.0
 
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 47.5, 7 )
-
 [node name="NewAnimal" type="Node2D"]
 script = ExtResource( 4 )
 
@@ -29,19 +29,6 @@ centered = false
 hframes = 2
 frame = 1
 
-[node name="LineEdit" type="LineEdit" parent="."]
-visible = false
-margin_left = 116.0
-margin_top = 44.0
-margin_right = 201.0
-margin_bottom = 62.0
-theme = SubResource( 2 )
-custom_fonts/font = ExtResource( 2 )
-custom_styles/focus = SubResource( 3 )
-custom_styles/normal = SubResource( 1 )
-max_length = 8
-placeholder_text = "Nickname"
-
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 margin_left = 10.0
 margin_top = 38.0
@@ -49,7 +36,7 @@ margin_right = 106.0
 margin_bottom = 65.0
 mouse_filter = 2
 custom_fonts/normal_font = ExtResource( 2 )
-text = "Recoveries:"
+text = "New Animal:"
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="."]
 margin_left = 116.0
@@ -83,12 +70,21 @@ position = Vector2( 10, 49 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 6 )
 
+[node name="Animal" parent="RecoveriesList" instance=ExtResource( 5 )]
+
+[node name="Animal2" parent="RecoveriesList" instance=ExtResource( 5 )]
+
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
 one_shot = true
 
 [node name="DeathList" type="Node2D" parent="."]
-script = ExtResource( 5 )
+visible = false
+position = Vector2( 10, 49 )
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 6 )
+
+[node name="Animal" parent="DeathList" instance=ExtResource( 5 )]
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -96,4 +92,20 @@ script = ExtResource( 5 )
 position = Vector2( 162.5, 121 )
 shape = SubResource( 4 )
 
+[node name="New" type="Node2D" parent="."]
+position = Vector2( 71, 36 )
+
+[node name="LineEdit" type="LineEdit" parent="New"]
+margin_left = 45.0
+margin_top = 16.0
+margin_right = 130.0
+margin_bottom = 34.0
+theme = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 1 )
+max_length = 8
+placeholder_text = "Nickname"
+
+[connection signal="finished" from="." to="." method="_on_NewAnimal_finished"]
 [connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]

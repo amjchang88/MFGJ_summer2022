@@ -21,6 +21,6 @@ func _process(_delta):
 
 func set_bar():
 	if ($TextureProgress.value < global.reputation):
-		$TextureProgress.value += 1
+		$TextureProgress.value += 5
 	if ($TextureProgress.value > global.reputation):
-		$TextureProgress.value += 1
+		$TextureProgress.value -= 5
