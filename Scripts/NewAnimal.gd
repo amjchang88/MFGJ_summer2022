@@ -8,10 +8,18 @@ var mode := 0
 func _on_Main_toNewAnimal():
 
 	$Title.bbcode_text = "[center]Week " + str(global.week) + " Summary[/center]"
+	$Area2D.visible = false
+	$NewAnimalPanel.frame = 0
+	
 	$RecoveriesList.place_animals()
+	
 	timer.start(1)
 	yield(timer, "timeout")
+	
 	read_animals()
+	
+	$NewAnimalPanel.frame = 1
+	$Area2D.visible = true
 	
 func next_week():
 
@@ -32,3 +40,10 @@ func read_animals():
 		print(Animal.rarity)
 		$RichTextLabel2.text = Animal.nickname + ": +" + str(xp)
 		global.reputation += xp
+	
+
+
+func _on_Area2D_input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton:
+		if event.pressed:
+			pass
