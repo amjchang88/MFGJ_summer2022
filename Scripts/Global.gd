@@ -8,6 +8,7 @@ class AnimalClass:
 	var rarity : int
 	var weightLow : float
 	var weightHigh : float
+	var symptomList = []
 
 class SymptomClass:
 	var ttk : int
@@ -93,6 +94,7 @@ func _init():
 	catClass.weightLow = 7
 	catClass.weightHigh = 18
 	catClass.nameList = ["Black Shorthair", "Tuxedo Shorthair", "Coffee Longhair", "Calico Shorthair", "Brown Tabby", "Orange Shorthair", "Chocolate Point", "White Longhair"]
+	catClass.symptomList = ["Fever", "Rashes", "Itching", "Vomiting", "Limping"]
 	
 	dogClass.name = "Dog"
 	dogClass.rarity = 0
@@ -148,4 +150,4 @@ func _init():
 	dragonClass.weightHigh = 15
 	dragonClass.nameList = ["Air", "Earth", "Fire", "Frost", "Light", "Shadow", "Soul", "Water"]
 
-	symptomDict = {"Fever" : fever, }
+	symptomDict = {"Fever" : fever, "Rashes" = rashes, "Itching" : itching, "Vomiting" : vomiting, "Limping" : limping}
