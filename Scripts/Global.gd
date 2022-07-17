@@ -9,6 +9,18 @@ class AnimalClass:
 	var weightLow : float
 	var weightHigh : float
 
+class SymptomClass:
+	var ttk : int
+	var tth : int
+	var afflictionName : String
+	var treatmentName : String
+	var discovered := false
+	
+var symptomDict : Dictionary
+
+var fever
+	
+
 var catClass
 var dogClass
 var fishClass
@@ -25,6 +37,14 @@ var season := 0
 var week := 13
 
 func _init():
+	fever = SymptomClass.new()
+	fever.ttk = 3
+	fever.tth = 2
+	fever.afflictionName = "Flu"
+	fever.treatmentName = "Flu meds"
+	
+
+	
 	catClass = AnimalClass.new()
 	dogClass = AnimalClass.new()
 	fishClass = AnimalClass.new()
@@ -95,3 +115,5 @@ func _init():
 	dragonClass.weightLow = 5
 	dragonClass.weightHigh = 15
 	dragonClass.nameList = ["Air", "Earth", "Fire", "Frost", "Light", "Shadow", "Soul", "Water"]
+
+	symptomDict = {"Fever" : fever, }
