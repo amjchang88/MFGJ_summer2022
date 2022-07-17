@@ -36,4 +36,5 @@ func _on_Main_toNewAnimal():
 	animalArray = get_children()
 	
 	for Animal in animalArray:
-		if Animal.symptom
+		#if Animal.symptom
+		pass
