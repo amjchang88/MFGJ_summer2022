@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/treatmentsAll.png-2ba2e54113119d6106d025fcbf6167bf.stex"
+path="res://.import/treatmentsAll.png-91770fedb95f0f135cba0d1d6db5099b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/treatmentsAll.png"
-dest_files=[ "res://.import/treatmentsAll.png-2ba2e54113119d6106d025fcbf6167bf.stex" ]
+source_file="res://Assets/UI/treatmentsAll.png"
+dest_files=[ "res://.import/treatmentsAll.png-91770fedb95f0f135cba0d1d6db5099b.stex" ]
 
 [params]
 
