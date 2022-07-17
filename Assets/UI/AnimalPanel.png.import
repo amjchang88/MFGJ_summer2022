@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/animalPanel.png-3ada1052333bda42da0b82894bd163d6.stex"
+path="res://.import/AnimalPanel.png-66f4ddcf4f69b72476e6c391a6802f42.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/animalPanel.png"
-dest_files=[ "res://.import/animalPanel.png-3ada1052333bda42da0b82894bd163d6.stex" ]
+source_file="res://Assets/UI/AnimalPanel.png"
+dest_files=[ "res://.import/AnimalPanel.png-66f4ddcf4f69b72476e6c391a6802f42.stex" ]
 
 [params]
 
