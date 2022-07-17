@@ -20,7 +20,7 @@ var birdClass
 var axolotlClass
 var dragonClass
 
-var repuation : float = 10
+var reputation : float = 100
 var season := 0
 var week := 13
 

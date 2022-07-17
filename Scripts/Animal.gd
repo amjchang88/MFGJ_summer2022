@@ -18,11 +18,11 @@ onready var symptom := " "
 onready var gender := 0
 
 # Static stats
-onready var rarity := 0
+onready var rarity := int(rand_range(0, 4.9))
 onready var weight := 0
 onready var height := 0
 onready var animalName : String
-onready var nickname : String
+onready var nickname : String = "Jeff"
 onready var variation := 0
 
 

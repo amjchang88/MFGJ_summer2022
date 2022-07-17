@@ -1,6 +1,7 @@
 extends Node2D
 
 onready var global = get_node("/root/Global")
+onready var value = $TextureProgress.value
 
 func _process(_delta):
 	# set week number
@@ -13,10 +14,13 @@ func _process(_delta):
 		$Week2.frame = global.week
 	
 	# set reputation bar length
-	if $TextureProgress.value < global.reputation:
-		$TextureProgress.value += 1
-	if $TexttureProgress.value > global.reputation:
-		$TextureProgress.value += 1
+	set_bar()
 	
 	# set season
 	$Season.frame = global.season
+
+func set_bar():
+	if ($TextureProgress.value < global.reputation):
+		$TextureProgress.value += 1
+	if ($TextureProgress.value > global.reputation):
+		$TextureProgress.value += 1
