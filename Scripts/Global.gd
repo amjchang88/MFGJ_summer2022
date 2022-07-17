@@ -150,4 +150,4 @@ func _init():
 	dragonClass.weightHigh = 15
 	dragonClass.nameList = ["Air", "Earth", "Fire", "Frost", "Light", "Shadow", "Soul", "Water"]
 
-	symptomDict = {"Fever" : fever, "Rashes" = rashes, "Itching" : itching, "Vomiting" : vomiting, "Limping" : limping}
+	symptomDict = {"Fever" : fever, "Rashes" : rashes, "Itching" : itching, "Vomiting" : vomiting, "Limping" : limping}
