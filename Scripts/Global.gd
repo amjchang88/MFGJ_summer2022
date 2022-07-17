@@ -101,6 +101,7 @@ func _init():
 	dogClass.weightLow = 40
 	dogClass.weightHigh = 85
 	dogClass.nameList = ["Border Collie", "Chocolate Lab", "Rhodesian Ridgeback", "Golden Retriever", "Terrier", "Black Shiba Inu", "Schipperke", "White German Shepherd"]
+	dogClass.symptomList = ["Fever", "Rashes", "Itching", "Vomiting", "Limping"]
 	
 	fishClass.name = "Fish"
 	fishClass.rarity = 1
@@ -119,12 +120,14 @@ func _init():
 	rabbitClass.weightLow = 2
 	rabbitClass.weightHigh = 10
 	rabbitClass.nameList = ["Black", "Dutch", "Brown", "Californian", "Harlequin", "White", "Golden"]
+	rabbitClass.symptomList = ["Fever", "Rashes", "Itching", "Vomiting", "Limping"]
 	
 	ratClass.name = "Rat"
 	ratClass.rarity = 2
 	ratClass.weightLow = 0.5
 	ratClass.weightHigh = 1.5
 	ratClass.nameList = ["Black", "Black Piebald", "Blue", "Gray", "Gray Piebald", "Brown", "Brown Piebald", "Tan Piebald"]
+	ratClass.symptomList = ["Fever", "Rashes", "Itching", "Vomiting", "Limping"]
 	
 	frogClass.name = "Frog"
 	frogClass.rarity = 2
