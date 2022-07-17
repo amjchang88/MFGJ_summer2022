@@ -19,7 +19,13 @@ class SymptomClass:
 var symptomDict : Dictionary
 
 var fever
-	
+var rashes
+var itching
+var vomiting
+var limping
+var bleeding
+var swelling
+var lethargy
 
 var catClass
 var dogClass
@@ -38,10 +44,36 @@ var week := 13
 
 func _init():
 	fever = SymptomClass.new()
-	fever.ttk = 3
-	fever.tth = 2
+	fever.ttk = 2
 	fever.afflictionName = "Flu"
 	fever.treatmentName = "Flu meds"
+	
+	rashes = SymptomClass.new()
+	rashes.ttk = 3
+	rashes.afflictionName = "Mange"
+	rashes.treatmentName = "Mange meds"
+	
+	itching = SymptomClass.new()
+	itching.ttk = 3
+	itching.afflictionName = "Fleas"
+	itching.treatmentName = "Flea meds"
+	
+	vomiting = SymptomClass.new()
+	vomiting.ttk = 2
+	vomiting.afflictionName = "Worms"
+	vomiting.treatmentName = "Dewormer"
+	
+	limping = SymptomClass.new()
+	limping.ttk = 1
+	limping.afflictionName = "Fracture"
+	limping.treatmentName = "Cast"
+	
+	bleeding = SymptomClass.new()
+	
+	swelling = SymptomClass.new()
+	
+	lethargy = SymptomClass.new()
+	
 	
 
 	
