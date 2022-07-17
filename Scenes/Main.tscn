@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Scenes/InfoPanel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Main.gd" type="Script" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Scenes/NewAnimal.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Assets/UI/seasonSheet.png" type="Texture" id=14]
 [ext_resource path="res://Scripts/HUD.gd" type="Script" id=15]
+[ext_resource path="res://Scenes/Animal.tscn" type="PackedScene" id=16]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 24.5, 7 )
@@ -46,6 +47,8 @@ centered = false
 position = Vector2( 2, 2 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 3 )
+
+[node name="Animal" parent="AnimalList/AnimalArray" instance=ExtResource( 16 )]
 
 [node name="InfoPanel" parent="." instance=ExtResource( 1 )]
 position = Vector2( 2, 2 )
