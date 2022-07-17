@@ -30,3 +30,10 @@ func place_animals():
 
 func _on_JournalPanel_returned():
 	paused = false
+
+
+func _on_Main_toNewAnimal():
+	animalArray = get_children()
+	
+	for Animal in animalArray:
+		if Animal.symptom

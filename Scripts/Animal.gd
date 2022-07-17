@@ -16,6 +16,7 @@ onready var alive := true
 onready var affliction := " "
 onready var symptom := " "
 onready var gender := 0
+onready var treatment
 
 # Static stats
 onready var rarity := int(rand_range(0, 4.9))
@@ -26,7 +27,7 @@ onready var nickname : String = "Jeff"
 onready var variation := 0
 
 
-func initialize(p_animalName, p_variation, p_rarity, p_symptom, p_ttk, p_weight):
+func initialize(p_animalName, p_variation, p_rarity, p_symptom, p_ttk, p_weight, p_gender):
 	variation = p_variation
 	symptom = p_symptom
 	rarity = p_rarity
@@ -34,6 +35,7 @@ func initialize(p_animalName, p_variation, p_rarity, p_symptom, p_ttk, p_weight)
 	weight = p_weight
 	animalName = p_animalName
 	$AnimatedSprite.animation = animalName.to_lower() + str(variation)
+	gender = p_gender
 	
 func _ready():
 	randomize()

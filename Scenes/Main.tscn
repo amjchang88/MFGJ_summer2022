@@ -120,6 +120,7 @@ position = Vector2( 110, 72 )
 frames = ExtResource( 12 )
 animation = "start"
 
+[connection signal="toNewAnimal" from="." to="AnimalList/AnimalArray" method="_on_Main_toNewAnimal"]
 [connection signal="toNewAnimal" from="." to="NewAnimal" method="_on_Main_toNewAnimal"]
 [connection signal="returned" from="JournalPanel" to="." method="_on_JournalPanel_returned"]
 [connection signal="returned" from="JournalPanel" to="AnimalList/AnimalArray" method="_on_JournalPanel_returned"]

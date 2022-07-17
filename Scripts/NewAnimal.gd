@@ -112,6 +112,7 @@ func _on_Area2D_input_event(_viewport, event, _shape_idx):
 					$RichTextLabel2.text = ""
 					mode = 0
 					emit_signal("returnMain")
+					$New/LineEdit.text = ""
 
 
 func _on_NewAnimal_finished():
@@ -121,11 +122,11 @@ func _on_NewAnimal_finished():
 func random_animal():
 	randomize()
 	if global.reputation < 500:
-		#choices = ["cat", "dog", "fish", "rabbit", "duck"]
-		choices = ["cat"]
+		choices = ["cat", "dog", "fish", "rabbit", "duck"]
+		#choices = ["cat"]
 	else:
-		#choices = ["cat", "dog", "fish", "rabbit", "duck", "rat", "frog", "bird", "axolotl", "dragon"]
-		choices = ["cat"]
+		choices = ["cat", "dog", "fish", "rabbit", "duck", "rat", "frog", "bird", "axolotl", "dragon"]
+		#choices = ["cat"]
 	newAnimal = animal.instance()
 	mainAnimalArray.add_child(newAnimal)
 	var p_animalName = choices[randi() % choices.size()]
@@ -134,17 +135,17 @@ func random_animal():
 	var p_symptom = global.get(p_animalName + "Class").symptomList[randi() % global.get(p_animalName + "Class").symptomList.size()]
 	var p_ttk = global.symptomDict[p_symptom].ttk
 	var p_weight = rand_range(global.get(p_animalName + "Class").weightLow, global.get(p_animalName + "Class").weightHigh)
-	newAnimal.initialize(p_animalName, p_variation, p_rarity, p_symptom, p_ttk, p_weight)
+	var p_gender = rng.randi_range(0,1)
+	newAnimal.initialize(p_animalName, p_variation, p_rarity, p_symptom, p_ttk, p_weight, p_gender)
 	newAnimal.position = $New.position
 	
 
 
 func _on_LineEdit_text_entered(new_text):
 	if new_text:
-		print('*****')
 		newAnimal.nickname = new_text
 		#remove_child(get_node("Animal"))
-		mainAnimalArray.add_child(newAnimal)
+		#mainAnimalArray.add_child(newAnimal)
 		newAnimal.set_owner(mainAnimalArray)
 		mainAnimalArray.place_animals()
 		emit_signal("finished")

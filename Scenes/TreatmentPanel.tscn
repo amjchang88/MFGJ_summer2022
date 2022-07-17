@@ -1,0 +1,295 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://Scripts/TreatmentPanel.gd" type="Script" id=1]
+[ext_resource path="res://Assets/UI/treatmentPanel.png" type="Texture" id=2]
+[ext_resource path="res://Assets/UI/hgssFont.tres" type="BitmapFont" id=3]
+[ext_resource path="res://Scenes/JournalIcon.tscn" type="PackedScene" id=4]
+[ext_resource path="res://outlineShader.gdshader" type="Shader" id=5]
+[ext_resource path="res://Assets/treatmentSpriteFrames.tres" type="SpriteFrames" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 9 )
+
+[sub_resource type="ShaderMaterial" id=2]
+resource_local_to_scene = true
+shader = ExtResource( 5 )
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
+
+[sub_resource type="ShaderMaterial" id=3]
+resource_local_to_scene = true
+shader = ExtResource( 5 )
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
+
+[sub_resource type="ShaderMaterial" id=4]
+resource_local_to_scene = true
+shader = ExtResource( 5 )
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
+
+[sub_resource type="ShaderMaterial" id=5]
+resource_local_to_scene = true
+shader = ExtResource( 5 )
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
+
+[sub_resource type="ShaderMaterial" id=6]
+resource_local_to_scene = true
+shader = ExtResource( 5 )
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
+
+[sub_resource type="ShaderMaterial" id=7]
+resource_local_to_scene = true
+shader = ExtResource( 5 )
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
+
+[sub_resource type="ShaderMaterial" id=8]
+resource_local_to_scene = true
+shader = ExtResource( 5 )
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
+
+[sub_resource type="ShaderMaterial" id=9]
+resource_local_to_scene = true
+shader = ExtResource( 5 )
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
+
+[sub_resource type="ShaderMaterial" id=10]
+resource_local_to_scene = true
+shader = ExtResource( 5 )
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
+
+[sub_resource type="ShaderMaterial" id=11]
+resource_local_to_scene = true
+shader = ExtResource( 5 )
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
+
+[sub_resource type="ShaderMaterial" id=12]
+resource_local_to_scene = true
+shader = ExtResource( 5 )
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
+
+[sub_resource type="ShaderMaterial" id=13]
+resource_local_to_scene = true
+shader = ExtResource( 5 )
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
+
+[sub_resource type="ShaderMaterial" id=14]
+resource_local_to_scene = true
+shader = ExtResource( 5 )
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
+
+[sub_resource type="ShaderMaterial" id=15]
+resource_local_to_scene = true
+shader = ExtResource( 5 )
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
+
+[sub_resource type="ShaderMaterial" id=16]
+resource_local_to_scene = true
+shader = ExtResource( 5 )
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
+
+[sub_resource type="ShaderMaterial" id=17]
+resource_local_to_scene = true
+shader = ExtResource( 5 )
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
+
+[sub_resource type="ShaderMaterial" id=18]
+resource_local_to_scene = true
+shader = ExtResource( 5 )
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
+
+[sub_resource type="ShaderMaterial" id=19]
+resource_local_to_scene = true
+shader = ExtResource( 5 )
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
+
+[sub_resource type="ShaderMaterial" id=20]
+resource_local_to_scene = true
+shader = ExtResource( 5 )
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
+
+[sub_resource type="ShaderMaterial" id=21]
+resource_local_to_scene = true
+shader = ExtResource( 5 )
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
+
+[node name="TreatmentPanel" type="Sprite"]
+texture = ExtResource( 2 )
+centered = false
+script = ExtResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 95, 14 )
+shape = SubResource( 1 )
+
+[node name="Title" type="RichTextLabel" parent="."]
+margin_left = 8.0
+margin_top = 9.0
+margin_right = 82.0
+margin_bottom = 24.0
+mouse_filter = 2
+custom_fonts/normal_font = ExtResource( 3 )
+bbcode_enabled = true
+bbcode_text = "[center]TREATMENTS[/center]"
+text = "TREATMENTS"
+
+[node name="Affliction" type="RichTextLabel" parent="."]
+margin_left = 8.0
+margin_top = 101.0
+margin_right = 82.0
+margin_bottom = 116.0
+mouse_filter = 2
+custom_fonts/normal_font = ExtResource( 3 )
+text = "Treats:"
+
+[node name="Affliction2" type="RichTextLabel" parent="."]
+margin_left = 8.0
+margin_top = 120.0
+margin_right = 82.0
+margin_bottom = 135.0
+mouse_filter = 2
+custom_fonts/normal_font = ExtResource( 3 )
+text = "Unknown"
+
+[node name="TreatmentIcons" type="Node2D" parent="."]
+
+[node name="JournalIcon" parent="TreatmentIcons" instance=ExtResource( 4 )]
+material = SubResource( 2 )
+position = Vector2( 14, 34 )
+frames = ExtResource( 6 )
+animation = "anti-inflammatory"
+
+[node name="JournalIcon2" parent="TreatmentIcons" instance=ExtResource( 4 )]
+material = SubResource( 3 )
+position = Vector2( 30, 34 )
+frames = ExtResource( 6 )
+animation = "antibiotics"
+
+[node name="JournalIcon3" parent="TreatmentIcons" instance=ExtResource( 4 )]
+material = SubResource( 4 )
+position = Vector2( 46, 34 )
+frames = ExtResource( 6 )
+animation = "antifungal"
+
+[node name="JournalIcon4" parent="TreatmentIcons" instance=ExtResource( 4 )]
+material = SubResource( 5 )
+position = Vector2( 62, 34 )
+frames = ExtResource( 6 )
+animation = "bandages"
+
+[node name="JournalIcon5" parent="TreatmentIcons" instance=ExtResource( 4 )]
+material = SubResource( 6 )
+position = Vector2( 78, 34 )
+frames = ExtResource( 6 )
+animation = "cast"
+
+[node name="JournalIcon6" parent="TreatmentIcons" instance=ExtResource( 4 )]
+material = SubResource( 7 )
+position = Vector2( 94, 34 )
+frames = ExtResource( 6 )
+animation = "claw cream"
+
+[node name="JournalIcon7" parent="TreatmentIcons" instance=ExtResource( 4 )]
+material = SubResource( 8 )
+position = Vector2( 14, 50 )
+frames = ExtResource( 6 )
+animation = "dewormer"
+
+[node name="JournalIcon8" parent="TreatmentIcons" instance=ExtResource( 4 )]
+material = SubResource( 9 )
+position = Vector2( 30, 50 )
+frames = ExtResource( 6 )
+animation = "eye cream"
+
+[node name="JournalIcon9" parent="TreatmentIcons" instance=ExtResource( 4 )]
+material = SubResource( 10 )
+position = Vector2( 46, 50 )
+frames = ExtResource( 6 )
+animation = "eye drops"
+
+[node name="JournalIcon10" parent="TreatmentIcons" instance=ExtResource( 4 )]
+material = SubResource( 11 )
+position = Vector2( 62, 50 )
+frames = ExtResource( 6 )
+animation = "flea meds"
+
+[node name="JournalIcon11" parent="TreatmentIcons" instance=ExtResource( 4 )]
+material = SubResource( 12 )
+position = Vector2( 78, 50 )
+frames = ExtResource( 6 )
+animation = "flu meds"
+
+[node name="JournalIcon12" parent="TreatmentIcons" instance=ExtResource( 4 )]
+material = SubResource( 13 )
+position = Vector2( 94, 50 )
+frames = ExtResource( 6 )
+animation = "mange meds"
+
+[node name="JournalIcon13" parent="TreatmentIcons" instance=ExtResource( 4 )]
+material = SubResource( 14 )
+position = Vector2( 14, 66 )
+frames = ExtResource( 6 )
+animation = "med bath"
+
+[node name="JournalIcon20" parent="TreatmentIcons" instance=ExtResource( 4 )]
+material = SubResource( 15 )
+position = Vector2( 30, 66 )
+frames = ExtResource( 6 )
+animation = "mineral bath"
+
+[node name="JournalIcon14" parent="TreatmentIcons" instance=ExtResource( 4 )]
+material = SubResource( 16 )
+position = Vector2( 46, 66 )
+frames = ExtResource( 6 )
+animation = "parasite treatment"
+
+[node name="JournalIcon15" parent="TreatmentIcons" instance=ExtResource( 4 )]
+material = SubResource( 17 )
+position = Vector2( 62, 66 )
+frames = ExtResource( 6 )
+animation = "refrigeration"
+
+[node name="JournalIcon16" parent="TreatmentIcons" instance=ExtResource( 4 )]
+material = SubResource( 18 )
+position = Vector2( 78, 66 )
+frames = ExtResource( 6 )
+animation = "tank filter"
+
+[node name="JournalIcon17" parent="TreatmentIcons" instance=ExtResource( 4 )]
+material = SubResource( 19 )
+position = Vector2( 94, 66 )
+frames = ExtResource( 6 )
+animation = "teddy bear"
+
+[node name="JournalIcon18" parent="TreatmentIcons" instance=ExtResource( 4 )]
+material = SubResource( 20 )
+position = Vector2( 14, 82 )
+frames = ExtResource( 6 )
+animation = "thyroid meds"
+
+[node name="JournalIcon19" parent="TreatmentIcons" instance=ExtResource( 4 )]
+material = SubResource( 21 )
+position = Vector2( 30, 82 )
+frames = ExtResource( 6 )
+animation = "vitamin treatment"
+
+[connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]
