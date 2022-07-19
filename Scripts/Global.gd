@@ -63,7 +63,7 @@ var dragonClass
 
 var reputation : float = 0
 var season := 0
-var week := 13
+var week := 1
 
 func _init():
 	fever = SymptomClass.new()
