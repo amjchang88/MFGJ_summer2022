@@ -61,3 +61,7 @@ func _on_JournalPanel_returned():
 func _on_NewAnimal_returnMain():
 	$AnimalList/AnimalArray.paused = false
 	paused = false
+
+
+func _on_MenuButton_mouse_entered():
+	pass # Replace with function body.

@@ -275,45 +275,45 @@ animation = "mineral bath"
 
 [node name="JournalIcon20" parent="TreatmentIcons" instance=ExtResource( 4 )]
 material = SubResource( 15 )
+position = Vector2( 30, 82 )
+frames = ExtResource( 6 )
+animation = "vitamin injection"
+
+[node name="JournalIcon14" parent="TreatmentIcons" instance=ExtResource( 4 )]
+material = SubResource( 16 )
 position = Vector2( 30, 66 )
 frames = ExtResource( 6 )
 animation = "parasite meds"
 
-[node name="JournalIcon14" parent="TreatmentIcons" instance=ExtResource( 4 )]
-material = SubResource( 16 )
+[node name="JournalIcon15" parent="TreatmentIcons" instance=ExtResource( 4 )]
+material = SubResource( 17 )
 position = Vector2( 46, 66 )
 frames = ExtResource( 6 )
 animation = "refrigeration"
 
-[node name="JournalIcon15" parent="TreatmentIcons" instance=ExtResource( 4 )]
-material = SubResource( 17 )
+[node name="JournalIcon16" parent="TreatmentIcons" instance=ExtResource( 4 )]
+material = SubResource( 18 )
 position = Vector2( 62, 66 )
 frames = ExtResource( 6 )
 animation = "splint"
 
-[node name="JournalIcon16" parent="TreatmentIcons" instance=ExtResource( 4 )]
-material = SubResource( 18 )
+[node name="JournalIcon17" parent="TreatmentIcons" instance=ExtResource( 4 )]
+material = SubResource( 19 )
 position = Vector2( 78, 66 )
 frames = ExtResource( 6 )
 animation = "tank filter"
 
-[node name="JournalIcon17" parent="TreatmentIcons" instance=ExtResource( 4 )]
-material = SubResource( 19 )
+[node name="JournalIcon18" parent="TreatmentIcons" instance=ExtResource( 4 )]
+material = SubResource( 20 )
 position = Vector2( 94, 66 )
 frames = ExtResource( 6 )
 animation = "teddy bear"
 
-[node name="JournalIcon18" parent="TreatmentIcons" instance=ExtResource( 4 )]
-material = SubResource( 20 )
+[node name="JournalIcon19" parent="TreatmentIcons" instance=ExtResource( 4 )]
+material = SubResource( 21 )
 position = Vector2( 14, 82 )
 frames = ExtResource( 6 )
 animation = "thyroid meds"
-
-[node name="JournalIcon19" parent="TreatmentIcons" instance=ExtResource( 4 )]
-material = SubResource( 21 )
-position = Vector2( 30, 82 )
-frames = ExtResource( 6 )
-animation = "vitamin injection"
 
 [connection signal="clicked" from="Button" to="." method="_on_Button_clicked"]
 [connection signal="input_event" from="Button/Area2D" to="Button" method="_on_Area2D_input_event"]

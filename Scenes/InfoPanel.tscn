@@ -23,8 +23,6 @@ custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
 custom_fonts/normal_font = ExtResource( 3 )
 bbcode_enabled = true
-bbcode_text = "[center]Fred[/center]"
-text = "Fred"
 
 [node name="Species" type="RichTextLabel" parent="."]
 margin_left = 8.0

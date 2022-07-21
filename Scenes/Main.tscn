@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Scenes/InfoPanel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Main.gd" type="Script" id=2]
@@ -17,12 +17,38 @@
 [ext_resource path="res://Scripts/HUD.gd" type="Script" id=15]
 [ext_resource path="res://Scenes/Animal.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Scenes/TreatmentPanel.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Scripts/JournalButton.gd" type="Script" id=18]
+[ext_resource path="res://Assets/UI/journalButton.png" type="Texture" id=19]
+[ext_resource path="res://outlineShader.gdshader" type="Shader" id=20]
+[ext_resource path="res://Assets/UI/endButton.png" type="Texture" id=21]
+[ext_resource path="res://Assets/UI/menuButton.png" type="Texture" id=22]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 24.5, 7 )
 
+[sub_resource type="ShaderMaterial" id=3]
+resource_local_to_scene = true
+shader = ExtResource( 20 )
+shader_param/outline_color = Color( 0.329412, 0.952941, 0.952941, 1 )
+shader_param/opacity = 0.0
+
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 24, 7 )
+
+[sub_resource type="ShaderMaterial" id=4]
+resource_local_to_scene = true
+shader = ExtResource( 20 )
+shader_param/outline_color = Color( 0.329412, 0.952941, 0.952941, 1 )
+shader_param/opacity = 0.0
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 8, 3.5 )
+
+[sub_resource type="ShaderMaterial" id=6]
+resource_local_to_scene = true
+shader = ExtResource( 20 )
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 2 )
@@ -32,6 +58,48 @@ texture = ExtResource( 4 )
 centered = false
 
 [node name="HUD" parent="." instance=ExtResource( 9 )]
+
+[node name="JournalButton" type="Area2D" parent="HUD"]
+position = Vector2( 0, 1 )
+script = ExtResource( 18 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HUD/JournalButton"]
+position = Vector2( 139.5, 30 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="HUD/JournalButton"]
+material = SubResource( 3 )
+position = Vector2( 114, 22 )
+texture = ExtResource( 19 )
+centered = false
+
+[node name="EndButton" type="Area2D" parent="HUD"]
+position = Vector2( 0, 1 )
+script = ExtResource( 18 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HUD/EndButton"]
+position = Vector2( 189, 30 )
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="HUD/EndButton"]
+material = SubResource( 4 )
+position = Vector2( 164, 22 )
+texture = ExtResource( 21 )
+centered = false
+
+[node name="MenuButton" type="Area2D" parent="HUD"]
+position = Vector2( 0, 1 )
+script = ExtResource( 18 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HUD/MenuButton"]
+position = Vector2( 205, 17.5 )
+shape = SubResource( 5 )
+
+[node name="MenuButton" type="Sprite" parent="HUD/MenuButton"]
+material = SubResource( 6 )
+position = Vector2( 196, 13 )
+texture = ExtResource( 22 )
+centered = false
 
 [node name="YardList" type="Node2D" parent="."]
 
@@ -79,18 +147,6 @@ defaultY = 2
 targetX = 222
 targetY = 2
 
-[node name="JournalButton" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="JournalButton"]
-position = Vector2( 139.5, 30 )
-shape = SubResource( 1 )
-
-[node name="EndButton" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EndButton"]
-position = Vector2( 189, 30 )
-shape = SubResource( 2 )
-
 [node name="NewAnimal" parent="." instance=ExtResource( 13 )]
 visible = false
 
@@ -133,11 +189,17 @@ animation = "start"
 
 [connection signal="toNewAnimal" from="." to="AnimalList/AnimalArray" method="_on_Main_toNewAnimal"]
 [connection signal="toNewAnimal" from="." to="NewAnimal" method="_on_Main_toNewAnimal"]
+[connection signal="input_event" from="HUD/JournalButton" to="." method="_on_JournalButton_input_event"]
+[connection signal="mouse_entered" from="HUD/JournalButton" to="HUD/JournalButton" method="_on_JournalButton_mouse_entered"]
+[connection signal="mouse_exited" from="HUD/JournalButton" to="HUD/JournalButton" method="_on_JournalButton_mouse_exited"]
+[connection signal="input_event" from="HUD/EndButton" to="." method="_on_EndButton_input_event"]
+[connection signal="mouse_entered" from="HUD/EndButton" to="HUD/EndButton" method="_on_EndButton_mouse_entered"]
+[connection signal="mouse_exited" from="HUD/EndButton" to="HUD/EndButton" method="_on_EndButton_mouse_exited"]
+[connection signal="mouse_entered" from="HUD/MenuButton" to="HUD/MenuButton" method="_on_MenuButton_mouse_entered"]
+[connection signal="mouse_exited" from="HUD/MenuButton" to="HUD/MenuButton" method="_on_MenuButton_mouse_exited"]
 [connection signal="returned" from="JournalPanel" to="." method="_on_JournalPanel_returned"]
 [connection signal="returned" from="JournalPanel" to="AnimalList/AnimalArray" method="_on_JournalPanel_returned"]
 [connection signal="returned" from="AnimalPanel" to="JournalPanel" method="_on_AnimalPanel_returned"]
 [connection signal="returned" from="TreatmentPanel" to="JournalPanel" method="_on_TreatmentPanel_returned"]
-[connection signal="input_event" from="JournalButton" to="." method="_on_JournalButton_input_event"]
-[connection signal="input_event" from="EndButton" to="." method="_on_EndButton_input_event"]
 [connection signal="returnMain" from="NewAnimal" to="." method="_on_NewAnimal_returnMain"]
 [connection signal="animation_finished" from="ScreenTransition" to="." method="_on_ScreenTransition_animation_finished"]
