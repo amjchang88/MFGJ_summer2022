@@ -141,7 +141,7 @@ func random_animal():
 	
 
 
-func _on_LineEdit_text_entered(new_text):
+func _on_LineEdit_text_changed(new_text):
 	if new_text:
 		newAnimal.nickname = new_text
 		#remove_child(get_node("Animal"))
@@ -149,4 +149,3 @@ func _on_LineEdit_text_entered(new_text):
 		newAnimal.set_owner(mainAnimalArray)
 		mainAnimalArray.place_animals()
 		emit_signal("finished")
-	
