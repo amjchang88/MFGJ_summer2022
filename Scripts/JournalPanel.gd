@@ -1,25 +1,24 @@
 extends UIPanel
 
 onready var animalPanel = get_tree().get_root().get_node("Main").get_node("AnimalPanel")
+onready var treatmentPanel = get_tree().get_root().get_node("Main").get_node("TreatmentPanel")
 onready var global = get_node("/root/Global")
 
 signal returned 
 
 var paused := false
 
-func _ready():
-	pass
-
-
-func _on_Area2D_input_event(_viewport, event, _shape_idx):
-	# clicked back button
-	if event is InputEventMouseButton:
-		if event.pressed and !paused:
-			move_to(defaultX, defaultY)
-			emit_signal("returned")
-
 func _on_AnimalPanel_returned():
 	paused = false
+	
+func _on_TreatmentPanel_returned():
+	paused = false
+
+func _on_TreatmentButton_clicked():
+	# open treatment panel
+	treatmentPanel.move_to(112, 2)
+	
+	paused = true
 	
 func set_panel(p_name : String):
 	var localName : String = global.get(p_name + "Class").name
@@ -53,3 +52,14 @@ func _on_Axolotl_clicked():
 	set_panel("axolotl")
 func _on_Dragon_clicked():
 	set_panel("dragon")
+
+
+
+func _on_BackButton_clicked():
+	if !paused:
+		move_to(defaultX, defaultY)
+		emit_signal("returned")
+
+
+
+

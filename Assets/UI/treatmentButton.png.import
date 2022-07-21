@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/infoPanel.png-6aa2b8839e3adfa2e8c4b3d89cb48db4.stex"
+path="res://.import/treatmentButton.png-c14da29fb33644ed9baf12e2f3798117.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/UI/infoPanel.png"
-dest_files=[ "res://.import/infoPanel.png-6aa2b8839e3adfa2e8c4b3d89cb48db4.stex" ]
+source_file="res://Assets/UI/treatmentButton.png"
+dest_files=[ "res://.import/treatmentButton.png-c14da29fb33644ed9baf12e2f3798117.stex" ]
 
 [params]
 

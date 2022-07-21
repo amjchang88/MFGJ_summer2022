@@ -83,43 +83,27 @@ custom_constants/shadow_offset_y = 1
 custom_fonts/normal_font = ExtResource( 3 )
 tab_size = 2
 
-[node name="Affliction" type="RichTextLabel" parent="."]
-margin_left = 8.0
-margin_top = 105.0
-margin_right = 105.0
-margin_bottom = 118.0
-custom_constants/shadow_offset_x = 1
-custom_constants/shadow_offset_y = 1
-custom_fonts/normal_font = ExtResource( 3 )
-text = "AFFLICTION"
-
-[node name="AfflictionText" type="RichTextLabel" parent="."]
-margin_left = 8.0
-margin_top = 121.0
-margin_right = 105.0
-margin_bottom = 134.0
-custom_constants/shadow_offset_x = 1
-custom_constants/shadow_offset_y = 1
-custom_fonts/normal_font = ExtResource( 3 )
-tab_size = 2
-
 [node name="GenderIcon" type="Sprite" parent="."]
+visible = false
 position = Vector2( 92, 29 )
 scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 6 )
 hframes = 2
 
 [node name="Shadow" type="Sprite" parent="."]
+visible = false
 position = Vector2( 80, 42 )
 texture = ExtResource( 5 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+visible = false
 position = Vector2( 80, 41 )
 frames = ExtResource( 4 )
 animation = "sus"
 playing = true
 
 [node name="StarSheet" type="Sprite" parent="."]
+visible = false
 position = Vector2( 60.5, 59 )
 texture = ExtResource( 7 )
 centered = false

@@ -8,13 +8,6 @@ var variationList
 
 func _ready():
 	children = $AnimalList.get_children()
-	
-func _on_Area2D_input_event(_viewport, event, _shape_idx):
-	# clicked back button
-	if event is InputEventMouseButton:
-		if event.pressed:
-			move_to(defaultX, defaultY)
-			emit_signal("returned")
 
 func initialize(p_name, p_variationList, p_nameList, p_rarity):
 	variationList = p_variationList
@@ -22,7 +15,7 @@ func initialize(p_name, p_variationList, p_nameList, p_rarity):
 	$StarSheet.frame = p_rarity
 	
 	nameList = p_nameList
-	$NameText.text = "Select " + p_name
+	$NameText.text = "Select variant"
 	for i in 8:
 		if p_variationList[i]:
 			children[i].animation = p_name.to_lower() + str(i)
@@ -52,3 +45,8 @@ func _on_7_clicked():
 	set_entries(7)
 func _on_8_clicked():
 	set_entries(8)
+
+
+func _on_Button_clicked():
+	move_to(defaultX, defaultY)
+	emit_signal("returned")

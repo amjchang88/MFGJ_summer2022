@@ -1,10 +1,22 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Assets/UI/journalPanel.png" type="Texture" id=1]
 [ext_resource path="res://Assets/UI/hgssFont.tres" type="BitmapFont" id=2]
+[ext_resource path="res://Assets/UI/treatmentButton.png" type="Texture" id=3]
 [ext_resource path="res://Scripts/JournalPanel.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/Button.gd" type="Script" id=5]
 [ext_resource path="res://Scenes/JournalIcon.tscn" type="PackedScene" id=6]
 [ext_resource path="res://outlineShader.gdshader" type="Shader" id=7]
+[ext_resource path="res://Assets/UI/backButton.png" type="Texture" id=8]
+
+[sub_resource type="ShaderMaterial" id=17]
+resource_local_to_scene = true
+shader = ExtResource( 7 )
+shader_param/outline_color = Color( 0.329412, 0.952941, 0.952941, 1 )
+shader_param/opacity = 0.0
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 49, 15.5 )
 
 [sub_resource type="ShaderMaterial" id=1]
 resource_local_to_scene = true
@@ -66,19 +78,33 @@ shader = ExtResource( 7 )
 shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
 shader_param/opacity = 0.0
 
-[sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 8, 9 )
-
-[sub_resource type="ShaderMaterial" id=12]
+[sub_resource type="ShaderMaterial" id=16]
 resource_local_to_scene = true
 shader = ExtResource( 7 )
-shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/outline_color = Color( 0.329412, 0.952941, 0.952941, 1 )
 shader_param/opacity = 0.0
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 8, 9 )
 
 [node name="JournalPanel" type="Sprite"]
 texture = ExtResource( 1 )
 centered = false
 script = ExtResource( 4 )
+
+[node name="TreatmentButton" type="Sprite" parent="."]
+material = SubResource( 17 )
+position = Vector2( 4, 84 )
+texture = ExtResource( 3 )
+centered = false
+script = ExtResource( 5 )
+
+[node name="Area2D" type="Area2D" parent="TreatmentButton"]
+position = Vector2( 26, -40 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TreatmentButton/Area2D"]
+position = Vector2( 24, 56.5 )
+shape = SubResource( 18 )
 
 [node name="JournalTitle" type="RichTextLabel" parent="."]
 margin_left = 8.0
@@ -101,18 +127,18 @@ text = "ANIMALS"
 
 [node name="AfflictionsTitle" type="RichTextLabel" parent="."]
 margin_left = 8.0
-margin_top = 88.0
+margin_top = 89.0
 margin_right = 97.0
-margin_bottom = 101.0
+margin_bottom = 102.0
 mouse_filter = 2
 custom_fonts/normal_font = ExtResource( 2 )
 text = "AFFLICTIONS &"
 
 [node name="TreatmentsTitle" type="RichTextLabel" parent="."]
 margin_left = 8.0
-margin_top = 101.0
+margin_top = 102.0
 margin_right = 82.0
-margin_bottom = 114.0
+margin_bottom = 115.0
 mouse_filter = 2
 custom_fonts/normal_font = ExtResource( 2 )
 text = "TREATMENTS"
@@ -182,16 +208,21 @@ playing = true
 
 [node name="TreatmentList" type="Node2D" parent="."]
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="BackButton" type="Sprite" parent="."]
+material = SubResource( 16 )
 position = Vector2( 95, 14 )
+texture = ExtResource( 8 )
+script = ExtResource( 5 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 7 )
+[node name="Area2D" type="Area2D" parent="BackButton"]
 
-[node name="JournalIcon" parent="." instance=ExtResource( 6 )]
-material = SubResource( 12 )
-position = Vector2( 15, 124 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BackButton/Area2D"]
+shape = SubResource( 15 )
 
+[connection signal="clicked" from="TreatmentButton" to="." method="_on_TreatmentButton_clicked"]
+[connection signal="input_event" from="TreatmentButton/Area2D" to="TreatmentButton" method="_on_Area2D_input_event"]
+[connection signal="mouse_entered" from="TreatmentButton/Area2D" to="TreatmentButton" method="_on_Area2D_mouse_entered"]
+[connection signal="mouse_exited" from="TreatmentButton/Area2D" to="TreatmentButton" method="_on_Area2D_mouse_exited"]
 [connection signal="clicked" from="AnimalList/Cat" to="." method="_on_Cat_clicked"]
 [connection signal="clicked" from="AnimalList/Dog" to="." method="_on_Dog_clicked"]
 [connection signal="clicked" from="AnimalList/Fish" to="." method="_on_Fish_clicked"]
@@ -202,4 +233,7 @@ position = Vector2( 15, 124 )
 [connection signal="clicked" from="AnimalList/Bird" to="." method="_on_Bird_clicked"]
 [connection signal="clicked" from="AnimalList/Axolotl" to="." method="_on_Axolotl_clicked"]
 [connection signal="clicked" from="AnimalList/Dragon" to="." method="_on_Dragon_clicked"]
-[connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]
+[connection signal="clicked" from="BackButton" to="." method="_on_BackButton_clicked"]
+[connection signal="input_event" from="BackButton/Area2D" to="BackButton" method="_on_Area2D_input_event"]
+[connection signal="mouse_entered" from="BackButton/Area2D" to="BackButton" method="_on_Area2D_mouse_entered"]
+[connection signal="mouse_exited" from="BackButton/Area2D" to="BackButton" method="_on_Area2D_mouse_exited"]

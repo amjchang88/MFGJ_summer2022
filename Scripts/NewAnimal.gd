@@ -153,8 +153,9 @@ func random_animal():
 	var p_animalName = p_animalNameCaps.to_lower()
 	var p_variation = rng.randi_range(1, 8)
 	var p_rarity = global.get(p_animalName + "Class").rarity
-	var p_symptom = global.get(p_animalName + "Class").symptomList[randi() % global.get(p_animalName + "Class").symptomList.size()]
-	var p_ttk = global.symptomDict[p_symptom].ttk
+	var treatment = global.get(p_animalName + "Class").symptomList[randi() % global.get(p_animalName + "Class").symptomList.size()]
+	var p_symptom = global.symptomDict[treatment].symptomName
+	var p_ttk = global.symptomDict[treatment].ttk
 	var p_weight = rand_range(global.get(p_animalName + "Class").weightLow, global.get(p_animalName + "Class").weightHigh)
 	var p_gender = rng.randi_range(0,1)
 	newAnimal.initialize(p_animalNameCaps, p_variation, p_rarity, p_symptom, p_ttk, p_weight, p_gender)
@@ -162,6 +163,6 @@ func random_animal():
 
 
 
-func _on_LineEdit_text_changed(new_text):
+func _on_LineEdit_text_changed(_new_text):
 	$NewAnimalPanel.frame = 1
 	$Area2D.visible = true
