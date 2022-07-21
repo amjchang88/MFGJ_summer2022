@@ -6,85 +6,55 @@ onready var global = get_node("/root/Global")
 func _on_Button_clicked():
 	# reset title
 	$Title.bbcode_text = "[center]Treatments[/center]"
+	$Affliction2.text = "Unknown"
+	$TreatmentName.text = "Select treatment"
 	move_to(defaultX, defaultY)
 	emit_signal("returned")
 
+func click_treatment(p_treatment : String):
+	$TreatmentName.text = p_treatment
+	$Affliction2.text = "Unknown"
+	if global.symptomDict[p_treatment].discovered == true:
+		$Affliction2.text = global.symptomDict[p_treatment].afflictionName
+		
 # treatment clicking
 func _on_JournalIcon_clicked():
-	$TreatmentName.text = "Anti inflammatory"
-	$Affliction2.text = global.symptomDict[$TreatmentName.text].afflictionName
-
+	click_treatment("Anti inflammatory")
 func _on_JournalIcon2_clicked():
-	pass # Replace with function body.
-
-
+	click_treatment("Antibiotics")
 func _on_JournalIcon3_clicked():
-	pass # Replace with function body.
-
-
+	click_treatment("Antifungal")
 func _on_JournalIcon4_clicked():
-	pass # Replace with function body.
-
-
+	click_treatment("Bandages")
 func _on_JournalIcon5_clicked():
-	pass # Replace with function body.
-
-
+	click_treatment("Claw cream")
 func _on_JournalIcon6_clicked():
-	pass # Replace with function body.
-
-
+	click_treatment("Dewormer")
 func _on_JournalIcon7_clicked():
-	pass # Replace with function body.
-
-
+	click_treatment("Eye cream")
 func _on_JournalIcon8_clicked():
-	pass # Replace with function body.
-
-
+	click_treatment("Eye drops")
 func _on_JournalIcon9_clicked():
-	pass # Replace with function body.
-
-
+	click_treatment("Flea meds")
 func _on_JournalIcon10_clicked():
-	pass # Replace with function body.
-
-
+	click_treatment("Flu meds")
 func _on_JournalIcon11_clicked():
-	pass # Replace with function body.
-
-
+	click_treatment("Mange meds")
 func _on_JournalIcon12_clicked():
-	pass # Replace with function body.
-
-
+	click_treatment("Med bath")
 func _on_JournalIcon13_clicked():
-	pass # Replace with function body.
-
-
-func _on_JournalIcon20_clicked():
-	pass # Replace with function body.
-
-
-func _on_JournalIcon15_clicked():
-	pass # Replace with function body.
-
-
+	click_treatment("Mineral bath")
 func _on_JournalIcon14_clicked():
-	pass # Replace with function body.
-
-
+	click_treatment("Parasite meds")
+func _on_JournalIcon15_clicked():
+	click_treatment("Refrigeration")
 func _on_JournalIcon16_clicked():
-	pass # Replace with function body.
-
-
+	click_treatment("Splint")
 func _on_JournalIcon17_clicked():
-	pass # Replace with function body.
-
-
+	click_treatment("Tank filter")
 func _on_JournalIcon18_clicked():
-	pass # Replace with function body.
-
-
+	click_treatment("Teddy bear")
 func _on_JournalIcon19_clicked():
-	pass # Replace with function body.
+	click_treatment("Thyroid meds")
+func _on_JournalIcon20_clicked():
+	click_treatment("Vitamin injection")

@@ -172,7 +172,7 @@ margin_right = 123.0
 margin_bottom = 105.0
 mouse_filter = 2
 custom_fonts/normal_font = ExtResource( 3 )
-text = "Select treatment"
+text = "Vitamin injection"
 
 [node name="Affliction" type="RichTextLabel" parent="."]
 margin_left = 8.0
@@ -223,73 +223,73 @@ animation = "bandages"
 material = SubResource( 6 )
 position = Vector2( 78, 34 )
 frames = ExtResource( 6 )
-animation = "cast"
+animation = "claw cream"
 
 [node name="JournalIcon6" parent="TreatmentIcons" instance=ExtResource( 4 )]
 material = SubResource( 7 )
 position = Vector2( 94, 34 )
 frames = ExtResource( 6 )
-animation = "claw cream"
+animation = "dewormer"
 
 [node name="JournalIcon7" parent="TreatmentIcons" instance=ExtResource( 4 )]
 material = SubResource( 8 )
 position = Vector2( 14, 50 )
 frames = ExtResource( 6 )
-animation = "dewormer"
+animation = "eye cream"
 
 [node name="JournalIcon8" parent="TreatmentIcons" instance=ExtResource( 4 )]
 material = SubResource( 9 )
 position = Vector2( 30, 50 )
 frames = ExtResource( 6 )
-animation = "eye cream"
+animation = "eye drops"
 
 [node name="JournalIcon9" parent="TreatmentIcons" instance=ExtResource( 4 )]
 material = SubResource( 10 )
 position = Vector2( 46, 50 )
 frames = ExtResource( 6 )
-animation = "eye drops"
+animation = "flea meds"
 
 [node name="JournalIcon10" parent="TreatmentIcons" instance=ExtResource( 4 )]
 material = SubResource( 11 )
 position = Vector2( 62, 50 )
 frames = ExtResource( 6 )
-animation = "flea meds"
+animation = "flu meds"
 
 [node name="JournalIcon11" parent="TreatmentIcons" instance=ExtResource( 4 )]
 material = SubResource( 12 )
 position = Vector2( 78, 50 )
 frames = ExtResource( 6 )
-animation = "flu meds"
+animation = "mange meds"
 
 [node name="JournalIcon12" parent="TreatmentIcons" instance=ExtResource( 4 )]
 material = SubResource( 23 )
 position = Vector2( 94, 50 )
 frames = ExtResource( 6 )
-animation = "mange meds"
+animation = "med bath"
 
 [node name="JournalIcon13" parent="TreatmentIcons" instance=ExtResource( 4 )]
 material = SubResource( 14 )
 position = Vector2( 14, 66 )
 frames = ExtResource( 6 )
-animation = "med bath"
+animation = "mineral bath"
 
 [node name="JournalIcon20" parent="TreatmentIcons" instance=ExtResource( 4 )]
 material = SubResource( 15 )
 position = Vector2( 30, 66 )
 frames = ExtResource( 6 )
-animation = "mineral bath"
+animation = "parasite meds"
 
 [node name="JournalIcon14" parent="TreatmentIcons" instance=ExtResource( 4 )]
 material = SubResource( 16 )
 position = Vector2( 46, 66 )
 frames = ExtResource( 6 )
-animation = "parasite treatment"
+animation = "refrigeration"
 
 [node name="JournalIcon15" parent="TreatmentIcons" instance=ExtResource( 4 )]
 material = SubResource( 17 )
 position = Vector2( 62, 66 )
 frames = ExtResource( 6 )
-animation = "refrigeration"
+animation = "splint"
 
 [node name="JournalIcon16" parent="TreatmentIcons" instance=ExtResource( 4 )]
 material = SubResource( 18 )
@@ -313,7 +313,7 @@ animation = "thyroid meds"
 material = SubResource( 21 )
 position = Vector2( 30, 82 )
 frames = ExtResource( 6 )
-animation = "vitamin treatment"
+animation = "vitamin injection"
 
 [connection signal="clicked" from="Button" to="." method="_on_Button_clicked"]
 [connection signal="input_event" from="Button/Area2D" to="Button" method="_on_Area2D_input_event"]

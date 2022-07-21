@@ -94,8 +94,8 @@ func _init():
 	limping = SymptomClass.new()
 	limping.ttk = 1
 	limping.afflictionName = "Fracture"
-	limping.treatmentName = "Cast"
-	limping.symptomName = "Vomiting"
+	limping.treatmentName = "Splint"
+	limping.symptomName = "Limping"
 	
 	bleeding = SymptomClass.new()
 	bleeding.ttk = 1 
@@ -229,14 +229,14 @@ func _init():
 	catClass.weightLow = 7
 	catClass.weightHigh = 14
 	catClass.nameList = ["Black Shorthair", "Tuxedo Shorthair", "Coffee Longhair", "Calico Shorthair", "Brown Tabby", "Orange Shorthair", "Chocolate Point", "White Longhair"]
-	catClass.symptomList = ["Flu meds", "Mange meds", "Flea meds", "Dewormer", "Splint", "Bandages", "Anti inflammatory", "Vitamins"]
+	catClass.symptomList = ["Flu meds", "Mange meds", "Flea meds", "Dewormer", "Splint", "Bandages", "Anti inflammatory", "Vitamin injection"]
 	
 	dogClass.name = "Dog"
 	dogClass.rarity = 0
 	dogClass.weightLow = 40
 	dogClass.weightHigh = 85
 	dogClass.nameList = ["Border Collie", "Chocolate Lab", "Rhodesian Ridgeback", "Golden Retriever", "Terrier", "Black Shiba Inu", "Schipperke", "White German Shepherd"]
-	dogClass.symptomList = ["Flu meds", "Mange meds", "Flea meds", "Dewormer", "Splint", "Bandages", "Anti inflammatory", "Vitamins"]
+	dogClass.symptomList = ["Flu meds", "Mange meds", "Flea meds", "Dewormer", "Splint", "Bandages", "Anti inflammatory", "Vitamin injection"]
 	
 	fishClass.name = "Fish"
 	fishClass.rarity = 1
@@ -257,14 +257,14 @@ func _init():
 	rabbitClass.weightLow = 2
 	rabbitClass.weightHigh = 10
 	rabbitClass.nameList = ["Black", "Dutch", "Brown", "Californian", "Harlequin", "White", "Golden"]
-	rabbitClass.symptomList = ["Flu meds", "Mange meds", "Flea meds", "Dewormer", "Splint", "Bandages", "Anti inflammatory", "Vitamins"]
+	rabbitClass.symptomList = ["Flu meds", "Mange meds", "Flea meds", "Dewormer", "Splint", "Bandages", "Anti inflammatory", "Vitamin injection"]
 	
 	ratClass.name = "Rat"
 	ratClass.rarity = 2
 	ratClass.weightLow = 0.5
 	ratClass.weightHigh = 1.5
 	ratClass.nameList = ["Black", "Black Piebald", "Blue", "Gray", "Gray Piebald", "Brown", "Brown Piebald", "Tan Piebald"]
-	ratClass.symptomList = ["Flu meds", "Mange meds", "Flea meds", "Dewormer", "Splint", "Bandages", "Anti inflammatory", "Vitamins"]
+	ratClass.symptomList = ["Flu meds", "Mange meds", "Flea meds", "Dewormer", "Splint", "Bandages", "Anti inflammatory", "Vitamin injection"]
 	
 	frogClass.name = "Frog"
 	frogClass.rarity = 2
@@ -294,4 +294,4 @@ func _init():
 	dragonClass.nameList = ["Air", "Earth", "Fire", "Frost", "Light", "Shadow", "Soul", "Water"]
 	dragonClass.symptomList = ["Antibiotics", "Flu meds", "Teddy bear", "Claw cream"]
 
-	symptomDict = {"Flu meds" : fever, "Mange meds" : rashes, "Flea meds" : itching, "Dewormer" : vomiting, "Splint" : limping, "Bandages" : bleeding, "Anti inflammatory" : swelling, "Vitamins" : lethargy, "Eye drops" : eyeCrusts, "Med bath" : damagedFeathers, "Antibiotics" : sneezing, "Antifungal" : fuzzGrowth, "Parasite meds" : weightLoss, "Tank filter" : gasping, "Mineral bath" : drySkin, "Eye cream" : cloudyEyes, "Thyroid meds" : bloating, "Refrigeration" : floating, "Teddy bear" : irritability, "Claw cream" : dryClaws}
+	symptomDict = {"Flu meds" : fever, "Mange meds" : rashes, "Flea meds" : itching, "Dewormer" : vomiting, "Splint" : limping, "Bandages" : bleeding, "Anti inflammatory" : swelling, "Vitamin injection" : lethargy, "Eye drops" : eyeCrusts, "Med bath" : damagedFeathers, "Antibiotics" : sneezing, "Antifungal" : fuzzGrowth, "Parasite meds" : weightLoss, "Tank filter" : gasping, "Mineral bath" : drySkin, "Eye cream" : cloudyEyes, "Thyroid meds" : bloating, "Refrigeration" : floating, "Teddy bear" : irritability, "Claw cream" : dryClaws}

@@ -11,10 +11,10 @@ onready var arrayPos := 0
 
 # Health stats
 onready var happiness := 1
-onready var health := .5
+onready var health := 2
 onready var alive := true
 onready var affliction := " "
-onready var symptom := " "
+onready var symptom := "Fever"
 onready var gender := 0
 onready var treatment
 

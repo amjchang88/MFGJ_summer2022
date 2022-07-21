@@ -1,6 +1,6 @@
 extends UIPanel
 	
-func set_values(p_animalName, p_nickname, p_weight, p_symptom, p_affliction, p_gender, p_rarity, p_animation):
+func set_values(p_animalName, p_nickname, p_weight, p_symptom, _p_affliction, p_gender, p_rarity, p_animation):
 	# set data
 	$Name.bbcode_text = "[center]" + p_nickname + "[/center]"
 	$SpeciesText.text = p_animalName

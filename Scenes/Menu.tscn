@@ -29,12 +29,7 @@ margin_right = -144.0
 margin_bottom = 149.0
 custom_fonts/normal_font = ExtResource( 2 )
 bbcode_text = "SMALL ANIMAL MANAGEMENT"
-text = "TUTORIAL
-
-Drag treatment to animal file to administer. You can only administer one treatment per animal per week.
-Click END to end the week and see the week summary. 
-
-"
+text = "SMALL ANIMAL MANAGEMENT"
 fit_content_height = true
 scroll_active = false
 
@@ -45,10 +40,6 @@ margin_right = -48.0
 margin_bottom = 188.0
 custom_fonts/normal_font = ExtResource( 2 )
 bbcode_text = "SMALL ANIMAL MANAGEMENT"
-text = "TIPS
-
-*Tip: Some treatments heal multiple afflictions. 
-*Tip: The correct treatment must be administered within 1 to 3 weeks. 
-"
+text = "SMALL ANIMAL MANAGEMENT"
 fit_content_height = true
 scroll_active = false
