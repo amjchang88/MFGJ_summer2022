@@ -172,7 +172,7 @@ margin_right = 123.0
 margin_bottom = 105.0
 mouse_filter = 2
 custom_fonts/normal_font = ExtResource( 3 )
-text = "Vitamin injection"
+text = "Select treatment"
 
 [node name="Affliction" type="RichTextLabel" parent="."]
 margin_left = 8.0

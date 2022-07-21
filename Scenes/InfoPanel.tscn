@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/UI/infoPanel.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/infoPanel.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Assets/Sprites/animalShadow.png" type="Texture" id=5]
 [ext_resource path="res://Assets/UI/genderIcons2.png" type="Texture" id=6]
 [ext_resource path="res://Assets/UI/starSheet.png" type="Texture" id=7]
+[ext_resource path="res://Assets/UI/applyTreatmentButton.png" type="Texture" id=8]
 
 [node name="InfoPanel" type="Sprite"]
 texture = ExtResource( 1 )
@@ -108,3 +109,7 @@ position = Vector2( 60.5, 59 )
 texture = ExtResource( 7 )
 centered = false
 hframes = 5
+
+[node name="TreatIcon" type="Sprite" parent="."]
+position = Vector2( 54, 119 )
+texture = ExtResource( 8 )
