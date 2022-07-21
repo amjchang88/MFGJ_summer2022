@@ -23,7 +23,7 @@ onready var rarity := 0
 onready var weight : float = 0
 onready var height := 0
 onready var animalName : String = "Cat"
-onready var nickname : String = "Jeff"
+onready var nickname : String = "Bao"
 onready var variation := 0
 
 

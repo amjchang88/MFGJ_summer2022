@@ -206,7 +206,7 @@ func _init():
 	catClass.name = "Cat"
 	catClass.rarity = 0
 	catClass.weightLow = 7
-	catClass.weightHigh = 18
+	catClass.weightHigh = 14
 	catClass.nameList = ["Black Shorthair", "Tuxedo Shorthair", "Coffee Longhair", "Calico Shorthair", "Brown Tabby", "Orange Shorthair", "Chocolate Point", "White Longhair"]
 	catClass.symptomList = ["Fever", "Rashes", "Itching", "Vomiting", "Limping", "Bleeding", "Swelling", "Lethargy"]
 	
