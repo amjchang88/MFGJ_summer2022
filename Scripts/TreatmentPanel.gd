@@ -1,6 +1,7 @@
 extends UIPanel
 
 signal returned
+signal clicked_treatment
 onready var global = get_node("/root/Global")
 
 func _on_Button_clicked():
@@ -16,6 +17,7 @@ func click_treatment(p_treatment : String):
 	$Affliction2.text = "Unknown"
 	if global.symptomDict[p_treatment].discovered == true:
 		$Affliction2.text = global.symptomDict[p_treatment].afflictionName
+	emit_signal("clicked_treatment", p_treatment)
 		
 # treatment clicking
 func _on_JournalIcon_clicked():

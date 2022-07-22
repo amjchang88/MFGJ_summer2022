@@ -10,7 +10,7 @@ onready var parent := get_parent()
 onready var arrayPos := 0
 
 # Health stats
-onready var happiness := 1
+onready var recovered := false
 onready var health := 2
 onready var alive := true
 onready var affliction := " "
@@ -23,7 +23,7 @@ onready var rarity := 0
 onready var weight : float = 0
 onready var height := 0
 onready var animalName : String = "Cat"
-onready var nickname : String = "Mao"
+onready var nickname : String = "Samuel"
 onready var variation := 0
 
 
@@ -48,7 +48,7 @@ func _on_AnimalArea2D_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton:
 		if event.pressed and !parent.paused and alive:
 			infoPanel.move_to(2, 2)
-			infoPanel.set_values(self, animalName, nickname, weight, symptom, affliction, gender, rarity, $AnimatedSprite.animation)
+			infoPanel.set_values(self, animalName, nickname, weight, symptom, affliction, gender, rarity, $AnimatedSprite.animation, recovered)
 
 
 func _on_AnimalArea2D_mouse_entered():

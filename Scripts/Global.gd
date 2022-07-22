@@ -66,6 +66,8 @@ var reputation : float = 50
 var season := 0
 var week := 1
 
+var heldTreatment : String = ""
+
 func _init():
 	fever = SymptomClass.new()
 	fever.ttk = 2

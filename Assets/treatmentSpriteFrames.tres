@@ -30,10 +30,6 @@ region = Rect2( 176, 0, 16, 16 )
 atlas = ExtResource( 1 )
 region = Rect2( 80, 0, 16, 16 )
 
-[sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 1 )
-region = Rect2( 0, 0, 16, 16 )
-
 [sub_resource type="AtlasTexture" id=13]
 atlas = ExtResource( 1 )
 region = Rect2( 240, 0, 16, 16 )
@@ -78,6 +74,10 @@ region = Rect2( 64, 0, 16, 16 )
 atlas = ExtResource( 1 )
 region = Rect2( 224, 0, 16, 16 )
 
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 16, 16 )
+
 [sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 1 )
 region = Rect2( 304, 0, 16, 16 )
@@ -117,11 +117,6 @@ animations = [ {
 "frames": [ SubResource( 3 ) ],
 "loop": true,
 "name": "claw cream",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 4 ) ],
-"loop": true,
-"name": "anti-inflammatory",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 13 ) ],
@@ -177,6 +172,11 @@ animations = [ {
 "frames": [ SubResource( 14 ) ],
 "loop": true,
 "name": "parasite meds",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 4 ) ],
+"loop": true,
+"name": "anti inflammatory",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 10 ) ],

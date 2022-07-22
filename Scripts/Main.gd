@@ -1,5 +1,7 @@
 extends Node2D
 
+onready var global = get_node("/root/Global")
+
 onready var journalPanel = get_node("JournalPanel")
 onready var animalArray = get_node("AnimalList").get_node("AnimalArray")
 onready var week1 = get_node("HUD").get_node("Week1")
@@ -11,13 +13,11 @@ onready var time := 1
 onready var day := 1
 onready var season := 0
 
-var paused = false
+var paused := false
+var selecting := false
 
 signal toNewAnimal
-
-func _ready():
-	randomize()
-
+signal to_treatment
 
 func _on_JournalButton_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton:
@@ -62,6 +62,13 @@ func _on_NewAnimal_returnMain():
 	$AnimalList/AnimalArray.paused = false
 	paused = false
 
+func _on_InfoPanel_select_treatment_mode():
+	if !selecting:
+		selecting = true
+		$TreatmentOverlay.visible = true
 
-func _on_MenuButton_mouse_entered():
-	pass # Replace with function body.
+func _on_TreatmentPanel_clicked_treatment(p_treatment):
+	if selecting:
+		$TreatmentOverlay.visible = false
+		emit_signal("to_treatment", p_treatment)
+		selecting = false

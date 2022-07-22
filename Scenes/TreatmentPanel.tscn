@@ -199,7 +199,7 @@ position = Vector2( 0, -2 )
 material = SubResource( 2 )
 position = Vector2( 14, 34 )
 frames = ExtResource( 6 )
-animation = "anti-inflammatory"
+animation = "anti inflammatory"
 
 [node name="JournalIcon2" parent="TreatmentIcons" instance=ExtResource( 4 )]
 material = SubResource( 3 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Scenes/InfoPanel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/Main.gd" type="Script" id=2]
@@ -22,6 +22,8 @@
 [ext_resource path="res://outlineShader.gdshader" type="Shader" id=20]
 [ext_resource path="res://Assets/UI/endButton.png" type="Texture" id=21]
 [ext_resource path="res://Assets/UI/menuButton.png" type="Texture" id=22]
+[ext_resource path="res://Assets/UI/treatmentOverlay.png" type="Texture" id=23]
+[ext_resource path="res://Assets/UI/hgssFont.tres" type="BitmapFont" id=24]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 24.5, 7 )
@@ -187,8 +189,30 @@ position = Vector2( 110, 72 )
 frames = ExtResource( 12 )
 animation = "start"
 
+[node name="TreatmentOverlay" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 23 )
+centered = false
+
+[node name="Node2D" type="Node2D" parent="TreatmentOverlay"]
+scale = Vector2( 0.5, 0.5 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TreatmentOverlay/Node2D"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_top = 264.0
+margin_right = 220.0
+margin_bottom = 304.0
+custom_fonts/normal_font = ExtResource( 24 )
+bbcode_enabled = true
+bbcode_text = "[center]Choose treatment from journal[/center]"
+text = "Choose treatment from journal"
+
 [connection signal="toNewAnimal" from="." to="AnimalList/AnimalArray" method="_on_Main_toNewAnimal"]
 [connection signal="toNewAnimal" from="." to="NewAnimal" method="_on_Main_toNewAnimal"]
+[connection signal="to_treatment" from="." to="InfoPanel" method="_on_Main_to_treatment"]
 [connection signal="input_event" from="HUD/JournalButton" to="." method="_on_JournalButton_input_event"]
 [connection signal="mouse_entered" from="HUD/JournalButton" to="HUD/JournalButton" method="_on_JournalButton_mouse_entered"]
 [connection signal="mouse_exited" from="HUD/JournalButton" to="HUD/JournalButton" method="_on_JournalButton_mouse_exited"]
@@ -197,9 +221,11 @@ animation = "start"
 [connection signal="mouse_exited" from="HUD/EndButton" to="HUD/EndButton" method="_on_EndButton_mouse_exited"]
 [connection signal="mouse_entered" from="HUD/MenuButton" to="HUD/MenuButton" method="_on_MenuButton_mouse_entered"]
 [connection signal="mouse_exited" from="HUD/MenuButton" to="HUD/MenuButton" method="_on_MenuButton_mouse_exited"]
+[connection signal="select_treatment_mode" from="InfoPanel" to="." method="_on_InfoPanel_select_treatment_mode"]
 [connection signal="returned" from="JournalPanel" to="." method="_on_JournalPanel_returned"]
 [connection signal="returned" from="JournalPanel" to="AnimalList/AnimalArray" method="_on_JournalPanel_returned"]
 [connection signal="returned" from="AnimalPanel" to="JournalPanel" method="_on_AnimalPanel_returned"]
+[connection signal="clicked_treatment" from="TreatmentPanel" to="." method="_on_TreatmentPanel_clicked_treatment"]
 [connection signal="returned" from="TreatmentPanel" to="JournalPanel" method="_on_TreatmentPanel_returned"]
 [connection signal="returnMain" from="NewAnimal" to="." method="_on_NewAnimal_returnMain"]
 [connection signal="animation_finished" from="ScreenTransition" to="." method="_on_ScreenTransition_animation_finished"]
