@@ -16,7 +16,7 @@ onready var alive := true
 onready var affliction := " "
 onready var symptom := "Fever"
 onready var gender := 0
-onready var treatment : String
+onready var treatment : String = ""
 
 # Static stats
 onready var rarity := 0

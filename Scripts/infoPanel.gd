@@ -53,3 +53,16 @@ func _on_Main_to_treatment(p_treatment):
 	$TreatIcon/AnimatedSprite2.visible = true
 	
 	animalNode.treatment = p_treatment
+
+
+func _on_Main_reset_info():
+	$Name.bbcode_text = ""
+	$SpeciesText.text = ""
+	$WeightText.text = ""
+	$StatusText.text = ""
+	
+	$GenderIcon.visible = false
+	$Shadow.visible = false
+	$AnimatedSprite.visible = false
+	$StarSheet.visible = false
+	$TreatIcon.visible = false

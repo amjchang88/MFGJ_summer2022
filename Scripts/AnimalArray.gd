@@ -2,8 +2,13 @@ extends Node2D
 
 onready var animalArray 
 onready var animalInstance = preload("res://Scenes/Animal.tscn")
-
+onready var global = get_node("/root/Global")
 onready var paused = false
+
+onready var recoveryList = get_tree().get_root().get_node("Main").get_node("NewAnimal").get_node("RecoveriesList")
+onready var deathList = get_tree().get_root().get_node("Main").get_node("NewAnimal").get_node("DeathList")
+
+signal toNewAnimal
 
 var animalX := 0
 var animalY := 0
@@ -35,6 +40,15 @@ func _on_JournalPanel_returned():
 func _on_Main_toNewAnimal():
 	animalArray = get_children()
 	
+	# check each animal for recovery / death
 	for Animal in animalArray:
-		#if Animal.symptom
-		pass
+		# check if treatment is correct
+		if global.symptomDict.has(Animal.treatment):
+			if Animal.symptom == global.symptomDict[Animal.treatment].symptomName:
+				self.remove_child(Animal)
+				recoveryList.add_child(Animal)
+				Animal.set_owner(recoveryList)
+				
+
+		
+	emit_signal("toNewAnimal")

@@ -210,8 +210,8 @@ position = Vector2( 110, 72 )
 frames = ExtResource( 12 )
 animation = "start"
 
+[connection signal="reset_info" from="." to="InfoPanel" method="_on_Main_reset_info"]
 [connection signal="toNewAnimal" from="." to="AnimalList/AnimalArray" method="_on_Main_toNewAnimal"]
-[connection signal="toNewAnimal" from="." to="NewAnimal" method="_on_Main_toNewAnimal"]
 [connection signal="to_treatment" from="." to="InfoPanel" method="_on_Main_to_treatment"]
 [connection signal="input_event" from="HUD/JournalButton" to="." method="_on_JournalButton_input_event"]
 [connection signal="mouse_entered" from="HUD/JournalButton" to="HUD/JournalButton" method="_on_JournalButton_mouse_entered"]
@@ -221,6 +221,7 @@ animation = "start"
 [connection signal="mouse_exited" from="HUD/EndButton" to="HUD/EndButton" method="_on_EndButton_mouse_exited"]
 [connection signal="mouse_entered" from="HUD/MenuButton" to="HUD/MenuButton" method="_on_MenuButton_mouse_entered"]
 [connection signal="mouse_exited" from="HUD/MenuButton" to="HUD/MenuButton" method="_on_MenuButton_mouse_exited"]
+[connection signal="toNewAnimal" from="AnimalList/AnimalArray" to="NewAnimal" method="_on_AnimalArray_toNewAnimal"]
 [connection signal="select_treatment_mode" from="InfoPanel" to="." method="_on_InfoPanel_select_treatment_mode"]
 [connection signal="returned" from="AnimalPanel" to="JournalPanel" method="_on_AnimalPanel_returned"]
 [connection signal="returned" from="JournalPanel" to="." method="_on_JournalPanel_returned"]

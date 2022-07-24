@@ -18,6 +18,7 @@ var selecting := false
 
 signal toNewAnimal
 signal to_treatment
+signal reset_info
 
 func _on_JournalButton_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton:
@@ -61,7 +62,10 @@ func _on_JournalPanel_returned():
 func _on_NewAnimal_returnMain():
 	$AnimalList/AnimalArray.paused = false
 	paused = false
-
+	
+	# reset info panel
+	emit_signal("reset_info")
+	
 func _on_InfoPanel_select_treatment_mode():
 	if !selecting:
 		selecting = true

@@ -14,28 +14,6 @@ var paused
 signal finished
 signal returnMain
 
-func _on_Main_toNewAnimal():
-	rng.randomize()
-	$New.visible = false
-	$RichTextLabel.text = "Healed:"
-	$RichTextLabel2.visible = true
-	$RichTextLabel3.text = "Reputation:"
-	$DeathList.visible = false
-	$Title.bbcode_text = "[center]Week " + str(global.week) + " Summary[/center]"
-	$Area2D.visible = false
-	$NewAnimalPanel.frame = 0
-	
-	$RecoveriesList.place_animals()
-	
-	timer.start(1)
-	yield(timer, "timeout")
-	
-	animalArray = $RecoveriesList.animalArray
-	read_animals()
-	
-	#$NewAnimalPanel.frame = 1
-	#$Area2D.visible = true
-	
 func next_week():
 
 	global.week += 1
@@ -166,3 +144,23 @@ func random_animal():
 func _on_LineEdit_text_changed(_new_text):
 	$NewAnimalPanel.frame = 1
 	$Area2D.visible = true
+
+
+func _on_AnimalArray_toNewAnimal():
+	rng.randomize()
+	$New.visible = false
+	$RichTextLabel.text = "Healed:"
+	$RichTextLabel2.visible = true
+	$RichTextLabel3.text = "Reputation:"
+	$DeathList.visible = false
+	$Title.bbcode_text = "[center]Week " + str(global.week) + " Summary[/center]"
+	$Area2D.visible = false
+	$NewAnimalPanel.frame = 0
+	
+	$RecoveriesList.place_animals()
+	
+	timer.start(1)
+	yield(timer, "timeout")
+	
+	animalArray = $RecoveriesList.animalArray
+	read_animals()
