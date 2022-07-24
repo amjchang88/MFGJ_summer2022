@@ -45,10 +45,19 @@ func _on_Main_toNewAnimal():
 		# check if treatment is correct
 		if global.symptomDict.has(Animal.treatment):
 			if Animal.symptom == global.symptomDict[Animal.treatment].symptomName:
+				global.symptomDict[Animal.treatment].discovered = true
 				self.remove_child(Animal)
 				recoveryList.add_child(Animal)
 				Animal.set_owner(recoveryList)
-				
-
+				break
 		
+		Animal.health -= 1
+		# check for death
+		if Animal.health <= 0:
+			Animal.alive = false
+			Animal.get_node("AnimatedSprite").animation = "dead"
+			self.remove_child(Animal)
+			deathList.add_child(Animal)
+			Animal.set_owner(deathList)
+
 	emit_signal("toNewAnimal")

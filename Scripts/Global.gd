@@ -232,6 +232,7 @@ func _init():
 	catClass.weightHigh = 14
 	catClass.nameList = ["Black Shorthair", "Tuxedo Shorthair", "Coffee Longhair", "Calico Shorthair", "Brown Tabby", "Orange Shorthair", "Chocolate Point", "White Longhair"]
 	catClass.symptomList = ["Flu meds", "Mange meds", "Flea meds", "Dewormer", "Splint", "Bandages", "Anti inflammatory", "Vitamin injection"]
+	catClass.variationList[0] = 1
 	
 	dogClass.name = "Dog"
 	dogClass.rarity = 0

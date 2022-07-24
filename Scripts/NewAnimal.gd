@@ -119,7 +119,7 @@ func _on_NewAnimal_finished():
 
 func random_animal():
 	randomize()
-	if global.reputation < 250:
+	if global.reputation < 60:
 		choices = ["Cat", "Dog", "Fish", "Rabbit", "Duck"]
 		#choices = ["cat"]
 	else:
@@ -140,7 +140,9 @@ func random_animal():
 	newAnimal.position = $New.position
 	$New/Sprite.frame = p_gender
 
-
+	# add new animal to journal
+	global.get(p_animalName + "Class").variationList[p_variation-1] = 1
+	print(global.get(p_animalName + "Class").variationList)
 
 func _on_LineEdit_text_changed(_new_text):
 	$NewAnimalPanel.frame = 1

@@ -18,13 +18,13 @@ func initialize(p_name, p_variationList, p_nameList, p_rarity):
 	$NameText.text = "Select variant"
 	for i in 8:
 		if p_variationList[i]:
-			children[i].animation = p_name.to_lower() + str(i)
+			children[i].animation = p_name.to_lower() + str(i+1)
 		else:
 			children[i].animation = p_name.to_lower() + "Shadow"
 	
 func set_entries(i):
 	if variationList[i-1]:
-		$NameText.text = nameList[0]
+		$NameText.text = nameList[i-1]
 	else:
 		$NameText.text = "Undiscovered"
 
