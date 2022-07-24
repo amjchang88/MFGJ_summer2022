@@ -138,6 +138,7 @@ func random_animal():
 	var p_gender = rng.randi_range(0,1)
 	newAnimal.initialize(p_animalNameCaps, p_variation, p_rarity, p_symptom, p_ttk, p_weight, p_gender)
 	newAnimal.position = $New.position
+	$New/Sprite.frame = p_gender
 
 
 

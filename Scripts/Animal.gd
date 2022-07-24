@@ -3,7 +3,6 @@ extends Node2D
 
 # Node paths
 onready var infoPanel := get_tree().get_root().get_node("Main").get_node("InfoPanel")
-onready var parent := get_parent()
 
 
 # Basic Animal Stats
@@ -46,7 +45,7 @@ func _ready():
 
 func _on_AnimalArea2D_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton:
-		if event.pressed and !parent.paused and alive:
+		if event.pressed and !get_parent().paused and alive:
 			infoPanel.move_to(2, 2)
 			infoPanel.set_values(self, animalName, nickname, weight, symptom, affliction, gender, rarity, $AnimatedSprite.animation, recovered)
 

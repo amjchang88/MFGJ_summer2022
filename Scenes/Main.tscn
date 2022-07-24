@@ -128,13 +128,6 @@ defaultY = 2
 targetX = 2
 targetY = 2
 
-[node name="AnimalPanel" parent="." instance=ExtResource( 7 )]
-position = Vector2( 222, 2 )
-defaultX = 222
-defaultY = 2
-targetX = 222
-targetY = 2
-
 [node name="TreatmentOverlay" type="Sprite" parent="."]
 visible = false
 texture = ExtResource( 23 )
@@ -157,6 +150,13 @@ bbcode_text = "[center]Choose treatment from journal[/center]"
 text = "Choose treatment from journal"
 
 [node name="JournalPanel" parent="." instance=ExtResource( 6 )]
+position = Vector2( 222, 2 )
+defaultX = 222
+defaultY = 2
+targetX = 222
+targetY = 2
+
+[node name="AnimalPanel" parent="." instance=ExtResource( 7 )]
 position = Vector2( 222, 2 )
 defaultX = 222
 defaultY = 2
@@ -223,9 +223,9 @@ animation = "start"
 [connection signal="mouse_exited" from="HUD/MenuButton" to="HUD/MenuButton" method="_on_MenuButton_mouse_exited"]
 [connection signal="toNewAnimal" from="AnimalList/AnimalArray" to="NewAnimal" method="_on_AnimalArray_toNewAnimal"]
 [connection signal="select_treatment_mode" from="InfoPanel" to="." method="_on_InfoPanel_select_treatment_mode"]
-[connection signal="returned" from="AnimalPanel" to="JournalPanel" method="_on_AnimalPanel_returned"]
 [connection signal="returned" from="JournalPanel" to="." method="_on_JournalPanel_returned"]
 [connection signal="returned" from="JournalPanel" to="AnimalList/AnimalArray" method="_on_JournalPanel_returned"]
+[connection signal="returned" from="AnimalPanel" to="JournalPanel" method="_on_AnimalPanel_returned"]
 [connection signal="clicked_treatment" from="TreatmentPanel" to="." method="_on_TreatmentPanel_clicked_treatment"]
 [connection signal="returned" from="TreatmentPanel" to="JournalPanel" method="_on_TreatmentPanel_returned"]
 [connection signal="returnMain" from="NewAnimal" to="." method="_on_NewAnimal_returnMain"]
