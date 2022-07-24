@@ -1,28 +1,70 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/UI/menuPanel.png" type="Texture" id=1]
 [ext_resource path="res://Assets/UI/hgssFont.tres" type="BitmapFont" id=2]
+[ext_resource path="res://Assets/UI/MainMenu/tutorialButton.png" type="Texture" id=3]
+[ext_resource path="res://Assets/UI/MainMenu/playButton.png" type="Texture" id=4]
+[ext_resource path="res://Assets/UI/MainMenu/aboutButton.png" type="Texture" id=5]
+[ext_resource path="res://Assets/UI/MainMenu/exitButton.png" type="Texture" id=6]
+[ext_resource path="res://Scripts/Menu.gd" type="Script" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 26.5, 7 )
 
 [node name="Menu" type="Node2D"]
+pause_mode = 2
+script = ExtResource( 7 )
 
 [node name="MenuPanel" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 centered = false
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 14.0
-margin_top = 11.0
-margin_right = 104.0
-margin_bottom = 69.0
+[node name="Title" type="RichTextLabel" parent="."]
+margin_left = 8.0
+margin_top = 19.0
+margin_right = 107.0
+margin_bottom = 46.0
 custom_fonts/normal_font = ExtResource( 2 )
-bbcode_text = "SMALL ANIMAL MANAGEMENT"
+bbcode_enabled = true
+bbcode_text = "[center]SMALL ANIMAL MANAGEMENT[/center]"
 text = "SMALL ANIMAL MANAGEMENT"
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="List" type="Node2D" parent="."]
+scale = Vector2( 0.5, 0.5 )
+
+[node name="PlayButton" type="Sprite" parent="."]
+position = Vector2( 8, 52 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="AboutButton" type="Sprite" parent="."]
+position = Vector2( 8, 67 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="About" type="Node2D" parent="."]
+
+[node name="TutorialButton" type="Sprite" parent="."]
+position = Vector2( 8, 97 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Area2D" type="Area2D" parent="TutorialButton"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TutorialButton/Area2D"]
+position = Vector2( 49.5, -7 )
+shape = SubResource( 1 )
+
+[node name="ExitButton" type="Sprite" parent="."]
+position = Vector2( 8, 82 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="Tutorial" type="Node2D" parent="."]
 position = Vector2( 234, 40 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="Node2D"]
+[node name="RichTextLabel2" type="RichTextLabel" parent="Tutorial"]
 margin_left = -234.0
 margin_top = -46.0
 margin_right = -144.0
@@ -33,7 +75,7 @@ text = "SMALL ANIMAL MANAGEMENT"
 fit_content_height = true
 scroll_active = false
 
-[node name="RichTextLabel3" type="RichTextLabel" parent="Node2D"]
+[node name="RichTextLabel3" type="RichTextLabel" parent="Tutorial"]
 margin_left = -138.0
 margin_top = -46.0
 margin_right = -48.0

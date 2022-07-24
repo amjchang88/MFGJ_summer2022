@@ -21,7 +21,6 @@ centered = false
 material = ExtResource( 3 )
 frames = ExtResource( 1 )
 animation = "cat1"
-frame = 1
 playing = true
 centered = false
 
