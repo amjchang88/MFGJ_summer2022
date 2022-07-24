@@ -12,6 +12,9 @@ func _ready():
 func initialize(p_name, p_variationList, p_nameList, p_rarity):
 	variationList = p_variationList
 	$JournalTitle.bbcode_text = "[center]" + p_name.to_upper() + "[/center]"
+	if p_name == "Dragon":
+		$JournalTitle.bbcode_text = "[center]" + "???" + "[/center]"
+	
 	$StarSheet.frame = p_rarity
 	
 	nameList = p_nameList

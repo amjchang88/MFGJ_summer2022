@@ -8,6 +8,7 @@ var animalCount := 0
 var paused = true
 
 func place_animals():
+	animalCount = 0
 	animalArray = get_children()
 	
 	for Animal in animalArray:

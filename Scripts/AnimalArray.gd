@@ -39,7 +39,7 @@ func _on_JournalPanel_returned():
 
 func _on_Main_toNewAnimal():
 	animalArray = get_children()
-	
+	var end = false
 	# check each animal for recovery / death
 	for Animal in animalArray:
 		# check if treatment is correct
@@ -49,15 +49,17 @@ func _on_Main_toNewAnimal():
 				self.remove_child(Animal)
 				recoveryList.add_child(Animal)
 				Animal.set_owner(recoveryList)
-				break
-		
-		Animal.health -= 1
-		# check for death
-		if Animal.health <= 0:
-			Animal.alive = false
-			Animal.get_node("AnimatedSprite").animation = "dead"
-			self.remove_child(Animal)
-			deathList.add_child(Animal)
-			Animal.set_owner(deathList)
+				end = true
+		# if animal didn't recover
+		if !end:
+			Animal.health -= 1
+			Animal.treatment = ""
+			# check for death
+			if Animal.health <= 0:
+				Animal.alive = false
+				Animal.get_node("AnimatedSprite").animation = "dead"
+				self.remove_child(Animal)
+				deathList.add_child(Animal)
+				Animal.set_owner(deathList)
 
 	emit_signal("toNewAnimal")

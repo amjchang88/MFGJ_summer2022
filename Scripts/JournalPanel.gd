@@ -25,7 +25,7 @@ func set_panel(p_name : String):
 	var localVariationList = global.get(p_name + "Class").variationList
 	var localNameList = global.get(p_name + "Class").nameList
 	var localRarity = global.get(p_name + "Class").rarity
-	
+
 	if !paused:
 		animalPanel.move_to(112, 2)
 		animalPanel.initialize(localName, localVariationList, localNameList, localRarity)

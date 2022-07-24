@@ -186,7 +186,7 @@ text = "TREATS:"
 [node name="Affliction2" type="RichTextLabel" parent="."]
 margin_left = 8.0
 margin_top = 122.0
-margin_right = 82.0
+margin_right = 113.0
 margin_bottom = 137.0
 mouse_filter = 2
 custom_fonts/normal_font = ExtResource( 3 )
