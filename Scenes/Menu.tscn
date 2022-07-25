@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Assets/UI/menuPanel.png" type="Texture" id=1]
 [ext_resource path="res://Assets/UI/hgssFont.tres" type="BitmapFont" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Assets/UI/MainMenu/exitButton.png" type="Texture" id=6]
 [ext_resource path="res://Scripts/Menu.gd" type="Script" id=7]
 [ext_resource path="res://outlineShader.gdshader" type="Shader" id=8]
+[ext_resource path="res://Assets/screenTransition.tres" type="SpriteFrames" id=9]
 
 [sub_resource type="ShaderMaterial" id=5]
 resource_local_to_scene = true
@@ -49,11 +50,13 @@ extents = Vector2( 26.5, 7 )
 pause_mode = 2
 script = ExtResource( 7 )
 
-[node name="MenuPanel" type="Sprite" parent="."]
+[node name="List" type="Node2D" parent="."]
+
+[node name="MenuPanel" type="Sprite" parent="List"]
 texture = ExtResource( 1 )
 centered = false
 
-[node name="Title" type="RichTextLabel" parent="."]
+[node name="Title" type="RichTextLabel" parent="List"]
 margin_left = 8.0
 margin_top = 19.0
 margin_right = 107.0
@@ -63,62 +66,59 @@ bbcode_enabled = true
 bbcode_text = "[center] SMALL ANIMAL MANAGEMENT[/center]"
 text = " SMALL ANIMAL MANAGEMENT"
 
-[node name="List" type="Node2D" parent="."]
-scale = Vector2( 0.5, 0.5 )
-
-[node name="PlayButton" type="Sprite" parent="."]
+[node name="PlayButton" type="Sprite" parent="List"]
 material = SubResource( 5 )
 position = Vector2( 8, 52 )
 texture = ExtResource( 4 )
 centered = false
 
-[node name="Button1" type="Area2D" parent="PlayButton"]
+[node name="Button1" type="Area2D" parent="List/PlayButton"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayButton/Button1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="List/PlayButton/Button1"]
 position = Vector2( 49.5, 8 )
 shape = SubResource( 2 )
 
-[node name="AboutButton" type="Sprite" parent="."]
+[node name="AboutButton" type="Sprite" parent="List"]
 material = SubResource( 6 )
 position = Vector2( 8, 67 )
 texture = ExtResource( 5 )
 centered = false
 
-[node name="Button2" type="Area2D" parent="AboutButton"]
+[node name="Button2" type="Area2D" parent="List/AboutButton"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AboutButton/Button2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="List/AboutButton/Button2"]
 position = Vector2( 49.5, 8 )
 shape = SubResource( 3 )
 
-[node name="TutorialButton" type="Sprite" parent="."]
+[node name="TutorialButton" type="Sprite" parent="List"]
 material = SubResource( 7 )
 position = Vector2( 8, 82 )
 texture = ExtResource( 3 )
 centered = false
 
-[node name="Button3" type="Area2D" parent="TutorialButton"]
+[node name="Button3" type="Area2D" parent="List/TutorialButton"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TutorialButton/Button3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="List/TutorialButton/Button3"]
 position = Vector2( 49.5, 8 )
 shape = SubResource( 4 )
 
-[node name="ExitButton" type="Sprite" parent="."]
+[node name="ExitButton" type="Sprite" parent="List"]
 material = SubResource( 8 )
 position = Vector2( 8, 97 )
 texture = ExtResource( 6 )
 centered = false
 
-[node name="Button4" type="Area2D" parent="ExitButton"]
+[node name="Button4" type="Area2D" parent="List/ExitButton"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitButton/Button4"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="List/ExitButton/Button4"]
 position = Vector2( 49.5, 8 )
 shape = SubResource( 1 )
 
-[node name="About" type="Node2D" parent="."]
+[node name="About" type="Node2D" parent="List"]
 visible = false
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Title2" type="RichTextLabel" parent="About"]
+[node name="Title2" type="RichTextLabel" parent="List/About"]
 margin_left = 226.0
 margin_top = 80.0
 margin_right = 424.0
@@ -142,19 +142,26 @@ Maryanne Park
 for MFGJ Summer 2022
 "
 
-[node name="Tutorial" type="Node2D" parent="."]
+[node name="Tutorial" type="Node2D" parent="List"]
 position = Vector2( 116, 9 )
 scale = Vector2( 0.5, 0.5 )
 
-[connection signal="input_event" from="PlayButton/Button1" to="." method="_on_Area2D_input_event"]
-[connection signal="mouse_entered" from="PlayButton/Button1" to="." method="_on_Area2D_mouse_entered"]
-[connection signal="mouse_exited" from="PlayButton/Button1" to="." method="_on_Area2D_mouse_exited"]
-[connection signal="input_event" from="AboutButton/Button2" to="." method="_on_Button2_input_event"]
-[connection signal="mouse_entered" from="AboutButton/Button2" to="." method="_on_Button2_mouse_entered"]
-[connection signal="mouse_exited" from="AboutButton/Button2" to="." method="_on_Button2_mouse_exited"]
-[connection signal="input_event" from="TutorialButton/Button3" to="." method="_on_Button3_input_event"]
-[connection signal="mouse_entered" from="TutorialButton/Button3" to="." method="_on_Button3_mouse_entered"]
-[connection signal="mouse_exited" from="TutorialButton/Button3" to="." method="_on_Button3_mouse_exited"]
-[connection signal="input_event" from="ExitButton/Button4" to="." method="_on_Button4_input_event"]
-[connection signal="mouse_entered" from="ExitButton/Button4" to="." method="_on_Button4_mouse_entered"]
-[connection signal="mouse_exited" from="ExitButton/Button4" to="." method="_on_Button4_mouse_exited"]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 110, 72 )
+frames = ExtResource( 9 )
+animation = "start"
+
+[connection signal="input_event" from="List/PlayButton/Button1" to="." method="_on_Area2D_input_event"]
+[connection signal="mouse_entered" from="List/PlayButton/Button1" to="." method="_on_Area2D_mouse_entered"]
+[connection signal="mouse_exited" from="List/PlayButton/Button1" to="." method="_on_Area2D_mouse_exited"]
+[connection signal="input_event" from="List/AboutButton/Button2" to="." method="_on_Button2_input_event"]
+[connection signal="mouse_entered" from="List/AboutButton/Button2" to="." method="_on_Button2_mouse_entered"]
+[connection signal="mouse_exited" from="List/AboutButton/Button2" to="." method="_on_Button2_mouse_exited"]
+[connection signal="input_event" from="List/TutorialButton/Button3" to="." method="_on_Button3_input_event"]
+[connection signal="mouse_entered" from="List/TutorialButton/Button3" to="." method="_on_Button3_mouse_entered"]
+[connection signal="mouse_exited" from="List/TutorialButton/Button3" to="." method="_on_Button3_mouse_exited"]
+[connection signal="input_event" from="List/ExitButton/Button4" to="." method="_on_Button4_input_event"]
+[connection signal="mouse_entered" from="List/ExitButton/Button4" to="." method="_on_Button4_mouse_entered"]
+[connection signal="mouse_exited" from="List/ExitButton/Button4" to="." method="_on_Button4_mouse_exited"]
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
