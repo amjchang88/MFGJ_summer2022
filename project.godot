@@ -23,6 +23,7 @@ _global_script_class_icons={
 config/name="MFGJ_summer2022"
 run/main_scene="res://Scenes/Main.tscn"
 config/icon="res://icon.png"
+config/windows_native_icon="res://icon2.ico"
 
 [autoload]
 

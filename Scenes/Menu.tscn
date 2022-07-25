@@ -146,6 +146,13 @@ for MFGJ Summer 2022
 position = Vector2( 116, 9 )
 scale = Vector2( 0.5, 0.5 )
 
+[node name="RichTextLabel" type="RichTextLabel" parent="List/Tutorial"]
+margin_top = 22.0
+margin_right = 192.0
+margin_bottom = 62.0
+custom_fonts/normal_font = ExtResource( 2 )
+text = "lol no"
+
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 visible = false
 position = Vector2( 110, 72 )
