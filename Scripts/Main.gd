@@ -13,8 +13,9 @@ onready var time := 1
 onready var day := 1
 onready var season := 0
 
-var paused := false
+var paused := true
 var selecting := false
+var toMenu := false
 
 signal toNewAnimal
 signal to_treatment
@@ -37,13 +38,21 @@ func _on_ScreenTransition_animation_finished():
 		$ScreenTransition.stop()
 	else:
 		# mid transition (screen is black)
+		
+		if !toMenu:
 		# switch to newAnimal scene
-		paused = true
-		$AnimalList/AnimalArray.paused = true
-		$ScreenTransition.animation = "end"
-		$ScreenTransition.play()
-		$NewAnimal.visible = true
-		emit_signal("toNewAnimal")
+			paused = true
+			$AnimalList/AnimalArray.paused = true
+			$ScreenTransition.animation = "end"
+			$ScreenTransition.play()
+			$NewAnimal.visible = true
+			emit_signal("toNewAnimal")
+		else: # going to menu 
+			$ScreenTransition.animation = "end"
+			$ScreenTransition.play()
+			
+			$Menu.visible = true
+			get_tree().paused = true
 
 
 func _on_EndButton_input_event(_viewport, event, _shape_idx):
@@ -76,3 +85,11 @@ func _on_TreatmentPanel_clicked_treatment(p_treatment):
 		$TreatmentOverlay.visible = false
 		emit_signal("to_treatment", p_treatment)
 		selecting = false
+
+func _on_MenuButton_input_event(_viewport, event, _shape_idx):
+	if event is InputEventMouseButton and event.pressed:
+		toMenu = true
+		paused = true
+		$ScreenTransition.visible = true
+		$ScreenTransition.play()
+		
