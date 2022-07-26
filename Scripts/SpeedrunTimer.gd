@@ -27,4 +27,5 @@ func _process(delta : float):
 	ms = fmod(time, 1) * 100
 	
 	var time_string := "%02d:%02d:%02d" % [minutes, seconds, ms]
+	
 	$Label.text = time_string

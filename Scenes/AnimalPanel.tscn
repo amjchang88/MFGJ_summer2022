@@ -133,52 +133,44 @@ text = "RARITY"
 [node name="1" parent="AnimalList" instance=ExtResource( 6 )]
 material = SubResource( 1 )
 animation = "cat1"
-frame = 1
 playing = true
 
 [node name="2" parent="AnimalList" instance=ExtResource( 6 )]
 material = SubResource( 2 )
 position = Vector2( 30, 52 )
 animation = "cat2"
-frame = 1
 playing = true
 
 [node name="3" parent="AnimalList" instance=ExtResource( 6 )]
 material = SubResource( 3 )
 position = Vector2( 46, 52 )
-frame = 1
 playing = true
 
 [node name="4" parent="AnimalList" instance=ExtResource( 6 )]
 material = SubResource( 4 )
 position = Vector2( 62, 52 )
-frame = 1
 playing = true
 
 [node name="5" parent="AnimalList" instance=ExtResource( 6 )]
 material = SubResource( 5 )
 position = Vector2( 78, 52 )
 animation = "cat5"
-frame = 1
 playing = true
 
 [node name="6" parent="AnimalList" instance=ExtResource( 6 )]
 material = SubResource( 6 )
 position = Vector2( 94, 52 )
 animation = "cat6"
-frame = 1
 playing = true
 
 [node name="7" parent="AnimalList" instance=ExtResource( 6 )]
 material = SubResource( 7 )
 position = Vector2( 14, 68 )
-frame = 1
 playing = true
 
 [node name="8" parent="AnimalList" instance=ExtResource( 6 )]
 material = SubResource( 8 )
 position = Vector2( 30, 68 )
-frame = 1
 playing = true
 
 [node name="StarSheet" type="Sprite" parent="."]
