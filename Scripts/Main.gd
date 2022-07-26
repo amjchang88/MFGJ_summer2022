@@ -64,9 +64,11 @@ func _on_EndButton_input_event(_viewport, event, _shape_idx):
 
 
 func _on_JournalPanel_returned():
-	paused = false
+	$Timer.start(0.25)
 	$HUD.visible = true
 
+func _on_Timer_timeout():
+	paused = false
 
 func _on_NewAnimal_returnMain():
 	$AnimalList/AnimalArray.paused = false
@@ -93,3 +95,4 @@ func _on_MenuButton_input_event(_viewport, event, _shape_idx):
 		$ScreenTransition.visible = true
 		$ScreenTransition.play()
 		
+

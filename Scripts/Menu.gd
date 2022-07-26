@@ -36,6 +36,7 @@ func _on_Button3_mouse_exited():
 func _on_Button3_input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.pressed:
 		clear_visibility()
+		$List/Tutorial.visible = true
 	
 # Button 4: exit button
 func _on_Button4_mouse_entered():
@@ -66,3 +67,12 @@ func _on_AnimatedSprite_animation_finished():
 		$AnimatedSprite.visible = false
 		$AnimatedSprite.animation = "start"
 		$AnimatedSprite.stop()
+
+
+func _on_5_mouse_entered():
+	$List/SpeedrunButton.get_material().set_shader_param("opacity", 1)
+func _on_5_mouse_exited():
+	$List/SpeedrunButton.get_material().set_shader_param("opacity", 0)
+func _on_5_input_event(_viewport, event, _shape_idx):
+	if event is InputEventMouseButton and event.pressed:
+		get_parent().get_node("SpeedrunTimer").run()
