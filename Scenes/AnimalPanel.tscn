@@ -105,7 +105,7 @@ text = "COLLECTION"
 [node name="NameTitle" type="RichTextLabel" parent="."]
 margin_left = 8.0
 margin_top = 81.0
-margin_right = 82.0
+margin_right = 103.0
 margin_bottom = 94.0
 mouse_filter = 2
 custom_fonts/normal_font = ExtResource( 2 )

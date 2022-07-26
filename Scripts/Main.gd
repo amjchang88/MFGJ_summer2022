@@ -87,7 +87,7 @@ func _on_TreatmentPanel_clicked_treatment(p_treatment):
 		selecting = false
 
 func _on_MenuButton_input_event(_viewport, event, _shape_idx):
-	if event is InputEventMouseButton and event.pressed:
+	if event is InputEventMouseButton and event.pressed and !paused:
 		toMenu = true
 		paused = true
 		$ScreenTransition.visible = true

@@ -18,6 +18,11 @@ func _process(_delta):
 	
 	# set season
 	$Season.frame = global.season
+	
+	if global.reputation > 3000:
+		global.reputation = 3000
+	if global.reputation < 0:
+		global.reputation = 0
 
 func set_bar():
 	if ($TextureProgress.value < global.reputation):
