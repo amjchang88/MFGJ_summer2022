@@ -4,6 +4,9 @@ var animalNode
 onready var global = get_node("/root/Global")
 signal select_treatment_mode
 
+var array
+var max_size
+
 func set_values(p_animalNode, p_animalName, p_nickname, p_weight, p_symptom, _p_affliction, p_gender, p_rarity, p_animation, p_recovered):
 	# set data
 	$Name.bbcode_text = "[center]" + p_nickname + "[/center]"
@@ -25,13 +28,18 @@ func set_values(p_animalNode, p_animalName, p_nickname, p_weight, p_symptom, _p_
 	if p_recovered:
 		$TreatIcon.visible = false
 	# get reference to node clicked
-	animalNode = p_animalNode		
+	animalNode = p_animalNode
 	$TreatIcon/AnimatedSprite2.visible = false
 	if animalNode and animalNode.treatment:
 		$TreatIcon/AnimatedSprite2.animation = animalNode.treatment.to_lower()
 		$TreatIcon/AnimatedSprite2.visible = true
 		$TreatIcon.frame = 1
 		
+	$ForwardButton.paused = false
+	$BackButton.paused = false
+	
+	array = animalNode.get_parent()
+	max_size = array.animalArray.size()
 
 func _on_Area2D_input_event(_viewport, event, _shape_idx):
 
@@ -66,3 +74,24 @@ func _on_Main_reset_info():
 	$AnimatedSprite.visible = false
 	$StarSheet.visible = false
 	$TreatIcon.visible = false
+	
+	$ForwardButton.paused = true
+	$BackButton.paused = true
+
+
+func _on_ForwardButton_clicked():
+	
+	if animalNode:
+		#print(animalNode)
+		#print(max_size)
+		if animalNode.arrayPos == max_size - 1:
+			array.animalArray[0].send_values()
+		elif (animalNode.arrayPos+1) < max_size:
+			array.animalArray[animalNode.arrayPos + 1].send_values()
+
+
+func _on_BackButton_clicked():
+	if animalNode.arrayPos == 0:
+		array.animalArray[max_size-1].send_values()
+	elif animalNode.arrayPos > 0:
+		array.animalArray[animalNode.arrayPos - 1].send_values()

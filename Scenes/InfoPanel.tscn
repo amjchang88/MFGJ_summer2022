@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Assets/UI/infoPanel.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/InfoPanel.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Assets/UI/applyTreatmentButton.png" type="Texture" id=8]
 [ext_resource path="res://outlineShader.gdshader" type="Shader" id=9]
 [ext_resource path="res://Assets/treatmentSpriteFrames.tres" type="SpriteFrames" id=10]
+[ext_resource path="res://Scenes/AnimalButton.tscn" type="PackedScene" id=11]
 
 [sub_resource type="ShaderMaterial" id=2]
 resource_local_to_scene = true
@@ -18,6 +19,18 @@ shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
 shader_param/opacity = 0.0
 
 [sub_resource type="RectangleShape2D" id=1]
+
+[sub_resource type="ShaderMaterial" id=3]
+resource_local_to_scene = true
+shader = ExtResource( 9 )
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
+
+[sub_resource type="ShaderMaterial" id=4]
+resource_local_to_scene = true
+shader = ExtResource( 9 )
+shader_param/outline_color = Color( 0.952941, 0.92549, 0.329412, 1 )
+shader_param/opacity = 0.0
 
 [node name="InfoPanel" type="Sprite"]
 texture = ExtResource( 1 )
@@ -126,7 +139,6 @@ centered = false
 hframes = 5
 
 [node name="TreatIcon" type="Sprite" parent="."]
-visible = false
 material = SubResource( 2 )
 position = Vector2( 54, 118 )
 texture = ExtResource( 8 )
@@ -142,6 +154,16 @@ visible = false
 frames = ExtResource( 10 )
 animation = "anti inflammatory"
 
+[node name="ForwardButton" parent="." instance=ExtResource( 11 )]
+material = SubResource( 3 )
+
+[node name="BackButton" parent="." instance=ExtResource( 11 )]
+material = SubResource( 4 )
+position = Vector2( 16, 118 )
+scale = Vector2( -1, 1 )
+
 [connection signal="input_event" from="TreatIcon/Area2D" to="." method="_on_Area2D_input_event"]
 [connection signal="mouse_entered" from="TreatIcon/Area2D" to="." method="_on_Area2D_mouse_entered"]
 [connection signal="mouse_exited" from="TreatIcon/Area2D" to="." method="_on_Area2D_mouse_exited"]
+[connection signal="clicked" from="ForwardButton" to="." method="_on_ForwardButton_clicked"]
+[connection signal="clicked" from="BackButton" to="." method="_on_BackButton_clicked"]
